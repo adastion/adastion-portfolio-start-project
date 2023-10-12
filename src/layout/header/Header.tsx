@@ -17,5 +17,5 @@ export function Header() {
 const StyledHeader = styled.header`
   width: 100%;
   height: 600px;
-  background: lightgreen;
+  background: #6e8ea2;
 `
