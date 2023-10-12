@@ -6,9 +6,9 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 
 export const Main = () => {
   return (
-    <>
-      <FlexWrapper justify="center" align="center">
-        <FlexWrapper derection="column">
+    <div>
+      <FlexWrapper justify={"center"} align={"center"}>
+        <FlexWrapper derection={"column"}>
           <h2>I’m Rayan Adlrdard</h2>
           <h1>Front-end Developer </h1>
           <p>
@@ -18,7 +18,7 @@ export const Main = () => {
           </p>
           <a href="">
             HIRE ME
-            <Icon />
+            <Icon iconId={"arrow"} />
           </a>
         </FlexWrapper>
         <picture>
@@ -26,8 +26,6 @@ export const Main = () => {
           <img src={myPhoto} alt="photo" />
         </picture>
       </FlexWrapper>
-    </>
+    </div>
   );
 };
-
-
