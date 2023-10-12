@@ -4,8 +4,10 @@ import { MyServices } from "../my_services/MyServices";
 
 export const Main = () => {
   return (
-    <FlexWrapper direction={'column'} align={"center"} >
-     <MyServices />
-    </FlexWrapper>
+    <main>
+      <FlexWrapper direction={"column"} align={"center"}>
+        <MyServices />
+      </FlexWrapper>
+    </main>
   );
 };
