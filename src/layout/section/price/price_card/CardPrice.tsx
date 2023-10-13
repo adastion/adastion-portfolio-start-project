@@ -12,7 +12,7 @@ type CardPricePropsType = {
 
 export const CardPrice = (props: CardPricePropsType) => {
   return (
-    <FlexWrapper direction={'column'} align={'center'}>
+    <FlexWrapper direction={'column'} align={''}>
       <Ttle>{props.title}</Ttle>
       <Price><span>$</span>{props.price}</Price>
       <Text>{props.info}</Text>
