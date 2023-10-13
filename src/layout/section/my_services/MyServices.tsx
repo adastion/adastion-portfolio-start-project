@@ -1,9 +1,8 @@
 import React from "react";
 import { SectionTitle } from "./../../../components/SectionTitle";
-import { Text } from "../../../components/SectionText";
+import { Text } from "../../../components/Text";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { CardServices } from "./CardServices";
-import { wrap } from "module";
+import { CardServices } from "./card_services/CardServices";
 
 export const MyServices = () => {
   return (

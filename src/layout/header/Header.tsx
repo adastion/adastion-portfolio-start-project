@@ -6,7 +6,7 @@ import myPhoto from "./../../assets/images/your_Image_1.png";
 import myPhotoWebp from "./../../assets/images/your_Image_1.webp";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { SectionTitle } from "../../components/SectionTitle";
-import { Text } from "../../components/SectionText";
+import { Text } from "../../components/Text";
 import { Icon } from "../../components/Icons/Icon";
 
 export function Header() {

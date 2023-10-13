@@ -1,7 +1,7 @@
 import React from "react";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Icon } from "../../../components/Icons/Icon";
-import { Text } from "../../../components/SectionText";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { Icon } from "../../../../components/Icons/Icon";
+import { Text } from "../../../../components/Text";
 import styled from "styled-components";
 
 type CardServicesPropsType = {
