@@ -14,12 +14,8 @@ export const CardServices = (props: CardServicesPropsType) => {
   return (
     <StyledCardServices>
       <FlexWrapper direction={"column"} align={"center"}>
-        <Icon
-          iconId={props.iconCard}
-          viewBox={"0 0 68 68"}
-          width={"68"}
-          height={"68"}
-        />
+        <Icon iconId={props.iconCard}
+        fill={'#FFB400'}/>
         <h3>{props.name}</h3>
         <Text>{props.description}</Text>
       </FlexWrapper>

@@ -1,25 +1,24 @@
-import React from 'react'
-import sprite from './../../assets/images/icons-sprite.svg'
-import styled from 'styled-components';
-
+import React from "react";
+import sprite from "./../../assets/images/icons-sprite.svg";
+import styled from "styled-components";
 
 type IconPropsType = {
   iconId: string;
   width?: string;
-  height?: string;
   fill?: string;
-  viewBox?: string
-}
+};
 
 export const Icon = (props: IconPropsType) => {
   return (
-    <StyledIcon  
-         fill={`${props.fill || 'black'}`} xmlns="http://www.w3.org/2000/svg">
-      <use xlinkHref={`${sprite}#${props.iconId}`}/>
+    <StyledIcon
+      fill={`${props.fill || "black"}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use xlinkHref={`${sprite}#${props.iconId}`} />
     </StyledIcon>
-  )
-}
+  );
+};
 
 const StyledIcon = styled.svg`
-  width: min-content;
-`
+  width: 70px;
+`;
