@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "../../components/menu/Menu";
-import { MenuAboutMe } from "../../components/menu_about_me/MenuAboutMe";
+import { Profile } from "../../components/menu_about_me/Profile";
 import styled from "styled-components";
 import myPhoto from "./../../assets/images/your_Image_1.png";
 import myPhotoWebp from "./../../assets/images/your_Image_1.webp";
@@ -13,7 +13,7 @@ export function Header() {
   return (
     <StyledHeader>
       <FlexWrapper justify={"space-between"}>
-        <MenuAboutMe />
+        <Profile />
         <FlexWrapper justify={"center"} align={"center"}>
           <FlexWrapper direction={"column"}>
             <SectionTitle>I’m Rayan Adlrdard</SectionTitle>
