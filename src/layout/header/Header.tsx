@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "../../components/menu/Menu";
-import { MenuAboutMe } from "../../components/MenuAboutMe/MenuAboutMe";
+import { MenuAboutMe } from "../../components/menu_about_me/MenuAboutMe";
 import styled from "styled-components";
 import myPhoto from "./../../assets/images/your_Image_1.png";
 import myPhotoWebp from "./../../assets/images/your_Image_1.webp";
