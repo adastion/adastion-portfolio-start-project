@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "../../components/menu/Menu";
-import { Profile } from "../../components/menu_about_me/Profile";
+import { Profile } from "./menu_about_me/Profile";
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Banner } from "./banner/Banner";

@@ -1,7 +1,7 @@
 import React from "react";
-import avatarProfile from "./../../assets/images/avatar_profile.jpg";
-import { Icon } from "../Icons/Icon";
-import { Btn } from "../Btn";
+import avatarProfile from "./../../../assets/images/avatar_profile.jpg";
+import { Icon } from "../../../components/Icons/Icon";
+import { Btn } from "../../../components/Btn";
 
 export const Profile = () => {
   return (
