@@ -71,12 +71,12 @@ meter {
     -webkit-user-select: auto;
 }
 
-
+/* apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable="true"]) {
     -webkit-user-drag: element;
 }
 
-
+/* Revert Modal native behavior */
 :where(dialog:modal) {
     all: revert;
 }

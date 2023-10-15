@@ -1,6 +1,7 @@
 import React from "react";
 import avatarProfile from "./../../assets/images/avatar_profile.jpg";
 import { Icon } from "../Icons/Icon";
+import { Btn } from "../Btn";
 
 export const Profile = () => {
   return (
@@ -11,34 +12,34 @@ export const Profile = () => {
         <span>Font-end Developer</span>
         <ul>
           <li>
-            <a href="#l">
-              <Icon iconId={"faceboock"} />
-            </a>
+            <Btn circle>
+              <Icon size={"14px"} iconId={"faceboock"} />
+            </Btn>
           </li>
           <li>
-            <a href="#l">
-              <Icon iconId={"instagram"} />
-            </a>
+            <Btn circle>
+              <Icon size={"14px"} iconId={"instagram"} />
+            </Btn>
           </li>
           <li>
-            <a href="#l">
-              <Icon iconId={"twitter"} />
-            </a>
+            <Btn circle>
+              <Icon size={"14px"} iconId={"twitter"} />
+            </Btn>
           </li>
           <li>
-            <a href="#l">
-              <Icon iconId={"linkedin"} />
-            </a>
+            <Btn circle>
+              <Icon size={"14px"} iconId={"linkedin"} />
+            </Btn>
           </li>
           <li>
-            <a href="#l">
-              <Icon iconId={"youtube"} />
-            </a>
+            <Btn circle>
+              <Icon size={"14px"} iconId={"youtube"} />
+            </Btn>
           </li>
           <li>
-            <a href="#l">
-              <Icon iconId={"dribbble"} />
-            </a>
+            <Btn circle>
+              <Icon size={"14px"} iconId={"dribbble"} />
+            </Btn>
           </li>
         </ul>
         <div>

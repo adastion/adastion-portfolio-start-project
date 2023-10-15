@@ -3,7 +3,7 @@ import { Menu } from "../../components/menu/Menu";
 import { Profile } from "../../components/menu_about_me/Profile";
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { Banner } from "../../components/banner/Banner";
+import { Banner } from "./banner/Banner";
 
 export function Header() {
   return (
@@ -20,5 +20,4 @@ export function Header() {
 const StyledHeader = styled.header`
   width: 100%;
   min-height: 100%;
-  background: #6e8ea2;
 `;
