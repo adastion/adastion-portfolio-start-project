@@ -2,7 +2,7 @@ import React from "react";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Text } from "./../../../components/Text";
 import { FlexWrapper } from "./../../../components/FlexWrapper";
-import { CardPrice } from "./price_card/CardPrice";
+import { CardPrice } from "./card_price/CardPrice";
 
 export const PricePlans = () => {
   return (

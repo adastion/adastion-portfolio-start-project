@@ -1,6 +1,6 @@
 import React from 'react'
-import { FlexWrapper } from './../../../../components/FlexWrapper';
-import { Text } from './../../../../components/Text';
+import { FlexWrapper } from '../../../../components/FlexWrapper';
+import { Text } from '../../../../components/Text';
 import styled from 'styled-components';
 
 type CardPricePropsType = {
@@ -17,6 +17,13 @@ export const CardPrice = (props: CardPricePropsType) => {
       <Price><span>$</span>{props.price}</Price>
       <Text>{props.info}</Text>
       <ul>
+        <ServiceName>{props.service}</ServiceName>
+        <ServiceName>{props.service}</ServiceName>
+        <ServiceName>{props.service}</ServiceName>
+        <ServiceName>{props.service}</ServiceName>
+        <ServiceName>{props.service}</ServiceName>
+        <ServiceName>{props.service}</ServiceName>
+        <ServiceName>{props.service}</ServiceName>
         <ServiceName>{props.service}</ServiceName>
       </ul>
       <BtnService >ORDER NOW</BtnService>
