@@ -3,6 +3,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { Icon } from "../../../../components/Icons/Icon";
 import { Text } from "../../../../components/Text";
 import styled from "styled-components";
+import { Theme } from "../../../../styles/Theme";
 
 type CardServicesPropsType = {
   iconCard: string;
@@ -32,4 +33,5 @@ const StyledCardServices = styled.div`
   width: 310px;
   min-height: 100%;
   padding: 10px;
+  background: ${Theme.colors.bg.primary};
 `;

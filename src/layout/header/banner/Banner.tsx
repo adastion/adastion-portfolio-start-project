@@ -16,7 +16,7 @@ export const Banner = () => {
         <h1>
           <span>Front-end</span> Developer
         </h1>
-        <Text size={"16px"}>
+        <Text size={"16px"} position={"start"}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat
           feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
           lectus.

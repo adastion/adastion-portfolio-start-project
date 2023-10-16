@@ -10,7 +10,7 @@ export const MyServices = () => {
     <section>
       <FlexWrapper direction={"column"} align={"center"}>
         <SectionTitle>My services</SectionTitle>
-        <Text>
+        <Text width={"438px"}>
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. lorem ipsum
         </Text>
