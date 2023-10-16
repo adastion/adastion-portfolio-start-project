@@ -3,10 +3,11 @@ import { SectionTitle } from "./../../../components/SectionTitle";
 import { Text } from "../../../components/Text";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { CardServices } from "./card_services/CardServices";
+import { Theme } from "../../../styles/Theme";
 
 export const MyServices = () => {
   return (
-    <>
+    <section>
       <FlexWrapper direction={"column"} align={"center"}>
         <SectionTitle>My services</SectionTitle>
         <Text>
@@ -14,7 +15,7 @@ export const MyServices = () => {
           sint. Velit officia consequat duis enim velit mollit. lorem ipsum
         </Text>
       </FlexWrapper>
-      <FlexWrapper wrap={"wrap"}>
+      <FlexWrapper wrap={"wrap"} gap={Theme.gapCard}>
         <CardServices
           iconCard={"coding"}
           name={"web development"}
@@ -40,7 +41,15 @@ export const MyServices = () => {
           name={"photography"}
           description={"portrait, product photography"}
         />
+        <CardServices
+          iconCard={""}
+          name={"advertising"}
+          description={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. "
+          }
+          btn={"ORDER NOW"}
+        />
       </FlexWrapper>
-    </>
+    </section>
   );
 };

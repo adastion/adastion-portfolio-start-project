@@ -7,8 +7,9 @@ export const Theme = {
       secondary: "#ffb400",
       page: "#F0F0F6",
     },
-    fonts: {
-      inter: "Inter",
-    },
   },
+  fonts: {
+    inter: "Inter",
+  },
+  gapCard: "20px",
 };

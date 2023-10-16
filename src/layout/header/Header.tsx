@@ -9,9 +9,9 @@ export function Header() {
   return (
     <StyledHeader>
       <FlexWrapper justify={"space-between"}>
-        <Profile />
+        {/* <Profile /> */}
         <Banner />
-        <Menu />
+        {/* <Menu /> */}
       </FlexWrapper>
     </StyledHeader>
   );

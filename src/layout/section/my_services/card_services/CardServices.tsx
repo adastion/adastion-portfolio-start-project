@@ -8,16 +8,21 @@ type CardServicesPropsType = {
   iconCard: string;
   name: string;
   description: string;
+  btn?: string;
 };
 
 export const CardServices = (props: CardServicesPropsType) => {
   return (
     <StyledCardServices>
       <FlexWrapper direction={"column"} align={"center"}>
-        <Icon iconId={props.iconCard}
-        fill={'#FFB400'}/>
+        {props.iconCard !== "" ? (
+          <Icon iconId={props.iconCard} fill={"#FFB400"} />
+        ) : (
+          ""
+        )}
         <h3>{props.name}</h3>
         <Text>{props.description}</Text>
+        {props.btn !== "" ? <a href="#l">{props.btn}</a> : null}
       </FlexWrapper>
     </StyledCardServices>
   );
