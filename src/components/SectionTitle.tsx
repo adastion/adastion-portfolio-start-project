@@ -13,4 +13,8 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
   &::first-letter {
     text-transform: uppercase;
   }
+
+  & + * {
+    margin-top: 25px;
+  }
 `;

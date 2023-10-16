@@ -16,4 +16,8 @@ export const Text = styled.p<TextPropsType>`
   color: ${Theme.colors.secondary || "#000"};
   max-width: ${(props) => props.width || "auto"};
   text-align: ${(props) => props.position || "center"};
+
+  & + * {
+    margin-top: 50px;
+  }
 `;

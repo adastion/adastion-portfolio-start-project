@@ -4,17 +4,16 @@ import { Text } from "../../../components/Text";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { CardServices } from "./card_services/CardServices";
 import { Theme } from "../../../styles/Theme";
+import styled from "styled-components";
 
 export const MyServices = () => {
   return (
-    <section>
-      <FlexWrapper direction={"column"} align={"center"}>
-        <SectionTitle>My services</SectionTitle>
-        <Text width={"438px"}>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. lorem ipsum
-        </Text>
-      </FlexWrapper>
+    <MyServicesStyled>
+      <SectionTitle>My services</SectionTitle>
+      <Text width={"438px"}>
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+      </Text>
       <FlexWrapper wrap={"wrap"} gap={Theme.gapCard}>
         <CardServices
           iconCard={"coding"}
@@ -50,6 +49,12 @@ export const MyServices = () => {
           btn={"ORDER NOW"}
         />
       </FlexWrapper>
-    </section>
+    </MyServicesStyled>
   );
 };
+
+const MyServicesStyled = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
