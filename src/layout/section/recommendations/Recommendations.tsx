@@ -3,6 +3,8 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "./../../../components/SectionTitle";
 import { Text } from "./../../../components/Text";
 import { CardRecommendation } from "./card_recommendation/CardRecommendation";
+import styled from "styled-components";
+import { Theme } from "../../../styles/Theme";
 
 const cardListRecommendation = [
   {
@@ -27,13 +29,13 @@ const cardListRecommendation = [
 
 export const Recommendations = () => {
   return (
-    <FlexWrapper direction={"column"} align={"center"}>
+    <RecommendationsStyled>
       <SectionTitle>recommendations</SectionTitle>
-      <Text>
+      <Text width={Theme.widthText}>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. lorem ipsum
       </Text>
-      <FlexWrapper wrap={"wrap"}>
+      <FlexWrapper wrap={"wrap"} align={"center"} gap={Theme.gapCard}>
         {cardListRecommendation.map((card, index) => (
           <CardRecommendation
             indexCard={index}
@@ -43,6 +45,12 @@ export const Recommendations = () => {
           />
         ))}
       </FlexWrapper>
-    </FlexWrapper>
+    </RecommendationsStyled>
   );
 };
+
+const RecommendationsStyled = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;

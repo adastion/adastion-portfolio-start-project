@@ -6,7 +6,7 @@ import myPhoto from "./../../../assets/images/your_Image_1.png";
 import { Icon } from "../../../components/Icons/Icon";
 import styled from "styled-components";
 import { Theme } from "../../../styles/Theme";
-import { Btn } from "../../../components/Btn";
+import { Button } from "../../../components/Button";
 
 export const Banner = () => {
   return (
@@ -21,10 +21,10 @@ export const Banner = () => {
           feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
           lectus.
         </Text>
-        <Btn>
+        <Button>
           <span>HIRE ME</span>
           <Icon iconId={"arrowRight"} size={"16px"} />
-        </Btn>
+        </Button>
       </FlexWrapper>
       <img src={myPhoto} alt="photo" />
     </BannerStyled>
@@ -34,6 +34,7 @@ export const Banner = () => {
 const BannerStyled = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
   flex-grow: 1;
   padding: 0 60px;

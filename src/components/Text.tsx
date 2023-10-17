@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Theme } from "../styles/Theme";
 
 type TextPropsType = {
@@ -7,6 +7,7 @@ type TextPropsType = {
   height?: string;
   width?: string;
   position?: string;
+  flex?: boolean;
 };
 
 export const Text = styled.p<TextPropsType>`
@@ -20,4 +21,12 @@ export const Text = styled.p<TextPropsType>`
   & + * {
     margin-top: 50px;
   }
+
+  ${(props) =>
+    props.flex &&
+    css<TextPropsType>`
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+    `}
 `;

@@ -10,11 +10,11 @@ export const MyServices = () => {
   return (
     <MyServicesStyled>
       <SectionTitle>My services</SectionTitle>
-      <Text width={"438px"}>
+      <Text width={Theme.widthText}>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. lorem ipsum
       </Text>
-      <FlexWrapper wrap={"wrap"} gap={Theme.gapCard}>
+      <FlexWrapper wrap={"wrap"} justify={"center"} gap={Theme.gapCard}>
         <CardServices
           iconCard={"coding"}
           name={"web development"}

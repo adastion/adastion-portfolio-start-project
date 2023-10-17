@@ -1,5 +1,30 @@
 1 styling списков ul li?
-2 размещение в header (обязателен ли?)
+2 размещение в header (обязателен ли?) +
 3 модификаторы в styled-components (замена тега?)
 4 styling чистых тэгов?
-5 
+5 обращение к созданым Styled-components через & ?
+
+
+
+
+
+
+
+import React from 'react';
+import iconsSprite from '../../assets/images/sprite.svg'
+
+type IconPropsTypes = {
+    iconId: string
+    width?: string
+    height?: string
+    viewBox?: string
+}
+export const Icon = (props: IconPropsTypes) => {
+    return (
+        <svg width={props.width || '50'} height={props.height || '50'}
+             viewBox={`${props.viewBox}` || `0 0 ${props.width} ${props.height}`} fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <use xlinkHref={`${iconsSprite}#${props.iconId}`}></use>
+        </svg>
+    );
+};

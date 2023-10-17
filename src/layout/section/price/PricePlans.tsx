@@ -10,7 +10,7 @@ export const PricePlans = () => {
   return (
     <PricePlansStyled>
       <SectionTitle>Price plans</SectionTitle>
-      <Text width={"438px"}>
+      <Text width={Theme.widthText}>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. lorem ipsum
       </Text>
