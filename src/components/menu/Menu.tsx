@@ -47,7 +47,7 @@ export const Menu = () => {
 const MenuStyled = styled.nav`
   background: ${Theme.colors.bg.primary};
   display: grid;
-  position: fixed;
+  /* position: absolute; */
   top: 0;
   z-index: 3;
 

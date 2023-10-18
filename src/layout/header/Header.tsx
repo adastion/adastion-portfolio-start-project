@@ -3,13 +3,16 @@ import { Menu } from "../../components/menu/Menu";
 import styled from "styled-components";
 import { Banner } from "./banner/Banner";
 import { Profile } from "./menu_about_me/Profile";
+import { Conatiner } from "./../../components/Container";
 
 export function Header() {
   return (
     <StyledHeader>
-      {/* <Profile /> */}
-      <Banner />
-      {/* <Menu /> */}
+      <Conatiner>
+        {/* <Profile /> */}
+        <Banner />
+        {/* <Menu /> */}
+      </Conatiner>
     </StyledHeader>
   );
 }

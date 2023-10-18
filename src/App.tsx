@@ -10,14 +10,14 @@ import { Profile } from "./layout/header/menu_about_me/Profile";
 function App() {
   return (
     <AppStyled className="App">
-      <Profile />
+      {/* <Profile /> */}
       <Header />
       <Main />
       <FooterStyled>
         <Icon iconId={"copyright"} />
         <small>2021 All Rights Reserved.Ojjomedia</small>
       </FooterStyled>
-      <Menu />
+      {/* <Menu /> */}
     </AppStyled>
   );
 }
@@ -25,8 +25,6 @@ function App() {
 export default App;
 
 const AppStyled = styled.div`
-  background: #f0f0f6;
-  max-width: 1440px;
-  margin: 0 auto;
+  background: #6666a1;
   position: relative;
 `;
