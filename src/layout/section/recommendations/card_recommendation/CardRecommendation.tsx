@@ -7,7 +7,7 @@ import avatrPreview1 from "./../../../../assets/images/ava_1.jpg";
 import avatrPreview2 from "./../../../../assets/images/ava_2.jpg";
 import avatrPreview3 from "./../../../../assets/images/ava_3.jpg";
 import styled from "styled-components";
-import { Theme } from "../../../../styles/Theme";
+import { theme } from "../../../../styles/theme";
 import { SectionTitle } from "../../../../components/SectionTitle";
 
 type CardRecommendationPropdType = {
@@ -69,7 +69,7 @@ export const CardRecommendation = (props: CardRecommendationPropdType) => {
 const CardRecommendationStyled = styled.div`
   display: grid;
   max-width: 310px;
-  background: ${Theme.colors.primaryBg};
+  background: ${theme.colors.primaryBg};
   padding: 25px;
 `;
 

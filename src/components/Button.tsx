@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Theme } from "../styles/Theme";
+import { theme } from "../styles/theme";
 
 type ButtonPropsType = {
   circle?: boolean;
@@ -7,24 +7,30 @@ type ButtonPropsType = {
   padding?: string;
   width?: string;
   height?: string;
+  font?: string;
 };
 
 export const Button = styled.button<ButtonPropsType>`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: ${(props) => props.colorBackground || Theme.colors.secondaryBg};
+  background: ${(props) => props.colorBackground || theme.colors.secondaryBg};
   border-radius: 5px;
   padding: ${(props) => props.padding || "16px 32px"};
   font-weight: 500;
   text-transform: uppercase;
+  font-size: ${(props) => props.font || "16px"};
   cursor: pointer;
 
+  & > span {
+    margin-right: 10px;
+  }
+
   &:hover {
-    color: ${Theme.colors.primaryBg};
+    color: ${theme.colors.primaryBg};
 
     & svg {
-      fill: ${Theme.colors.primaryBg};
+      fill: ${theme.colors.primaryBg};
     }
   }
 
@@ -34,13 +40,13 @@ export const Button = styled.button<ButtonPropsType>`
       padding: ${(props) => props.padding || "5px"};
       border-radius: 50%;
       width: ${(props) => props.width || "40px"};
-      height: ${(props) => props.height || "40px"};
+      height: ${(props) => props.width || "40px"};
 
       &:hover {
-        background: ${Theme.colors.secondaryBg};
+        background: ${theme.colors.secondaryBg};
 
         svg {
-          fill: ${Theme.colors.primary};
+          fill: ${theme.colors.primary};
         }
       }
     `}

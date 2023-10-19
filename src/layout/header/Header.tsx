@@ -16,4 +16,8 @@ export function Header() {
 const StyledHeader = styled.header`
   display: flex;
   gap: 30px;
-`;
+
+  & + * {
+    margin-top: 138px;
+  }
+`; 

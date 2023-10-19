@@ -1,12 +1,12 @@
 import { Header } from "./layout/header/Header";
 import { Main } from "./layout/main/Main";
-import { FooterStyled } from "./layout/footer/FooterStyled";
+import { FooterStyled } from "./components/FooterStyled";
 import { Icon } from "./components/Icons/Icon";
 import styled from "styled-components";
 import { Menu } from "./components/menu/Menu";
 import { Profile } from "./layout/header/menu_about_me/Profile";
 import { Container } from "./components/Container";
-import { Theme } from "./styles/Theme";
+import { theme } from "./styles/theme";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
 export default App;
 
 const AppStyled = styled.div`
-  background: ${Theme.colors.pageBg};
+  background: ${theme.colors.pageBg};
   display: flex;
   gap: 15px;
 `;

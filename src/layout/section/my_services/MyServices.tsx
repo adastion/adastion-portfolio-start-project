@@ -3,7 +3,7 @@ import { SectionTitle } from "./../../../components/SectionTitle";
 import { Text } from "../../../components/Text";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { CardServices } from "./card_services/CardServices";
-import { Theme } from "../../../styles/Theme";
+import { theme } from "../../../styles/theme";
 import styled from "styled-components";
 import { Container } from "./../../../components/Container";
 
@@ -13,11 +13,11 @@ export const MyServices = () => {
       <Container>
         <FlexWrapper align="center" direction="column">
           <SectionTitle>My services</SectionTitle>
-          <Text width={Theme.widthText}>
+          <Text width={theme.widthText}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
-          <FlexWrapper wrap={"wrap"} justify={"center"} gap={Theme.gapCard}>
+          <FlexWrapper wrap={"wrap"} justify={"center"} gap={theme.gapCard}>
             <CardServices
               iconCard={"coding"}
               name={"web development"}

@@ -5,14 +5,14 @@ import { Text } from "../../../components/Text";
 import myPhoto from "./../../../assets/images/your_Image_1.png";
 import { Icon } from "../../../components/Icons/Icon";
 import styled from "styled-components";
-import { Theme } from "../../../styles/Theme";
+import { theme } from "../../../styles/theme";
 import { Button } from "../../../components/Button";
 
 export const Banner = () => {
   return (
     <BannerStyled>
       <FlexWrapper direction={"column"} align={"start"} gap={"26px"}>
-        <SectionTitle size={"48px"}>I’m Rayan Adlrdard</SectionTitle>
+        <SectionTitle size={"48px"} transform>I’m Rayan Adlrdard</SectionTitle>
         <h1>
           <span>Front-end</span> Developer
         </h1>
@@ -21,7 +21,7 @@ export const Banner = () => {
           feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
           lectus.
         </Text>
-        <Button>
+        <Button as={'a'}>
           <span>HIRE ME</span>
           <Icon iconId={"arrowRight"} size={"16px"} />
         </Button>
@@ -38,8 +38,8 @@ const BannerStyled = styled.div`
   gap: 30px;
   flex-grow: 1;
   padding: 0 60px;
-  background: ${Theme.colors.primaryBg || "#F0F0F6"};
-  color: ${Theme.colors.primary};
+  background: ${theme.colors.primaryBg || "#F0F0F6"};
+  color: ${theme.colors.primary};
 
   & h1 {
     font-size: 48px;
@@ -47,7 +47,7 @@ const BannerStyled = styled.div`
     line-height: 123.6%;
 
     & span {
-      color: ${Theme.colors.secondaryBg};
+      color: ${theme.colors.secondaryBg};
     }
   }
 

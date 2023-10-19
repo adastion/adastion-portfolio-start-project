@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { Icon } from "../../../../components/Icons/Icon";
 import { Text } from "../../../../components/Text";
 import styled from "styled-components";
-import { Theme } from "../../../../styles/Theme";
+import { theme } from "../../../../styles/theme";
 
 type CardServicesPropsType = {
   iconCard: string;
@@ -32,5 +32,5 @@ export const CardServices = (props: CardServicesPropsType) => {
 const StyledCardServices = styled.div`
   width: 310px;
   padding: 10px;
-  background: ${Theme.colors.primaryBg};
+  background: ${theme.colors.primaryBg};
 `;

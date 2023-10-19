@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "./../../../components/SectionTitle";
 import { Text } from "./../../../components/Text";
 import styled from "styled-components";
-import { Theme } from "../../../styles/Theme";
+import { theme } from "../../../styles/theme";
 import { Container } from "../../../components/Container";
 
 export const Education = () => {
@@ -12,7 +12,7 @@ export const Education = () => {
       <Container>
         <FlexWrapper align={"center"} direction={"column"}>
           <SectionTitle>Education</SectionTitle>
-          <Text width={Theme.widthText}>
+          <Text width={theme.widthText}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
@@ -49,7 +49,7 @@ export const Education = () => {
 
 const Table = styled.ul`
   padding: 42px 32px;
-  background: ${Theme.colors.primaryBg};
+  background: ${theme.colors.primaryBg};
   width: 100%;
 
   & li {
@@ -60,10 +60,10 @@ const Table = styled.ul`
 `;
 
 const DateStyled = styled.span`
-  color: ${Theme.colors.primaryBg};
+  color: ${theme.colors.primaryBg};
   font-size: 10px;
   font-weight: 400;
   line-height: 100.9%;
-  background: ${Theme.colors.secondaryBg};
+  background: ${theme.colors.secondaryBg};
   padding: 4px 7px;
 `;

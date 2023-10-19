@@ -135,7 +135,7 @@
         </clipPath>
       </defs>
     </symbol>
-    <symbol id="contact" viewBox="0 0 18 18">
+    <symbol id="contact">
       <g clip-path="url(#clip0_1_1595)">
         <path
           d="M4.841 14.25 1.5 16.875V3a.75.75 0 0 1 .75-.75h13.5a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75H4.841Z" />

@@ -1,42 +1,98 @@
 import React from "react";
 import { Icon } from "../Icons/Icon";
 import styled from "styled-components";
-import { Theme } from "../../styles/Theme";
+import { theme } from "../../styles/theme";
 import { Button } from "../Button";
 
 export const Menu = () => {
   return (
     <MenuStyled>
-      <Icon iconId={"contrast"} boxWidth="16" boxHeight="16"/>
+      <Icon iconId={"contrast"} boxWidth="16" boxHeight="16" />
       <ul>
         <li>
-          <Button padding={"10px"} colorBackground={Theme.colors.pageBg} as="a" circle>
-            <Icon iconId={"home"} boxWidth="16" boxHeight="16"/>
+          <Button
+            padding={"10px"}
+            colorBackground={theme.colors.pageBg}
+            as="a"
+            circle
+          >
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={"home"}
+              boxWidth="16"
+              boxHeight="16"
+            />
           </Button>
         </li>
         <li>
-          <Button padding={"10px"} colorBackground={Theme.colors.pageBg} as="a" circle>
-            <Icon iconId={"services"} boxWidth="16" boxHeight="16"/>
+          <Button
+            padding={"10px"}
+            colorBackground={theme.colors.pageBg}
+            as="a"
+            circle
+          >
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={"services"}
+              boxWidth="16"
+              boxHeight="16"
+            />
           </Button>
         </li>
         <li>
-          <Button padding={"10px"} colorBackground={Theme.colors.pageBg} as="a" circle>
-            <Icon iconId={"cv"} boxWidth="16" boxHeight="16"/>
+          <Button
+            padding={"10px"}
+            colorBackground={theme.colors.pageBg}
+            as="a"
+            circle
+          >
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={"cv"}
+              boxWidth="16"
+              boxHeight="16"
+            />
           </Button>
         </li>
         <li>
-          <Button padding={"10px"} colorBackground={Theme.colors.pageBg} as="a" circle>
-            <Icon iconId={"portfolio"} boxWidth="16" boxHeight="16"/>
+          <Button
+            padding={"10px"}
+            colorBackground={theme.colors.pageBg}
+            as="a"
+            circle
+          >
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={"portfolio"}
+              boxWidth="16"
+              boxHeight="16"
+            />
           </Button>
         </li>
         <li>
-          <Button padding={"10px"} colorBackground={Theme.colors.pageBg} as="a" circle>
-            <Icon iconId={"blog"} boxWidth="16" boxHeight="16"/>
+          <Button
+            padding={"10px"}
+            colorBackground={theme.colors.pageBg}
+            as="a"
+            circle
+          >
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={"blog"}
+              boxWidth="16"
+              boxHeight="16"
+            />
           </Button>
         </li>
         <li>
-          <Button colorBackground={Theme.colors.pageBg} as="a" circle>
-            <Icon iconId={"contact"} boxWidth="16" boxHeight="16"/>
+          <Button colorBackground={theme.colors.pageBg} as="a" circle>
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={"contact"}
+              boxWidth="16"
+              boxHeight="16"
+              size="16"
+            />
           </Button>
         </li>
       </ul>
@@ -45,10 +101,15 @@ export const Menu = () => {
 };
 
 const MenuStyled = styled.nav`
-  background: ${Theme.colors.primaryBg};
+  background: ${theme.colors.primaryBg};
   display: grid;
   justify-items: center;
-  max-width: 108px;
-  width: 100%;
+  padding: 50px 34px 0;
   height: 100%;
+
+  & ul {
+    display: grid;
+    gap: 44px;
+    margin: 174px 0;
+  }
 `;
