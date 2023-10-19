@@ -138,6 +138,8 @@ export const Profile = () => {
 };
 
 const ProfileStyled = styled.aside`
-  background: ${Theme.colors.bg.primary};
-  position: fixed;
+  background: ${Theme.colors.primaryBg};
+  max-width: 305px;
+  width: 100%;
+  height: 100%;
 `;

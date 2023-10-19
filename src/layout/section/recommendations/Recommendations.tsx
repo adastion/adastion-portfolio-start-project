@@ -5,6 +5,7 @@ import { Text } from "./../../../components/Text";
 import { CardRecommendation } from "./card_recommendation/CardRecommendation";
 import styled from "styled-components";
 import { Theme } from "../../../styles/Theme";
+import { Container } from "../../../components/Container";
 
 const cardListRecommendation = [
   {
@@ -30,27 +31,27 @@ const cardListRecommendation = [
 export const Recommendations = () => {
   return (
     <RecommendationsStyled>
-      <SectionTitle>recommendations</SectionTitle>
-      <Text width={Theme.widthText}>
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. lorem ipsum
-      </Text>
-      <FlexWrapper wrap={"wrap"} align={"center"} gap={Theme.gapCard}>
-        {cardListRecommendation.map((card, index) => (
-          <CardRecommendation
-            indexCard={index}
-            nameIcon={card.nameIcon}
-            title={card.title}
-            description={card.description}
-          />
-        ))}
-      </FlexWrapper>
+      <Container>
+        <FlexWrapper align={"center"} direction={"column"}>
+          <SectionTitle>recommendations</SectionTitle>
+          <Text width={Theme.widthText}>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+          </Text>
+          <FlexWrapper wrap={"wrap"} align={"center"} gap={Theme.gapCard}>
+            {cardListRecommendation.map((card, index) => (
+              <CardRecommendation
+                indexCard={index}
+                nameIcon={card.nameIcon}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
+          </FlexWrapper>
+        </FlexWrapper>
+      </Container>
     </RecommendationsStyled>
   );
 };
 
-const RecommendationsStyled = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+const RecommendationsStyled = styled.section``;

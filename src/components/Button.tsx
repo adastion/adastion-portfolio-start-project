@@ -3,7 +3,6 @@ import { Theme } from "../styles/Theme";
 
 type ButtonPropsType = {
   circle?: boolean;
-  link?: boolean;
   colorBackground?: string;
   padding?: string;
   width?: string;
@@ -14,7 +13,7 @@ export const Button = styled.button<ButtonPropsType>`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: ${(props) => props.colorBackground || Theme.colors.bg.secondary};
+  background: ${(props) => props.colorBackground || Theme.colors.secondaryBg};
   border-radius: 5px;
   padding: ${(props) => props.padding || "16px 32px"};
   font-weight: 500;
@@ -22,10 +21,10 @@ export const Button = styled.button<ButtonPropsType>`
   cursor: pointer;
 
   &:hover {
-    color: ${Theme.colors.bg.primary};
+    color: ${Theme.colors.primaryBg};
 
     & svg {
-      fill: ${Theme.colors.bg.primary};
+      fill: ${Theme.colors.primaryBg};
     }
   }
 
@@ -38,7 +37,7 @@ export const Button = styled.button<ButtonPropsType>`
       height: ${(props) => props.height || "40px"};
 
       &:hover {
-        background: ${Theme.colors.bg.secondary};
+        background: ${Theme.colors.secondaryBg};
 
         svg {
           fill: ${Theme.colors.primary};

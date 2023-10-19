@@ -70,7 +70,7 @@ const CardPriceStyled = styled.li`
   flex-direction: column;
   align-items: center;
   padding: 54px 31px 24px;
-  background: ${Theme.colors.bg.primary};
+  background: ${Theme.colors.primaryBg};
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
 `;
 
@@ -105,7 +105,7 @@ const BtnService = styled.a`
   padding: 10px 41px;
   height: 38px;
   border-radius: 19px;
-  background: ${Theme.colors.bg.primary};
+  background: ${Theme.colors.primaryBg};
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
   font-size: 14px;
   font-weight: 700;

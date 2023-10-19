@@ -32,5 +32,5 @@ export const CardServices = (props: CardServicesPropsType) => {
 const StyledCardServices = styled.div`
   width: 310px;
   padding: 10px;
-  background: ${Theme.colors.bg.primary};
+  background: ${Theme.colors.primaryBg};
 `;

@@ -3,15 +3,11 @@ export const Theme = {
     primary: "#2B2B2B",
     secondary: "#767676",
     lineTable: "#F0F0F6",
-    bg: {
-      primary: "#fff",
-      secondary: "#ffb400",
-      page: "#F0F0F6",
-    },
-  },
-  fonts: {
-    inter: "Inter",
-  },
+    primaryBg: "#fff",
+    secondaryBg: "#ffb400",
+    pageBg: "#F0F0F6",
+  }
+  ,
   gapCard: "20px",
   widthText: "438px",
 };

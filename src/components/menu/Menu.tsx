@@ -10,32 +10,32 @@ export const Menu = () => {
       <Icon iconId={"contrast"} boxWidth="16" boxHeight="16"/>
       <ul>
         <li>
-          <Button padding={"10px"} colorBackground={Theme.colors.bg.page} as="a" circle>
+          <Button padding={"10px"} colorBackground={Theme.colors.pageBg} as="a" circle>
             <Icon iconId={"home"} boxWidth="16" boxHeight="16"/>
           </Button>
         </li>
         <li>
-          <Button padding={"10px"} colorBackground={Theme.colors.bg.page} as="a" circle>
+          <Button padding={"10px"} colorBackground={Theme.colors.pageBg} as="a" circle>
             <Icon iconId={"services"} boxWidth="16" boxHeight="16"/>
           </Button>
         </li>
         <li>
-          <Button padding={"10px"} colorBackground={Theme.colors.bg.page} as="a" circle>
+          <Button padding={"10px"} colorBackground={Theme.colors.pageBg} as="a" circle>
             <Icon iconId={"cv"} boxWidth="16" boxHeight="16"/>
           </Button>
         </li>
         <li>
-          <Button padding={"10px"} colorBackground={Theme.colors.bg.page} as="a" circle>
+          <Button padding={"10px"} colorBackground={Theme.colors.pageBg} as="a" circle>
             <Icon iconId={"portfolio"} boxWidth="16" boxHeight="16"/>
           </Button>
         </li>
         <li>
-          <Button padding={"10px"} colorBackground={Theme.colors.bg.page} as="a" circle>
+          <Button padding={"10px"} colorBackground={Theme.colors.pageBg} as="a" circle>
             <Icon iconId={"blog"} boxWidth="16" boxHeight="16"/>
           </Button>
         </li>
         <li>
-          <Button colorBackground={Theme.colors.bg.page} as="a" circle>
+          <Button colorBackground={Theme.colors.pageBg} as="a" circle>
             <Icon iconId={"contact"} boxWidth="16" boxHeight="16"/>
           </Button>
         </li>
@@ -45,11 +45,10 @@ export const Menu = () => {
 };
 
 const MenuStyled = styled.nav`
-  background: ${Theme.colors.bg.primary};
+  background: ${Theme.colors.primaryBg};
   display: grid;
-  /* position: absolute; */
-  top: 0;
-  z-index: 3;
-
-
+  justify-items: center;
+  max-width: 108px;
+  width: 100%;
+  height: 100%;
 `;

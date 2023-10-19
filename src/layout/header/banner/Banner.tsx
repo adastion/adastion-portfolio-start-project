@@ -38,8 +38,7 @@ const BannerStyled = styled.div`
   gap: 30px;
   flex-grow: 1;
   padding: 0 60px;
-  background: ${Theme.colors.bg.primary || "#F0F0F6"};
-  max-height: 467px;
+  background: ${Theme.colors.primaryBg || "#F0F0F6"};
   color: ${Theme.colors.primary};
 
   & h1 {
@@ -48,7 +47,7 @@ const BannerStyled = styled.div`
     line-height: 123.6%;
 
     & span {
-      color: ${Theme.colors.bg.secondary};
+      color: ${Theme.colors.secondaryBg};
     }
   }
 
@@ -59,5 +58,4 @@ const BannerStyled = styled.div`
   & p {
     max-width: 424px;
   }
-  
 `;

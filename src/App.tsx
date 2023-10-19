@@ -3,21 +3,26 @@ import { Main } from "./layout/main/Main";
 import { FooterStyled } from "./layout/footer/FooterStyled";
 import { Icon } from "./components/Icons/Icon";
 import styled from "styled-components";
-import { FlexWrapper } from "./components/FlexWrapper";
 import { Menu } from "./components/menu/Menu";
 import { Profile } from "./layout/header/menu_about_me/Profile";
+import { Container } from "./components/Container";
+import { Theme } from "./styles/Theme";
 
 function App() {
   return (
     <AppStyled className="App">
-      {/* <Profile /> */}
-      <Header />
-      <Main />
-      <FooterStyled>
-        <Icon iconId={"copyright"} />
-        <small>2021 All Rights Reserved.Ojjomedia</small>
-      </FooterStyled>
-      {/* <Menu /> */}
+      <Profile />
+      <Container main>
+        <Header />
+        <Main />
+        <Container>
+          <FooterStyled>
+            <Icon iconId={"copyright"} />
+            <small>2021 All Rights Reserved.Ojjomedia</small>
+          </FooterStyled>
+        </Container>
+      </Container>
+      <Menu />
     </AppStyled>
   );
 }
@@ -25,6 +30,7 @@ function App() {
 export default App;
 
 const AppStyled = styled.div`
-  background: #6666a1;
-  position: relative;
+  background: ${Theme.colors.pageBg};
+  display: flex;
+  gap: 15px;
 `;
