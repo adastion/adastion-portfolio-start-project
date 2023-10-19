@@ -6,6 +6,9 @@ import { User } from "./../../../../components/user/User";
 import avatrPreview1 from "./../../../../assets/images/ava_1.jpg";
 import avatrPreview2 from "./../../../../assets/images/ava_2.jpg";
 import avatrPreview3 from "./../../../../assets/images/ava_3.jpg";
+import styled from "styled-components";
+import { Theme } from "../../../../styles/Theme";
+import { SectionTitle } from "../../../../components/SectionTitle";
 
 type CardRecommendationPropdType = {
   nameIcon: string;
@@ -39,16 +42,18 @@ const listUsers = [
 
 export const CardRecommendation = (props: CardRecommendationPropdType) => {
   return (
-    <FlexWrapper direction={"column"} align={"center"}>
-      <FlexWrapper>
-        <Icon iconId={props.nameIcon} />
-        <Icon iconId={props.nameIcon} />
-        <Icon iconId={props.nameIcon} />
-        <Icon iconId={props.nameIcon} />
-        <Icon iconId={props.nameIcon} />
-      </FlexWrapper>
-      <h4>Great Quality!</h4>
-      <Text>
+    <CardRecommendationStyled>
+      <Rtating>
+        <Icon iconId={props.nameIcon} size={"18px"} />
+        <Icon iconId={props.nameIcon} size={"18px"} />
+        <Icon iconId={props.nameIcon} size={"18px"} />
+        <Icon iconId={props.nameIcon} size={"18px"} />
+        <Icon iconId={props.nameIcon} size={"18px"} />
+      </Rtating>
+      <SectionTitle size={"18px"} weight={"500"}>
+        Great Quality!
+      </SectionTitle>
+      <Text position={"start"}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla
         diam in ac dictum a urna viverra morbi. Morbi donec amet....
       </Text>
@@ -57,6 +62,19 @@ export const CardRecommendation = (props: CardRecommendationPropdType) => {
         name={listUsers[props.indexCard].name}
         profession={listUsers[props.indexCard].profession}
       />
-    </FlexWrapper>
+    </CardRecommendationStyled>
   );
 };
+
+const CardRecommendationStyled = styled.div`
+  display: grid;
+  max-width: 310px;
+  background: ${Theme.colors.primaryBg};
+  padding: 25px;
+`;
+
+const Rtating = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+`;

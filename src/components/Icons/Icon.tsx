@@ -7,6 +7,8 @@ type IconPropsType = {
   iconId: string;
   size?: string;
   fill?: string;
+  boxWidth?: string;
+  boxHeight?: string;
 };
 
 export const Icon = (props: IconPropsType) => {
@@ -16,6 +18,7 @@ export const Icon = (props: IconPropsType) => {
       xmlns="http://www.w3.org/2000/svg"
       width={props.size || "40px"}
       height={props.size || "40px"}
+      viewBox={`0 0 ${props.boxWidth} ${props.boxHeight}` || "0 0 18 18"}
     >
       <use xlinkHref={`${sprite}#${props.iconId}`} />
     </StyledIcon>

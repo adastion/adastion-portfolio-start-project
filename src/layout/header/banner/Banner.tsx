@@ -6,7 +6,7 @@ import myPhoto from "./../../../assets/images/your_Image_1.png";
 import { Icon } from "../../../components/Icons/Icon";
 import styled from "styled-components";
 import { Theme } from "../../../styles/Theme";
-import { Btn } from "../../../components/Btn";
+import { Button } from "../../../components/Button";
 
 export const Banner = () => {
   return (
@@ -16,15 +16,15 @@ export const Banner = () => {
         <h1>
           <span>Front-end</span> Developer
         </h1>
-        <Text size={"16px"}>
+        <Text size={"16px"} position={"start"}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat
           feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
           lectus.
         </Text>
-        <Btn>
+        <Button>
           <span>HIRE ME</span>
           <Icon iconId={"arrowRight"} size={"16px"} />
-        </Btn>
+        </Button>
       </FlexWrapper>
       <img src={myPhoto} alt="photo" />
     </BannerStyled>
@@ -34,11 +34,11 @@ export const Banner = () => {
 const BannerStyled = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
   flex-grow: 1;
   padding: 0 60px;
-  background: ${Theme.colors.bg.primary || "#F0F0F6"};
-  max-height: 467px;
+  background: ${Theme.colors.primaryBg || "#F0F0F6"};
   color: ${Theme.colors.primary};
 
   & h1 {
@@ -47,7 +47,7 @@ const BannerStyled = styled.div`
     line-height: 123.6%;
 
     & span {
-      color: ${Theme.colors.bg.secondary};
+      color: ${Theme.colors.secondaryBg};
     }
   }
 
@@ -58,5 +58,4 @@ const BannerStyled = styled.div`
   & p {
     max-width: 424px;
   }
-  
 `;
