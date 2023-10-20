@@ -11,7 +11,7 @@ export const InfoCell = styled.section<InfoCellPropsType>`
 
   & ul li {
     display: flex;
-    justify-content:${props=>props.justify || "space-between"};
+    justify-content: ${(props) => props.justify || "space-between"};
     align-items: center;
     gap: 12px;
   }

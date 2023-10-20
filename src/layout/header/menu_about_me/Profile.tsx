@@ -9,6 +9,8 @@ import { FlexWrapper } from "./../../../components/FlexWrapper";
 import { SectionTitle } from "./../../../components/SectionTitle";
 import { Text } from "./../../../components/Text";
 import { InfoCell } from "../../../components/InfoCell";
+import { Pictures } from "./../../../components/Pictures";
+import { ProgressBar } from "../../../components/ProgressBar";
 
 export const Profile = () => {
   return (
@@ -16,11 +18,11 @@ export const Profile = () => {
       <FlexWrapper direction={"column"} align={"stretch"}>
         <InfoCell>
           <FlexWrapper direction="column" align="center">
-            <picture>
+            <Pictures circle>
               <source srcSet={avatarProfileWebp} type="image/webp" />
               <source srcSet={avatarProfile} type="image/png" />
               <img src={avatarProfile} alt="avatar" />
-            </picture>
+            </Pictures>
             <SectionTitle
               as={"h4"}
               size={"18px"}
@@ -115,30 +117,30 @@ export const Profile = () => {
             justify={"space-between"}
             gap={"10px"}
           >
-            <li>
+            <ProgressBar percent="100%">
               <Text margin={"0"} as={"span"}>
                 Bangla
               </Text>
               <Text margin={"0"} as={"span"}>
                 100%
               </Text>
-            </li>
-            <li>
+            </ProgressBar>
+            <ProgressBar percent="80%">
               <Text margin={"0"} as={"span"}>
                 English
               </Text>
               <Text margin={"0"} as={"span"}>
                 80%
               </Text>
-            </li>
-            <li>
+            </ProgressBar>
+            <ProgressBar percent="60%">
               <Text margin={"0"} as={"span"}>
                 Spanish
               </Text>
               <Text margin={"0"} as={"span"}>
                 60%
               </Text>
-            </li>
+            </ProgressBar>
           </FlexWrapper>
         </InfoCell>
         <InfoCell>
@@ -261,24 +263,13 @@ const ProfileStyled = styled.aside`
   height: 100%;
   padding: 50px 42px 25px;
 
-  & picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    object-fit: cover;
-
-    & > * {
-      width: inherit;
-      height: inherit;
-    }
-
-    & + h4 {
-      margin-top: 30px;
-    }
-  }
-
   & ul {
     width: 100%;
   }
+
+  & picture + h4 {
+    margin-top: 30px;
+  }
 `;
+
+
