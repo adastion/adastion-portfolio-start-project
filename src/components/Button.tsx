@@ -14,7 +14,7 @@ type ButtonPropsType = {
 export const Button = styled.button<ButtonPropsType>`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   background: ${(props) => props.colorBackground || theme.colors.secondaryBg};
   border-radius: 5px;
   padding: ${(props) => props.padding || "16px 32px"};
