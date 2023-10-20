@@ -8,6 +8,7 @@ type TextPropsType = {
   width?: string;
   position?: string;
   flex?: boolean;
+  margin?: string;
 };
 
 export const Text = styled.p<TextPropsType>`
@@ -19,7 +20,7 @@ export const Text = styled.p<TextPropsType>`
   text-align: ${(props) => props.position || "center"};
 
   & + * {
-    margin-top: 50px;
+    margin-top: ${props=>props.margin || "50px"};
   }
 
   ${(props) =>

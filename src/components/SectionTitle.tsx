@@ -4,6 +4,7 @@ type SectionTitlePropsType = {
   size?: string;
   weight?: string;
   transform?: boolean;
+  margin?: string;
 };
 
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
@@ -17,6 +18,6 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
   }
 
   & + * {
-    margin-top: 25px;
+    margin-top: ${(props) => props.margin || "25px"};
   }
 `;

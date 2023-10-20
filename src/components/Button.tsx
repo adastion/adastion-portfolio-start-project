@@ -3,6 +3,7 @@ import { theme } from "../styles/theme";
 
 type ButtonPropsType = {
   circle?: boolean;
+  sideBar?: boolean;
   colorBackground?: string;
   padding?: string;
   width?: string;
@@ -49,5 +50,11 @@ export const Button = styled.button<ButtonPropsType>`
           fill: ${theme.colors.primary};
         }
       }
+    `}
+
+  ${(props) =>
+    props.sideBar &&
+    css<ButtonPropsType>`
+      border-radius: unset;
     `}
 `;
