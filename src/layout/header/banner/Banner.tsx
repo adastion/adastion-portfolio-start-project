@@ -1,37 +1,36 @@
-import React from "react";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { SectionTitle } from "../../../components/SectionTitle";
-import { Text } from "../../../components/Text";
-import myPhoto from "./../../../assets/images/your_Image_1.png";
-import { Icon } from "../../../components/Icons/Icon";
-import styled from "styled-components";
-import { theme } from "../../../styles/theme";
-import { Button } from "../../../components/Button";
+import React from 'react'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import { SectionTitle } from '../../../components/SectionTitle'
+import { Text } from '../../../components/Text'
+import myPhoto from './../../../assets/images/your_Image_1.png'
+import { Icon } from '../../../components/Icons/Icon'
+import styled from 'styled-components'
+import { theme } from '../../../styles/theme'
+import { Button } from '../../../components/Button'
 
 export const Banner = () => {
   return (
     <BannerStyled>
-      <FlexWrapper direction={"column"} align={"start"} gap={"26px"}>
-        <SectionTitle size={"48px"} transform>
+      <FlexWrapper direction={'column'} align={'start'} gap={'26px'}>
+        <SectionTitle size={'48px'} transform>
           I’m Rayan Adlrdard
         </SectionTitle>
         <h1>
           <span>Front-end</span> Developer
         </h1>
-        <Text size={"16px"} position={"start"}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat
-          feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
-          lectus.
+        <Text size={'16px'} position={'start'}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat
+          lobortis. Natoque rutrum semper sed suspendisse nunc lectus.
         </Text>
-        <Button as={"a"}>
+        <Button as={'a'}>
           <span>HIRE ME</span>
-          <Icon iconId={"arrowRight"} size={"16px"} />
+          <Icon iconId={'arrowRight'} size={'16px'} />
         </Button>
       </FlexWrapper>
-      <img src={myPhoto} alt="photo" />
+      <img src={myPhoto} alt='photo' />
     </BannerStyled>
-  );
-};
+  )
+}
 
 const BannerStyled = styled.div`
   display: flex;
@@ -40,7 +39,7 @@ const BannerStyled = styled.div`
   gap: 30px;
   flex-grow: 1;
   padding: 0 60px;
-  background: ${theme.colors.primaryBg || "#F0F0F6"};
+  background: ${theme.colors.primaryBg || '#F0F0F6'};
   color: ${theme.colors.primary};
 
   & h1 {
@@ -66,4 +65,4 @@ const BannerStyled = styled.div`
       transform: rotate(-45deg);
     }
   }
-`;
+`
