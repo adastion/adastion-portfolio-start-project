@@ -3,7 +3,7 @@ import { theme } from "../styles/theme";
 
 type ProgressBarPropsType = {
   percent: string;
-};
+}
 
 export const ProgressBar = styled.li<ProgressBarPropsType>`
   position: relative;
@@ -27,7 +27,7 @@ export const ProgressBar = styled.li<ProgressBarPropsType>`
   &::after {
     bottom: -4px;
     left: 1px;
-    width: calc(${(props) => props.percent || "1"} - 1%);
+    width: calc(${props=>props.percent || '1'}% - 1%);
     height: 2px;
     background: ${theme.colors.secondaryBg};
     border-radius: 3px;

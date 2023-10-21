@@ -12,7 +12,9 @@ export const Banner = () => {
   return (
     <BannerStyled>
       <FlexWrapper direction={"column"} align={"start"} gap={"26px"}>
-        <SectionTitle size={"48px"} transform>I’m Rayan Adlrdard</SectionTitle>
+        <SectionTitle size={"48px"} transform>
+          I’m Rayan Adlrdard
+        </SectionTitle>
         <h1>
           <span>Front-end</span> Developer
         </h1>
@@ -21,7 +23,7 @@ export const Banner = () => {
           feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
           lectus.
         </Text>
-        <Button as={'a'}>
+        <Button as={"a"}>
           <span>HIRE ME</span>
           <Icon iconId={"arrowRight"} size={"16px"} />
         </Button>
@@ -57,5 +59,11 @@ const BannerStyled = styled.div`
 
   & p {
     max-width: 424px;
+  }
+
+  & a:hover {
+    & svg {
+      transform: rotate(-45deg);
+    }
   }
 `;

@@ -117,7 +117,7 @@ export const Profile = () => {
             justify={"space-between"}
             gap={"10px"}
           >
-            <ProgressBar percent="100%">
+            <ProgressBar percent="100">
               <Text margin={"0"} as={"span"}>
                 Bangla
               </Text>
@@ -125,7 +125,7 @@ export const Profile = () => {
                 100%
               </Text>
             </ProgressBar>
-            <ProgressBar percent="80%">
+            <ProgressBar percent="80">
               <Text margin={"0"} as={"span"}>
                 English
               </Text>
@@ -133,7 +133,7 @@ export const Profile = () => {
                 80%
               </Text>
             </ProgressBar>
-            <ProgressBar percent="60%">
+            <ProgressBar percent="60">
               <Text margin={"0"} as={"span"}>
                 Spanish
               </Text>
@@ -153,46 +153,46 @@ export const Profile = () => {
             justify={"space-between"}
             gap={"10px"}
           >
-            <li>
+            <ProgressBar percent={"90"}>
               <Text margin={"0"} as={"span"}>
                 Html
               </Text>
               <Text margin={"0"} as={"span"}>
                 90%
               </Text>
-            </li>
-            <li>
+            </ProgressBar>
+            <ProgressBar percent={"85"}>
               <Text margin={"0"} as={"span"}>
                 CSS
               </Text>
               <Text margin={"0"} as={"span"}>
                 85%
               </Text>
-            </li>
-            <li>
+            </ProgressBar>
+            <ProgressBar percent={"80"}>
               <Text margin={"0"} as={"span"}>
                 Js
               </Text>
               <Text margin={"0"} as={"span"}>
                 80%
               </Text>
-            </li>
-            <li>
+            </ProgressBar>
+            <ProgressBar percent={"75"}>
               <Text margin={"0"} as={"span"}>
                 PHP
               </Text>
               <Text margin={"0"} as={"span"}>
                 75%
               </Text>
-            </li>
-            <li>
+            </ProgressBar>
+            <ProgressBar percent={"85"}>
               <Text margin={"0"} as={"span"}>
                 WordPress
               </Text>
               <Text margin={"0"} as={"span"}>
                 85%
               </Text>
-            </li>
+            </ProgressBar>
           </FlexWrapper>
         </InfoCell>
         <InfoCell justify={"start"}>
