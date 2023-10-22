@@ -17,7 +17,7 @@ type CardServicesPropsType = {
 export const CardServices = (props: CardServicesPropsType) => {
   return (
     <CardServicesStyled>
-      <FlexWrapper direction={'column'} align={'center'} padding={'25px'}>
+      <FlexWrapper direction={'column'} align={'center'} padding={'30px 25px 25px'}>
         {props.iconCard !== '' ? (
           <Icon size='74px' iconId={props.iconCard} fill={theme.colors.secondaryBg} />
         ) : (
