@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { Text } from "../../../../components/Text";
 import styled from "styled-components";
 import { SectionTitle } from "../../../../components/SectionTitle";
-import { Theme } from "../../../../styles/Theme";
+import { theme } from "../../../../styles/Theme";
 import { Icon } from "./../../../../components/Icons/Icon";
 
 type CardPricePropsType = {
@@ -76,7 +76,7 @@ const CardPriceStyled = styled.li`
   flex-direction: column;
   align-items: center;
   padding: 54px 31px 24px;
-  background: ${Theme.colors.primaryBg};
+  background: ${theme.colors.primaryBg};
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
 `;
 
@@ -101,7 +101,7 @@ const ServiceName = styled.li`
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
-  color: ${Theme.colors.secondary};
+  color: ${theme.colors.secondary};
 `;
 
 const BtnService = styled.a`
@@ -111,7 +111,7 @@ const BtnService = styled.a`
   padding: 10px 41px;
   height: 38px;
   border-radius: 19px;
-  background: ${Theme.colors.primaryBg};
+  background: ${theme.colors.primaryBg};
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
   font-size: 14px;
   font-weight: 700;

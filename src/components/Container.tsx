@@ -6,7 +6,6 @@ type ContainerPropsType = {
 
 export const Container = styled.div<ContainerPropsType>`
   max-width: 970px;
-  min-height: 100%;
   width: 100%;
   margin: 0 auto;
 

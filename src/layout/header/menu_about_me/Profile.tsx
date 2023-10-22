@@ -1,145 +1,248 @@
-import React from "react";
-import avatarProfile from "./../../../assets/images/avatar_profile.jpg";
-import { Icon } from "../../../components/Icons/Icon";
-import { Button } from "../../../components/Button";
-import styled from "styled-components";
-import { Theme } from "../../../styles/Theme";
+import React from 'react'
+import avatarProfile from './../../../assets/images/avatar_profile.jpg'
+import avatarProfileWebp from './../../../assets/images/avatar_profile.webp'
+import { Icon } from '../../../components/Icons/Icon'
+import { Button } from '../../../components/Button'
+import styled from 'styled-components'
+import { theme } from '../../../styles/Theme'
+import { FlexWrapper } from './../../../components/FlexWrapper'
+import { SectionTitle } from './../../../components/SectionTitle'
+import { Text } from './../../../components/Text'
+import { InfoCell } from '../../../components/InfoCell'
+import { Picture } from '../../../components/Picture'
+import { ProgressBar } from '../../../components/ProgressBar'
 
 export const Profile = () => {
   return (
     <ProfileStyled>
-      <img src={avatarProfile} alt="avatar" />
-      <h4>Rayan Adlardard</h4>
-      <span>Font-end Developer</span>
-      <ul>
-        <li>
-          <Button circle>
-            <Icon size={"14px"} iconId={"faceboock"} />
-          </Button>
-        </li>
-        <li>
-          <Button circle>
-            <Icon size={"14px"} iconId={"instagram"} />
-          </Button>
-        </li>
-        <li>
-          <Button circle>
-            <Icon size={"14px"} iconId={"twitter"} />
-          </Button>
-        </li>
-        <li>
-          <Button circle>
-            <Icon size={"14px"} iconId={"linkedin"} />
-          </Button>
-        </li>
-        <li>
-          <Button circle>
-            <Icon size={"14px"} iconId={"youtube"} />
-          </Button>
-        </li>
-        <li>
-          <Button circle>
-            <Icon size={"14px"} iconId={"dribbble"} />
-          </Button>
-        </li>
-      </ul>
-      <div>
-        <section>
-          <h4>Me arameters</h4>
-          <ul>
+      <FlexWrapper direction={'column'} align={'stretch'}>
+        <InfoCell>
+          <FlexWrapper direction='column' align='center'>
+            <Picture avatar width={'150px'} height={'150px'}>
+              <source srcSet={avatarProfileWebp} type='image/webp' />
+              <source srcSet={avatarProfile} type='image/png' />
+              <img src={avatarProfile} alt='avatar' />
+            </Picture>
+            <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
+              Rayan Adlardard
+            </SectionTitle>
+            <Text margin={'15px'}>Font-end Developer</Text>
+            <FlexWrapper as={'ul'} justify={'space-between'}>
+              <li>
+                <Button width={'24px'} circle>
+                  <Icon size={'14px'} iconId={'faceboock'} />
+                </Button>
+              </li>
+              <li>
+                <Button width={'24px'} circle>
+                  <Icon size={'14px'} iconId={'instagram'} />
+                </Button>
+              </li>
+              <li>
+                <Button width={'24px'} circle>
+                  <Icon size={'14px'} iconId={'twitter'} />
+                </Button>
+              </li>
+              <li>
+                <Button width={'24px'} circle>
+                  <Icon size={'14px'} iconId={'linkedin'} />
+                </Button>
+              </li>
+              <li>
+                <Button width={'24px'} circle>
+                  <Icon size={'14px'} iconId={'youtube'} />
+                </Button>
+              </li>
+              <li>
+                <Button width={'24px'} circle>
+                  <Icon size={'14px'} iconId={'dribbble'} />
+                </Button>
+              </li>
+            </FlexWrapper>
+          </FlexWrapper>
+        </InfoCell>
+        <InfoCell profile>
+          <FlexWrapper as={'ul'} direction={'column'} justify={'space-between'} gap={'10px'}>
             <li>
-              <span>Age:</span>
-              <span>24</span>
+              <Text margin={'0'} as={'span'}>
+                Age:
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                24
+              </Text>
             </li>
             <li>
-              <span>Residence:</span>
-              <span>BD</span>
+              <Text margin={'0'} as={'span'}>
+                Residence:
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                BD
+              </Text>
             </li>
             <li>
-              <span>Freelance:</span>
-              <span>Available</span>
+              <Text margin={'0'} as={'span'}>
+                Freelance:
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                Available
+              </Text>
             </li>
             <li>
-              <span>Address:</span>
-              <span>Dhaka,Bangladesh</span>
+              <Text margin={'0'} as={'span'}>
+                Address:
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                Dhaka,Bangladesh
+              </Text>
             </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Languages</h4>
-          <ul>
+          </FlexWrapper>
+        </InfoCell>
+        <InfoCell>
+          <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
+            Languages
+          </SectionTitle>
+          <FlexWrapper as={'ul'} direction={'column'} justify={'space-between'} gap={'10px'}>
+            <ProgressBar percent='100'>
+              <Text margin={'0'} as={'span'}>
+                Bangla
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                100%
+              </Text>
+            </ProgressBar>
+            <ProgressBar percent='80'>
+              <Text margin={'0'} as={'span'}>
+                English
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                80%
+              </Text>
+            </ProgressBar>
+            <ProgressBar percent='60'>
+              <Text margin={'0'} as={'span'}>
+                Spanish
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                60%
+              </Text>
+            </ProgressBar>
+          </FlexWrapper>
+        </InfoCell>
+        <InfoCell>
+          <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
+            Skills
+          </SectionTitle>
+          <FlexWrapper as={'ul'} direction={'column'} justify={'space-between'} gap={'10px'}>
+            <ProgressBar percent={'90'}>
+              <Text margin={'0'} as={'span'}>
+                Html
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                90%
+              </Text>
+            </ProgressBar>
+            <ProgressBar percent={'85'}>
+              <Text margin={'0'} as={'span'}>
+                CSS
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                85%
+              </Text>
+            </ProgressBar>
+            <ProgressBar percent={'80'}>
+              <Text margin={'0'} as={'span'}>
+                Js
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                80%
+              </Text>
+            </ProgressBar>
+            <ProgressBar percent={'75'}>
+              <Text margin={'0'} as={'span'}>
+                PHP
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                75%
+              </Text>
+            </ProgressBar>
+            <ProgressBar percent={'85'}>
+              <Text margin={'0'} as={'span'}>
+                WordPress
+              </Text>
+              <Text margin={'0'} as={'span'}>
+                85%
+              </Text>
+            </ProgressBar>
+          </FlexWrapper>
+        </InfoCell>
+        <InfoCell justify={'start'}>
+          <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
+            Extra Skills
+          </SectionTitle>
+          <FlexWrapper as={'ul'} direction={'column'} justify={'space-between'} gap={'10px'}>
             <li>
-              <span>Bangla</span>
-              <span>100%</span>
+              <Icon
+                fill={theme.colors.secondaryBg}
+                boxWidth={'15'}
+                boxHeight={'15'}
+                size={'15px'}
+                iconId={'square'}
+              />
+              <Text as={'span'}>Bootstrap, Materialize</Text>
             </li>
             <li>
-              <span>English</span>
-              <span>80%</span>
+              <Icon
+                fill={theme.colors.secondaryBg}
+                boxWidth={'15'}
+                boxHeight={'15'}
+                size={'15px'}
+                iconId={'square'}
+              />
+              <Text as={'span'}>Stylus, Sass, Less</Text>
             </li>
             <li>
-              <span>Spanish</span>
-              <span>60%</span>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Skills</h4>
-          <ul>
-            <li>
-              <span>Html</span>
-              <span>90%</span>
+              <Icon
+                fill={theme.colors.secondaryBg}
+                boxWidth={'15'}
+                boxHeight={'15'}
+                size={'15px'}
+                iconId={'square'}
+              />
+              <Text as={'span'}>Gulp, Webpack, Grunt</Text>
             </li>
             <li>
-              <span>CSS</span>
-              <span>85%</span>
+              <Icon
+                fill={theme.colors.secondaryBg}
+                boxWidth={'15'}
+                boxHeight={'15'}
+                size={'15px'}
+                iconId={'square'}
+              />
+              <Text as={'span'}>GIT Knowledge</Text>
             </li>
-            <li>
-              <span>Js</span>
-              <span>80%</span>
-            </li>
-            <li>
-              <span>PHP</span>
-              <span>75%</span>
-            </li>
-            <li>
-              <span>WordPress</span>
-              <span>85%</span>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Extra Skills</h4>
-          <ul>
-            <li>
-              <Icon iconId={"square"} />
-              <span>Bootstrap, Materialize</span>
-            </li>
-            <li>
-              <Icon iconId={"square"} />
-              <span>Stylus, Sass, Less</span>
-            </li>
-            <li>
-              <Icon iconId={"square"} />
-              <span>Gulp, Webpack, Grunt</span>
-            </li>
-            <li>
-              <Icon iconId={"square"} />
-              <span>GIT Knowledge</span>
-            </li>
-          </ul>
-        </section>
-        <button>
+          </FlexWrapper>
+        </InfoCell>
+        <Button font={'14px'} sideBar padding={'10px'}>
           <span>Download cv</span>
-          <Icon iconId={"download"} />
-        </button>
-      </div>
+          <Icon size={'14'} iconId={'download'} />
+        </Button>
+      </FlexWrapper>
     </ProfileStyled>
-  );
-};
+  )
+}
 
 const ProfileStyled = styled.aside`
-  background: ${Theme.colors.primaryBg};
+  background: ${theme.colors.primaryBg};
   max-width: 305px;
   width: 100%;
   height: 100%;
-`;
+  padding: 50px 42px 25px;
+
+  & ul {
+    width: 100%;
+  }
+
+  & picture + h4 {
+    margin-top: 30px;
+  }
+`

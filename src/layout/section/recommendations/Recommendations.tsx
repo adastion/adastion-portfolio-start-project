@@ -4,7 +4,7 @@ import { SectionTitle } from "./../../../components/SectionTitle";
 import { Text } from "./../../../components/Text";
 import { CardRecommendation } from "./card_recommendation/CardRecommendation";
 import styled from "styled-components";
-import { Theme } from "../../../styles/Theme";
+import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
 
 const cardListRecommendation = [
@@ -34,11 +34,11 @@ export const Recommendations = () => {
       <Container>
         <FlexWrapper align={"center"} direction={"column"}>
           <SectionTitle>recommendations</SectionTitle>
-          <Text width={Theme.widthText}>
+          <Text width={theme.widthText}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
-          <FlexWrapper wrap={"wrap"} align={"center"} gap={Theme.gapCard}>
+          <FlexWrapper wrap={"wrap"} align={"center"} gap={theme.gapCard}>
             {cardListRecommendation.map((card, index) => (
               <CardRecommendation
                 indexCard={index}
