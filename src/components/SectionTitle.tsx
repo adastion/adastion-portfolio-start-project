@@ -10,7 +10,7 @@ type SectionTitlePropsType = {
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
   font-size: ${props => props.size || '32px'};
   font-weight: ${props => props.weight || '700'};
-  line-height: 123.6%;
+  line-height: 1.2;
   text-transform: ${props => (props.transform ? 'none' : 'capitalize')};
 
   &::first-letter {

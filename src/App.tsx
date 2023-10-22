@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { Menu } from './components/menu/Menu'
 import { Profile } from './layout/header/menu_about_me/Profile'
 import { Container } from './components/Container'
-import { theme } from './styles/theme'
+import { theme } from './styles/Theme'
 
 function App() {
   return (

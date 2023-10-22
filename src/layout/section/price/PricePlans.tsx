@@ -3,7 +3,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { Text } from "./../../../components/Text";
 import { FlexWrapper } from "./../../../components/FlexWrapper";
 import { CardPrice } from "./card_price/CardPrice";
-import { theme } from "../../../styles/theme";
+import { theme } from "../../../styles/Theme";
 import styled from "styled-components";
 import { Container } from "./../../../components/Container";
 

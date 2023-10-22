@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "./../../../components/SectionTitle";
 import { Text } from "./../../../components/Text";
 import styled from "styled-components";
-import { theme } from "../../../styles/theme";
+import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
 
 export const Education = () => {

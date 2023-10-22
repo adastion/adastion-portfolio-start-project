@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { Text } from "../../../../components/Text";
 import styled from "styled-components";
 import { SectionTitle } from "../../../../components/SectionTitle";
-import { theme } from "../../../../styles/theme";
+import { theme } from "../../../../styles/Theme";
 import { Icon } from "./../../../../components/Icons/Icon";
 
 type CardPricePropsType = {

@@ -7,7 +7,7 @@ import avatrPreview1 from "./../../../../assets/images/ava_1.jpg";
 import avatrPreview2 from "./../../../../assets/images/ava_2.jpg";
 import avatrPreview3 from "./../../../../assets/images/ava_3.jpg";
 import styled from "styled-components";
-import { theme } from "../../../../styles/theme";
+import { theme } from "../../../../styles/Theme";
 import { SectionTitle } from "../../../../components/SectionTitle";
 
 type CardRecommendationPropdType = {

@@ -4,7 +4,7 @@ import { SectionTitle } from "./../../../components/SectionTitle";
 import { Text } from "./../../../components/Text";
 import { CardRecommendation } from "./card_recommendation/CardRecommendation";
 import styled from "styled-components";
-import { theme } from "../../../styles/theme";
+import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
 
 const cardListRecommendation = [

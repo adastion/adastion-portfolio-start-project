@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { theme } from "../styles/theme";
+import { theme } from "../styles/Theme";
 
 type TextPropsType = {
   size?: string;
@@ -16,7 +16,7 @@ export const Text = styled.p<TextPropsType>`
   font-weight: ${(props) => props.weight || "400"};
   line-height: ${(props) => props.height || "24px"};
   color: ${theme.colors.secondary || "#000"};
-  max-width: ${(props) => props.width || "auto"};
+  max-width: ${(props) => props.width || "inherit"};
   text-align: ${(props) => props.position || "center"};
 
   & + * {

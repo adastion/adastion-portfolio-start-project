@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "../Icons/Icon";
 import styled from "styled-components";
-import { theme } from "../../styles/theme";
+import { theme } from "../../styles/Theme";
 import { Button } from "../Button";
 
 export const Menu = () => {
