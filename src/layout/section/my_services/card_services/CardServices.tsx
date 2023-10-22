@@ -26,8 +26,8 @@ export const CardServices = (props: CardServicesPropsType) => {
         <SectionTitle as={'h3'} size={'18px'} weight={'500'} margin='15px'>
           {props.name}
         </SectionTitle>
-        <Text margin={'0'}>{props.description}</Text>
-        <Button as={'a'} asLink>
+        <Text margin={'12px'}>{props.description}</Text>
+        <Button as={'a'} asLink padding={'0'}>
           {props.addBtn}
         </Button>
       </FlexWrapper>

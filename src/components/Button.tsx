@@ -5,16 +5,17 @@ type ButtonPropsType = {
   circle?: boolean
   asLink?: boolean
   sideBar?: boolean
-  display?: string
+  pseudo?: boolean
   colorBackground?: string
   padding?: string
   width?: string
   height?: string
   font?: string
+  notHover?: string
 }
 
 export const Button = styled.button<ButtonPropsType>`
-  display: ${props=>props.display || 'flex'};
+  display: flex;
   align-items: center;
   justify-content: center;
   background: ${props => props.colorBackground || theme.colors.secondaryBg};
@@ -47,6 +48,7 @@ export const Button = styled.button<ButtonPropsType>`
 
       &:hover {
         background: ${theme.colors.secondaryBg};
+        background: ${props => (props.notHover ? 'none' : theme.colors.secondaryBg)};
 
         svg {
           fill: ${theme.colors.primary};
@@ -73,5 +75,9 @@ export const Button = styled.button<ButtonPropsType>`
         color: ${theme.colors.secondaryBg};
         opacity: 0.7;
       }
+    `}
+
+    ${props=>props.pseudo && css<ButtonPropsType>`
+      
     `}
 `
