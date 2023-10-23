@@ -16,7 +16,7 @@ export const Menu = () => {
         <Icon iconId={'contrast'} boxWidth='30' boxHeight='30' size={'30px'} />
       </Button>
       <FlexWrapper as={'ul'} direction={'column'} align={'center'} gap={'44px'}>
-        <NavItem name={'Home'}>
+        <NavItem name={'home'}>
           <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
             <Icon
               fill={theme.colors.secondary}
@@ -26,7 +26,7 @@ export const Menu = () => {
             />
           </Button>
         </NavItem>
-        <NavItem name={'Services'}>
+        <NavItem name={'services'}>
           <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
             <Icon
               fill={theme.colors.secondary}
@@ -36,7 +36,7 @@ export const Menu = () => {
             />
           </Button>
         </NavItem>
-        <NavItem name={'Cv'}>
+        <NavItem name={'cv'}>
           <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
             <Icon
               fill={theme.colors.secondary}
@@ -46,7 +46,7 @@ export const Menu = () => {
             />
           </Button>
         </NavItem>
-        <NavItem name={'Portfolio'}>
+        <NavItem name={'portfolio'}>
           <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
             <Icon
               fill={theme.colors.secondary}
@@ -56,7 +56,7 @@ export const Menu = () => {
             />
           </Button>
         </NavItem>
-        <NavItem name={'Blog'}>
+        <NavItem name={'blog'}>
           <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
             <Icon
               fill={theme.colors.secondary}
@@ -66,7 +66,7 @@ export const Menu = () => {
             />
           </Button>
         </NavItem>
-        <NavItem name={'Contact'}>
+        <NavItem name={'contact'}>
           <Button colorBackground={theme.colors.pageBg} as='a' circle>
             <Icon
               fill={theme.colors.secondary}
@@ -129,6 +129,7 @@ const NavItem = styled.li<NavItemPropsType>`
     border-radius: 2px;
     padding: 6px;
     z-index: 1;
+    text-transform: capitalize;
   }
 
   &::after {
