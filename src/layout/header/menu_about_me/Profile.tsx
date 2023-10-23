@@ -62,7 +62,11 @@ export const Profile = () => {
           </FlexWrapper>
         </InfoCell>
         <InfoCell profile>
-          <FlexWrapper as={'ul'} direction={'column'} justify={'space-between'} gap={'10px'}>
+          <FlexWrapper
+            as={'ul'}
+            direction={'column'}
+            justify={'space-between'}
+            gap={'10px'}>
             <li>
               <Text margin={'0'} as={'span'}>
                 Age:
@@ -101,7 +105,11 @@ export const Profile = () => {
           <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
             Languages
           </SectionTitle>
-          <FlexWrapper as={'ul'} direction={'column'} justify={'space-between'} gap={'10px'}>
+          <FlexWrapper
+            as={'ul'}
+            direction={'column'}
+            justify={'space-between'}
+            gap={'10px'}>
             <ProgressBar percent='100'>
               <Text margin={'0'} as={'span'}>
                 Bangla
@@ -132,7 +140,11 @@ export const Profile = () => {
           <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
             Skills
           </SectionTitle>
-          <FlexWrapper as={'ul'} direction={'column'} justify={'space-between'} gap={'10px'}>
+          <FlexWrapper
+            as={'ul'}
+            direction={'column'}
+            justify={'space-between'}
+            gap={'10px'}>
             <ProgressBar percent={'90'}>
               <Text margin={'0'} as={'span'}>
                 Html
@@ -179,7 +191,11 @@ export const Profile = () => {
           <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
             Extra Skills
           </SectionTitle>
-          <FlexWrapper as={'ul'} direction={'column'} justify={'space-between'} gap={'10px'}>
+          <FlexWrapper
+            as={'ul'}
+            direction={'column'}
+            justify={'space-between'}
+            gap={'10px'}>
             <li>
               <Icon
                 fill={theme.colors.secondaryBg}
@@ -242,7 +258,7 @@ const ProfileStyled = styled.aside`
     width: 100%;
   }
 
-  & picture + h4 {
+  & ${Picture} + h4 {
     margin-top: 30px;
   }
 `

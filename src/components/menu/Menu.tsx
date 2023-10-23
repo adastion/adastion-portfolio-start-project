@@ -5,6 +5,10 @@ import { theme } from '../../styles/Theme'
 import { Button } from '../Button'
 import { FlexWrapper } from './../FlexWrapper'
 
+type NavItemPropsType = {
+  name: string
+}
+
 export const Menu = () => {
   return (
     <MenuStyled>
@@ -14,30 +18,55 @@ export const Menu = () => {
       <FlexWrapper as={'ul'} direction={'column'} align={'center'} gap={'44px'}>
         <NavItem name={'Home'}>
           <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon fill={theme.colors.secondary} iconId={'home'} boxWidth='16' boxHeight='16' />
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={'home'}
+              boxWidth='16'
+              boxHeight='16'
+            />
           </Button>
         </NavItem>
-        <NavItem name={'services'}>
+        <NavItem name={'Services'}>
           <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon fill={theme.colors.secondary} iconId={'services'} boxWidth='16' boxHeight='16' />
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={'services'}
+              boxWidth='16'
+              boxHeight='16'
+            />
           </Button>
         </NavItem>
-        <NavItem name={'cv'}>
+        <NavItem name={'Cv'}>
           <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon fill={theme.colors.secondary} iconId={'cv'} boxWidth='16' boxHeight='16' />
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={'cv'}
+              boxWidth='16'
+              boxHeight='16'
+            />
           </Button>
         </NavItem>
-        <NavItem name={'portfolio'}>
+        <NavItem name={'Portfolio'}>
           <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon fill={theme.colors.secondary} iconId={'portfolio'} boxWidth='16' boxHeight='16' />
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={'portfolio'}
+              boxWidth='16'
+              boxHeight='16'
+            />
           </Button>
         </NavItem>
-        <NavItem name={'blog'}>
+        <NavItem name={'Blog'}>
           <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon fill={theme.colors.secondary} iconId={'blog'} boxWidth='16' boxHeight='16' />
+            <Icon
+              fill={theme.colors.secondary}
+              iconId={'blog'}
+              boxWidth='16'
+              boxHeight='16'
+            />
           </Button>
         </NavItem>
-        <NavItem name={'contact'}>
+        <NavItem name={'Contact'}>
           <Button colorBackground={theme.colors.pageBg} as='a' circle>
             <Icon
               fill={theme.colors.secondary}
@@ -61,14 +90,10 @@ const MenuStyled = styled.nav`
   padding: 50px 34px 0;
   height: 100vh;
 
-  & ul {
+  ul {
     margin: 174px 0;
   }
 `
-
-type NavItemPropsType = {
-  name: string
-}
 
 const NavItem = styled.li<NavItemPropsType>`
   width: 65px;
@@ -76,10 +101,18 @@ const NavItem = styled.li<NavItemPropsType>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
+  &:hover {
+    &::before,
+    &::after {
+      transform: scale(1);
+    }
+  }
+
   &::before,
   &::after {
-    transition: all .3s;
+    display: inline-block;
+    transition: all 0.3s;
     content: '';
     position: absolute;
     background: ${theme.colors.primary};
@@ -96,10 +129,6 @@ const NavItem = styled.li<NavItemPropsType>`
     border-radius: 2px;
     padding: 6px;
     z-index: 1;
-
-    &::first-letter {
-      text-transform: uppercase;
-    }
   }
 
   &::after {
@@ -108,12 +137,5 @@ const NavItem = styled.li<NavItemPropsType>`
     height: 18px;
     clip-path: polygon(100% 0, 0 0, 50% 100%);
     z-index: 0;
-  }
-
-  &:hover {
-    &::before,
-    &::after {
-      transform: scale(1);
-    }
   }
 `

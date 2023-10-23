@@ -5,7 +5,7 @@ type ButtonPropsType = {
   circle?: boolean
   asLink?: boolean
   sideBar?: boolean
-  pseudo?: boolean
+  btnPrice?: boolean
   colorBackground?: string
   padding?: string
   width?: string
@@ -77,7 +77,19 @@ export const Button = styled.button<ButtonPropsType>`
       }
     `}
 
-    ${props=>props.pseudo && css<ButtonPropsType>`
-      
+    ${props =>
+    props.btnPrice &&
+    css<ButtonPropsType>`
+      padding: 10px 41px;
+      height: 38px;
+      border-radius: 19px;
+      background: ${theme.colors.primaryBg || 'white'};
+      box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+      font-size: 14px;
+      font-weight: 700;
+
+      &:hover {
+        color: ${theme.colors.secondary};
+      }
     `}
 `

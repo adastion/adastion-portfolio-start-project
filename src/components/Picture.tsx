@@ -41,7 +41,9 @@ export const Picture = styled.picture<PicturePropsType>`
         height: 16px;
         border-radius: 50%;
         background: ${props =>
-          props.status === 'active' ? theme.colors.onlineUser : theme.colors.secondary || 'gray'};
+          props.status === 'active'
+            ? theme.colors.onlineUser
+            : theme.colors.secondary || 'gray'};
         z-index: 3;
       }
     `}

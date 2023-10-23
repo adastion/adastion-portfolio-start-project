@@ -44,7 +44,7 @@ const CardServicesStyled = styled.div`
     margin-top: 25px;
   }
 
-  & a:empty {
+  & ${Button}:empty {
     display: none;
   }
 `
