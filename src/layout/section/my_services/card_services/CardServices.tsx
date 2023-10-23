@@ -17,7 +17,7 @@ type CardServicesPropsType = {
 export const CardServices = (props: CardServicesPropsType) => {
   return (
     <CardServicesStyled>
-      <FlexWrapper direction={'column'} align={'center'} padding={'25px'}>
+      <FlexWrapper direction={'column'} align={'center'} padding={'30px 25px 25px'}>
         {props.iconCard !== '' ? (
           <Icon size='74px' iconId={props.iconCard} fill={theme.colors.secondaryBg} />
         ) : (
@@ -26,8 +26,8 @@ export const CardServices = (props: CardServicesPropsType) => {
         <SectionTitle as={'h3'} size={'18px'} weight={'500'} margin='15px'>
           {props.name}
         </SectionTitle>
-        <Text margin={'0'}>{props.description}</Text>
-        <Button as={'a'} asLink>
+        <Text margin={'12px'}>{props.description}</Text>
+        <Button as={'a'} asLink padding={'0'}>
           {props.addBtn}
         </Button>
       </FlexWrapper>
@@ -44,7 +44,7 @@ const CardServicesStyled = styled.div`
     margin-top: 25px;
   }
 
-  & a:empty {
+  & ${Button}:empty {
     display: none;
   }
 `

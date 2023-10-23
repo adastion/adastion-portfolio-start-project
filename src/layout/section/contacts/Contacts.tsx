@@ -1,38 +1,38 @@
-import React from "react";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import styled from "styled-components";
-import { Icon } from "./../../../components/Icons/Icon";
-import { Container } from "../../../components/Container";
+import React from 'react'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import styled from 'styled-components'
+import { Icon } from './../../../components/Icons/Icon'
+import { Container } from '../../../components/Container'
 
 export const Contacts = () => {
   return (
     <FlexWrapper>
       <Container>
-        <FlexWrapper align={"center"} direction={"column"}>
+        <FlexWrapper align={'center'} direction={'column'}>
           <StyledForm>
             <ul>
               <li>
-                <label htmlFor="name">Your Full Name ( Required)</label>
-                <input id="name" type="text" />
+                <label htmlFor='name'>Your Full Name ( Required)</label>
+                <input id='name' type='text' />
               </li>
               <li>
-                <label htmlFor="email">Your Email ( Required)</label>
-                <input id="email" type="email" />
+                <label htmlFor='email'>Your Email ( Required)</label>
+                <input id='email' type='email' />
               </li>
               <li>
-                <label htmlFor="subject">Subject</label>
-                <input id="subject" type="text" />
+                <label htmlFor='subject'>Subject</label>
+                <input id='subject' type='text' />
               </li>
               <li>
-                <label htmlFor="message">Your Message</label>
-                <textarea id="message"></textarea>
+                <label htmlFor='message'>Your Message</label>
+                <textarea id='message'></textarea>
               </li>
             </ul>
-            <button type="submit">send message</button>
+            <button type='submit'>send message</button>
           </StyledForm>
           <ul>
             <li>
-              <Icon iconId={"location"} />
+              <Icon iconId={'location'} />
               <ul>
                 <li>
                   <span>Country:</span>
@@ -49,7 +49,7 @@ export const Contacts = () => {
               </ul>
             </li>
             <li>
-              <Icon iconId={"mail"} />
+              <Icon iconId={'mail'} />
               <ul>
                 <li>
                   <span>Email:</span>
@@ -66,7 +66,7 @@ export const Contacts = () => {
               </ul>
             </li>
             <li>
-              <Icon iconId={"mobile"} />
+              <Icon iconId={'mobile'} />
               <ul>
                 <li>
                   <span>Support services:</span>
@@ -86,8 +86,8 @@ export const Contacts = () => {
         </FlexWrapper>
       </Container>
     </FlexWrapper>
-  );
-};
+  )
+}
 
 const StyledForm = styled.form`
   display: flex;
@@ -97,4 +97,4 @@ const StyledForm = styled.form`
   & ul li {
     display: grid;
   }
-`;
+`

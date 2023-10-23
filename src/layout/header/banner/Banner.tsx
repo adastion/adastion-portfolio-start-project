@@ -21,9 +21,13 @@ export const Banner = () => {
           <SectionTitle margin={'18px'} as={'h1'} size={'48px'} transform>
             <span> Front-end</span> Developer
           </SectionTitle>
-          <Text margin={'25px'} size={'16px'} position={'start'} color={theme.colors.primary}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat
-            lobortis. Natoque rutrum semper sed suspendisse nunc lectus.
+          <Text
+            margin={'25px'}
+            size={'16px'}
+            position={'start'}
+            color={theme.colors.primary}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat
+            placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.
           </Text>
           <Button as={'a'}>
             <span>HIRE ME</span>
@@ -54,11 +58,7 @@ const BannerStyled = styled.section`
     max-width: 424px;
   }
 
-  & picture {
-    /* transform: translateY(4px); */
-  }
-
-  & a:hover {
+  & ${Button}:hover {
     & svg {
       transform: rotate(-45deg);
     }

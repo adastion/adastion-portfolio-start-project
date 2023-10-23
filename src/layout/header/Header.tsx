@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Banner } from "./banner/Banner";
-import { Container } from "./../../components/Container";
+import React from 'react'
+import styled from 'styled-components'
+import { Banner } from './banner/Banner'
+import { Container } from './../../components/Container'
 
 export function Header() {
   return (
@@ -10,7 +10,7 @@ export function Header() {
         <Banner />
       </Container>
     </StyledHeader>
-  );
+  )
 }
 
 const StyledHeader = styled.header`
@@ -20,4 +20,4 @@ const StyledHeader = styled.header`
   & + * {
     margin-top: 138px;
   }
-`; 
+`

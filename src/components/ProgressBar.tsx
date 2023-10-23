@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { theme } from "../styles/Theme";
+import styled from 'styled-components'
+import { theme } from '../styles/Theme'
 
 type ProgressBarPropsType = {
-  percent: string;
+  percent: string
 }
 
 export const ProgressBar = styled.li<ProgressBarPropsType>`
@@ -10,7 +10,7 @@ export const ProgressBar = styled.li<ProgressBarPropsType>`
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     border-radius: 3px;
     width: 100%;
@@ -27,9 +27,9 @@ export const ProgressBar = styled.li<ProgressBarPropsType>`
   &::after {
     bottom: -4px;
     left: 1px;
-    width: calc(${props=>props.percent || '1'}% - 1%);
+    width: calc(${props => props.percent || '1'}% - 1%);
     height: 2px;
     background: ${theme.colors.secondaryBg};
     border-radius: 3px;
   }
-`;
+`

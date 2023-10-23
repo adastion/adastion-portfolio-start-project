@@ -28,3 +28,54 @@ export const Icon = (props: IconPropsTypes) => {
         </svg>
     );
 };
+
+
+///////////
+
+export const Search = () => {
+  return (
+    <SearchStyled>
+      <label hidden htmlFor='headerSearch'>
+        label для демонстрации
+      </label>
+      <input id='headerSearch' type='search' placeholder='Поиск' />
+      <Icon iconId={'contrast'} size='15px' fill='white' />
+    </SearchStyled>
+  )
+}
+
+const SearchStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+
+  position: relative;
+
+  & input {
+    background: #141467;
+    color: white;
+    padding: 5px;
+    padding-left: 30px;
+
+    border-radius: 20px;
+
+    &:focus {
+
+      & + svg {
+        display: none;
+      }
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+
+  & svg {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+`

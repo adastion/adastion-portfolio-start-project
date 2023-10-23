@@ -14,8 +14,8 @@ export const MyServices = () => {
         <FlexWrapper align='center' direction='column'>
           <SectionTitle>My services</SectionTitle>
           <Text width={theme.widthText}>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-            consequat duis enim velit mollit. lorem ipsum
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+            Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
           <GridWrap>
             <CardServices

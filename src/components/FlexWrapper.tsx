@@ -10,7 +10,6 @@ type FlexWrapperPropsType = {
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
-  height: 100%;
   display: flex;
   flex-direction: ${props => props.direction || 'row'};
   align-items: ${props => props.align || 'strech'};

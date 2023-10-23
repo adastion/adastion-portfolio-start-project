@@ -1,17 +1,18 @@
-import styled, { css } from "styled-components";
-import { theme } from "../styles/Theme";
+import styled, { css } from 'styled-components'
+import { theme } from '../styles/Theme'
 
 type InfoCellPropsType = {
-  profile?: boolean;
-  justify?: string;
-};
+  profile?: boolean
+  justify?: string
+}
+
 export const InfoCell = styled.section<InfoCellPropsType>`
   padding: 25px 0;
   border-bottom: 2px solid ${theme.colors.lineTable};
 
   & ul li {
     display: flex;
-    justify-content: ${(props) => props.justify || "space-between"};
+    justify-content: ${props => props.justify || 'space-between'};
     align-items: center;
     gap: 12px;
   }
@@ -20,7 +21,7 @@ export const InfoCell = styled.section<InfoCellPropsType>`
     margin-top: 25px;
   }
 
-  ${(props) =>
+  ${props =>
     props.profile &&
     css<InfoCellPropsType>`
       & ul li {
@@ -38,4 +39,4 @@ export const InfoCell = styled.section<InfoCellPropsType>`
         }
       }
     `}
-`;
+`
