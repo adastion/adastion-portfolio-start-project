@@ -18,7 +18,7 @@ export const Profile = () => {
       <FlexWrapper direction={'column'} align={'stretch'}>
         <InfoCell>
           <FlexWrapper direction='column' align='center'>
-            <Picture avatar width={'150px'} height={'150px'}>
+            <Picture status={'active'} avatar width={'150px'} height={'150px'}>
               <source srcSet={avatarProfileWebp} type='image/webp' />
               <source srcSet={avatarProfile} type='image/png' />
               <img src={avatarProfile} alt='avatar' />
@@ -258,7 +258,9 @@ const ProfileStyled = styled.aside`
     width: 100%;
   }
 
-  & ${Picture} + h4 {
-    margin-top: 30px;
+  & ${Picture} {
+    & + h4 {
+      margin-top: 30px;
+    }
   }
 `

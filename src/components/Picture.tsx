@@ -31,11 +31,17 @@ export const Picture = styled.picture<PicturePropsType>`
     css<PicturePropsType>`
       position: relative;
       z-index: 0;
+      overflow: visible;
+
+      & img {
+        overflow: hidden;
+        border-radius: 50%;
+      }
 
       &::after {
         content: '';
         position: absolute;
-        right: 18px;
+        right: 10px;
         bottom: 18px;
         width: 16px;
         height: 16px;

@@ -18,13 +18,12 @@ const cardListRecommendation = [
     nameIcon: 'star',
     title: 'Amazing work!',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....',
+      'Lorem ipsum dolor sit amet, ac dictum a urna viverra morbi. Morbi donec amet....',
   },
   {
     nameIcon: 'star',
     title: 'Great',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisc Morbi donec amet....',
   },
 ]
 
@@ -38,7 +37,7 @@ export const Recommendations = () => {
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
-          <FlexWrapper wrap={'wrap'} align={'center'} gap={theme.gapCard}>
+          <FlexWrapper wrap={'wrap'} gap={theme.gapCard}>
             {cardListRecommendation.map((card, index) => (
               <CardRecommendation
                 indexCard={index}
