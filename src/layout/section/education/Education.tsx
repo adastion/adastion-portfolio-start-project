@@ -48,7 +48,7 @@ export const Education = () => {
   )
 }
 
-const EducationStyled = styled.div`
+const EducationStyled = styled.section`
   & ul {
     padding: 42px 32px;
     width: 100%;

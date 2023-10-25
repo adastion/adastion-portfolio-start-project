@@ -48,7 +48,7 @@ export const WorkHistory = () => {
   )
 }
 
-const WorkHistoryStyled = styled.div`
+const WorkHistoryStyled = styled.section`
   & ul {
     padding: 42px 32px;
     width: 100%;

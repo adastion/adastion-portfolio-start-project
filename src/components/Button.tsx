@@ -30,7 +30,8 @@ export const Button = styled.button<ButtonPropsType>`
     margin-right: 10px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: ${theme.colors.primaryBg};
 
     & svg {
