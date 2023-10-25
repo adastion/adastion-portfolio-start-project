@@ -6,14 +6,24 @@ import { Text } from '../../../components/Text'
 import { theme } from '../../../styles/Theme'
 import { Button } from '../../../components/Button'
 import portfolioPicPreview_1 from '../../../assets/images/portfolio_1.jpg'
+import portfolioPicPreviewWebp_1 from '../../../assets/images/portfolio_1.webp'
 import portfolioPicPreview_2 from '../../../assets/images/portfolio_2.jpg'
+import portfolioPicPreviewWebp_2 from '../../../assets/images/portfolio_2.webp'
 import portfolioPicPreview_3 from '../../../assets/images/portfolio_3.jpg'
+import portfolioPicPreviewWebp_3 from '../../../assets/images/portfolio_3.webp'
 import portfolioPicPreview_4 from '../../../assets/images/portfolio_4.jpg'
+import portfolioPicPreviewWebp_4 from '../../../assets/images/portfolio_4.webp'
 import portfolioPicPreview_5 from '../../../assets/images/portfolio_5.jpg'
+import portfolioPicPreviewWebp_5 from '../../../assets/images/portfolio_5.webp'
 import portfolioPicPreview_6 from '../../../assets/images/portfolio_6.jpg'
+import portfolioPicPreviewWebp_6 from '../../../assets/images/portfolio_6.webp'
 import portfolioPicPreview_7 from '../../../assets/images/portfolio_7.jpg'
+import portfolioPicPreviewWebp_7 from '../../../assets/images/portfolio_7.webp'
 import portfolioPicPreview_8 from '../../../assets/images/portfolio_8.jpg'
+import portfolioPicPreviewWebp_8 from '../../../assets/images/portfolio_8.webp'
 import portfolioPicPreview_9 from '../../../assets/images/portfolio_9.jpg'
+import portfolioPicPreviewWebp_9 from '../../../assets/images/portfolio_9.webp'
+import { Picture } from '../../../components/Picture'
 
 export const Portfolio = () => {
   return (
@@ -48,47 +58,74 @@ export const Portfolio = () => {
             <GridWrapper as={'ul'}>
               <li>
                 <a href='#l'>
-                  <img src={portfolioPicPreview_1} alt='portfolio' />
+                  <Picture>
+                    <source srcSet={portfolioPicPreviewWebp_1} />
+                    <img src={portfolioPicPreview_1} alt='portfolio' />
+                  </Picture>
                 </a>
               </li>
               <li>
                 <a href='#l'>
-                  <img src={portfolioPicPreview_2} alt='portfolio' />
+                  <Picture>
+                    <source srcSet={portfolioPicPreviewWebp_2} />
+                    <img src={portfolioPicPreview_2} alt='portfolio' />
+                  </Picture>
                 </a>
               </li>
               <li>
                 <a href='#l'>
-                  <img src={portfolioPicPreview_3} alt='portfolio' />
+                  <Picture>
+                    <source srcSet={portfolioPicPreviewWebp_3} />
+                    <img src={portfolioPicPreview_3} alt='portfolio' />
+                  </Picture>
                 </a>
               </li>
               <li>
                 <a href='#l'>
-                  <img src={portfolioPicPreview_4} alt='portfolio' />
+                  <Picture>
+                    <source srcSet={portfolioPicPreviewWebp_4} />
+                    <img src={portfolioPicPreview_4} alt='portfolio' />
+                  </Picture>
                 </a>
               </li>
               <li>
                 <a href='#l'>
-                  <img src={portfolioPicPreview_5} alt='portfolio' />
+                  <Picture>
+                    <source srcSet={portfolioPicPreviewWebp_5} />
+                    <img src={portfolioPicPreview_5} alt='portfolio' />
+                  </Picture>
                 </a>
               </li>
               <li>
                 <a href='#l'>
-                  <img src={portfolioPicPreview_6} alt='portfolio' />
+                  <Picture>
+                    <source srcSet={portfolioPicPreviewWebp_6} />
+                    <img src={portfolioPicPreview_6} alt='portfolio' />
+                  </Picture>
                 </a>
               </li>
               <li>
                 <a href='#l'>
-                  <img src={portfolioPicPreview_7} alt='portfolio' />
+                  <Picture>
+                    <source srcSet={portfolioPicPreviewWebp_7} />
+                    <img src={portfolioPicPreview_7} alt='portfolio' />
+                  </Picture>
                 </a>
               </li>
               <li>
                 <a href='#l'>
-                  <img src={portfolioPicPreview_8} alt='portfolio' />
+                  <Picture>
+                    <source srcSet={portfolioPicPreviewWebp_8} />
+                    <img src={portfolioPicPreview_8} alt='portfolio' />
+                  </Picture>
                 </a>
               </li>
               <li>
                 <a href='#l'>
-                  <img src={portfolioPicPreview_9} alt='portfolio' />
+                  <Picture>
+                    <source srcSet={portfolioPicPreviewWebp_9} />
+                    <img src={portfolioPicPreview_9} alt='portfolio' />
+                  </Picture>
                 </a>
               </li>
             </GridWrapper>
