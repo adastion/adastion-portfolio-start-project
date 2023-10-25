@@ -112,7 +112,7 @@ const NavItem = styled.li<NavItemPropsType>`
   &::before,
   &::after {
     display: inline-block;
-    transition: all 0.3s;
+
     content: '';
     position: absolute;
     background: ${theme.colors.primary};
