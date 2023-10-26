@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
@@ -30,8 +30,7 @@ ol, ul, menu {
 }
 
 img {
-    max-inline-size: 100%;
-    max-block-size: 100%;
+    max-width: 100%;
 }
 
 table {
@@ -89,4 +88,4 @@ meter {
 :where(dialog:modal) {
     all: revert;
 }
-`;
+`
