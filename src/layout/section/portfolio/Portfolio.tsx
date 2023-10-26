@@ -185,22 +185,36 @@ const GridWrapper = styled.div`
     position: relative;
     z-index: 0;
 
-    &::before {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &::before {
       top: 0;
       right: 0;
       left: 0;
       bottom: 0;
       width: 100%;
       background: ${theme.colors.secondaryBg};
-      opacity: 0;
-      z-index: -1;
+    }
+
+    &::after {
+      content: '+';
+      font-size: 85px;
+      line-height: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     &:hover,
     &:focus-visible {
-      &::before {
+      &::before,
+      &::after {
         transition: all 0.3s ease-in-out;
         z-index: 1;
         opacity: 0.9;
