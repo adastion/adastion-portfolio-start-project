@@ -68,10 +68,21 @@ export const Contacts = () => {
           </ContactsItem>
           <ContactsItem>
             <SectionTitle margin={'50px'}>Contact information</SectionTitle>
-            <ul>
+            <FlexWrapper
+              as={'ul'}
+              direction={'column'}
+              gap={'18px'}
+              justify={'space-between'}>
               <CardContacts>
-                <Icon iconId={'location'} />
-                <ul>
+                <Button as={'div'} circle>
+                  <Icon
+                    iconId={'location'}
+                    boxWidth={'18px'}
+                    boxHeight={'18px'}
+                    size={'18'}
+                  />
+                </Button>
+                <FlexWrapper direction={'column'} gap={'25px'}>
                   <li>
                     <span>Country:</span>
                     <span>Bangladesh</span>
@@ -84,43 +95,57 @@ export const Contacts = () => {
                     <span>Streat:</span>
                     <span>35 vhatara, Badda</span>
                   </li>
-                </ul>
+                </FlexWrapper>
               </CardContacts>
               <CardContacts>
-                <Icon iconId={'mail'} />
-                <ul>
+                <Button as={'div'} circle>
+                  <Icon
+                    iconId={'mail'}
+                    boxWidth={'18px'}
+                    boxHeight={'18px'}
+                    size={'18'}
+                  />
+                </Button>
+                <FlexWrapper direction={'column'} gap={'25px'}>
                   <li>
                     <span>Email:</span>
                     <span>youremail@gmail.com</span>
                   </li>
                   <li>
                     <span>Skype:</span>
-                    <span>@yourusername</span>
+                    <a href='mailto:@yourusername'>@yourusername</a>
                   </li>
                   <li>
                     <span>Telegram:</span>
-                    <span>@yourusername</span>
+                    <a href='mailto:@yourusername'>@yourusername</a>
                   </li>
-                </ul>
+                </FlexWrapper>
               </CardContacts>
               <CardContacts>
-                <Icon iconId={'mobile'} />
-                <ul>
+                <Button as={'div'} circle>
+                  <Icon
+                    iconId={'mobile'}
+                    boxWidth={'18px'}
+                    boxHeight={'18px'}
+                    size={'18'}
+                  />
+                </Button>
+                <FlexWrapper direction={'column'} gap={'25px'}>
                   <li>
                     <span>Support services:</span>
                     <span>15369</span>
                   </li>
                   <li>
                     <span>Office:</span>
-                    <span>+58 (021)356 587 235</span>
+                    <a href='tel:+58021356587235'>+58 (021)356 587 235</a>
                   </li>
                   <li>
                     <span>Personal:</span>
-                    <span>+58 (021)356 587 235</span>
+                    <a href='tel:+58021356587235'>+58 (021)356 587 235</a>
                   </li>
-                </ul>
+                </FlexWrapper>
               </CardContacts>
-            </ul>
+            </FlexWrapper>
           </ContactsItem>
         </FlexWrapper>
       </Container>
@@ -129,6 +154,8 @@ export const Contacts = () => {
 }
 
 const ContactsItem = styled.section`
+  min-height: 100%;
+
   &:first-child {
     flex-grow: 1;
   }
@@ -175,5 +202,19 @@ const StyledForm = styled.form`
 `
 
 const CardContacts = styled.li`
-  
+  background: ${theme.colors.primaryBg};
+  padding: 25px 15px;
+
+  & ${Button} {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  & li {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 15px;
+    color: ${theme.colors.secondary};
+  }
 `
