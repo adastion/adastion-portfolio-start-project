@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { theme } from '../../styles/Theme'
 import { SectionTitle } from '../SectionTitle'
-import { Text } from './../../components/Text'
+import { Text } from '../Text'
 
 type TablePropsType = {
   title: string

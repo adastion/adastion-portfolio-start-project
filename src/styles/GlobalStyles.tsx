@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { theme } from './Theme'
 
 export const GlobalStyles = createGlobalStyle`
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {

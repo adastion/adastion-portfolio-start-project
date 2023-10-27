@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { SectionTitle } from '../../../components/SectionTitle'
-import { Table } from '../../../components/Table/Table'
+import { Table } from '../../../components/table/Table'
 import { Text } from '../../../components/Text'
 import { theme } from '../../../styles/Theme'
 

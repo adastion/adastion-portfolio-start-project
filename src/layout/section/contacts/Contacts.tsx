@@ -1,15 +1,15 @@
-import React from 'react'
-import { FlexWrapper } from '../../../components/FlexWrapper'
 import styled from 'styled-components'
-import { Icon } from './../../../components/Icons/Icon'
 import { Container } from '../../../components/Container'
-import { SectionTitle } from './../../../components/SectionTitle'
+import { FlexWrapper } from '../../../components/FlexWrapper'
 import { theme } from '../../../styles/Theme'
 import { Button } from './../../../components/Button'
+import { Icon } from './../../../components/Icons/Icon'
+import { SectionTitle } from './../../../components/SectionTitle'
+import { MapContainer } from '../../../components/yandex_map/MapContainer'
 
 export const Contacts = () => {
   return (
-    <FlexWrapper>
+    <ContactsStyled>
       <Container>
         <FlexWrapper gap={'30px'} justify={'space-between'}>
           <ContactsItem>
@@ -71,7 +71,7 @@ export const Contacts = () => {
             <FlexWrapper
               as={'ul'}
               direction={'column'}
-              gap={'18px'}
+              gap={'22px'}
               justify={'space-between'}>
               <CardContacts>
                 <Button as={'div'} circle>
@@ -82,7 +82,7 @@ export const Contacts = () => {
                     size={'18'}
                   />
                 </Button>
-                <FlexWrapper direction={'column'} gap={'25px'}>
+                <FlexWrapper direction={'column'} gap={'16px'}>
                   <li>
                     <span>Country:</span>
                     <span>Bangladesh</span>
@@ -113,11 +113,11 @@ export const Contacts = () => {
                   </li>
                   <li>
                     <span>Skype:</span>
-                    <a href='mailto:@yourusername'>@yourusername</a>
+                    <a href='mailto:user@yourusername.com'>user@yourusername.com</a>
                   </li>
                   <li>
                     <span>Telegram:</span>
-                    <a href='mailto:@yourusername'>@yourusername</a>
+                    <a href='mailto:user@yourusername.com'>user@yourusername.com</a>
                   </li>
                 </FlexWrapper>
               </CardContacts>
@@ -148,14 +148,15 @@ export const Contacts = () => {
             </FlexWrapper>
           </ContactsItem>
         </FlexWrapper>
+        {/* <MapContainer /> */}
       </Container>
-    </FlexWrapper>
+    </ContactsStyled>
   )
 }
 
-const ContactsItem = styled.section`
-  min-height: 100%;
+const ContactsStyled = styled.section``
 
+const ContactsItem = styled.section`
   &:first-child {
     flex-grow: 1;
   }
@@ -203,7 +204,7 @@ const StyledForm = styled.form`
 
 const CardContacts = styled.li`
   background: ${theme.colors.primaryBg};
-  padding: 25px 15px;
+  padding: 25px 25px 16px;
 
   & ${Button} {
     margin: 0 auto;

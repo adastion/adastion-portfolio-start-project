@@ -17,7 +17,7 @@ function App() {
         <Main />
         <Container>
           <FooterStyled>
-            <Icon iconId={'copyright'} />
+            <Icon size={'24px'} iconId={'copyright'} />
             <small>2021 All Rights Reserved.Ojjomedia</small>
           </FooterStyled>
         </Container>
