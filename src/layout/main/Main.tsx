@@ -18,8 +18,8 @@ export const Main = () => {
     <MainStyled>
       <MyServices />
       <PricePlans />
-      {/* <Recommendations />
-      <Education />
+      <Recommendations />
+      {/* <Education />
       <WorkHistory />
       <Portfolio />
       <Blog />

@@ -37,7 +37,7 @@ export const Recommendations = () => {
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
-          <FlexWrapper as={'ul'} wrap={'wrap'} gap={theme.gapCard}>
+          <FlexWrapper as={'ul'} gap={theme.gapCard}>
             {cardListRecommendation.map((card, index) => (
               <CardRecommendation
                 indexCard={index}
@@ -53,4 +53,23 @@ export const Recommendations = () => {
   )
 }
 
-const RecommendationsStyled = styled.section``
+const RecommendationsStyled = styled.section`
+  & ul {
+    width: 100%;
+    overflow-x: auto;
+    max-width: 970px;
+
+    & li {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+
+    @media ${theme.media.tablet} {
+      max-width: 576px;
+    }
+
+    @media ${theme.media.mobile} {
+      max-width: 340px;
+    }
+  }
+`
