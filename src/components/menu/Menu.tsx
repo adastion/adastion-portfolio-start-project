@@ -93,7 +93,7 @@ const MenuStyled = styled.nav`
     margin: 174px 0;
   }
 
-  @media ${theme.media.desktop} {
+  @media ${theme.media.bigDesktop} {
     position: absolute;
     left: -110vw;
   }

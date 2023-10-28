@@ -1,11 +1,10 @@
-import React from 'react'
-import { FlexWrapper } from '../../../../components/FlexWrapper'
-import { Text } from '../../../../components/Text'
 import styled, { css } from 'styled-components'
+import { Button } from '../../../../components/Button'
+import { FlexWrapper } from '../../../../components/FlexWrapper'
 import { SectionTitle } from '../../../../components/SectionTitle'
+import { Text } from '../../../../components/Text'
 import { theme } from '../../../../styles/Theme'
 import { Icon } from './../../../../components/Icons/Icon'
-import { Button } from '../../../../components/Button'
 
 type CardPricePropsType = {
   title: string
@@ -74,7 +73,7 @@ export const CardPrice = (props: CardPricePropsType) => {
   )
 }
 
-const CardPriceStyled = styled.div<CardPriceStyledPropsType>`
+const CardPriceStyled = styled.li<CardPriceStyledPropsType>`
   max-width: 310px;
   padding: 54px 31px 24px;
   background: ${theme.colors.primaryBg};
