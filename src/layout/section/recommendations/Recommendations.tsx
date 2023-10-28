@@ -37,7 +37,7 @@ export const Recommendations = () => {
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
-          <FlexWrapper wrap={'wrap'} gap={theme.gapCard}>
+          <FlexWrapper as={'ul'} wrap={'wrap'} gap={theme.gapCard}>
             {cardListRecommendation.map((card, index) => (
               <CardRecommendation
                 indexCard={index}

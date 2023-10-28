@@ -72,7 +72,7 @@ export const CardRecommendation = (props: CardRecommendationPropdType) => {
   )
 }
 
-const CardRecommendationStyled = styled.div`
+const CardRecommendationStyled = styled.li`
   display: grid;
   max-width: 310px;
   background: ${theme.colors.primaryBg};

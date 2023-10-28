@@ -88,7 +88,7 @@ const MenuStyled = styled.nav`
   align-items: center;
   background: ${theme.colors.primaryBg};
   padding: 50px 34px 0;
-  height: 100vh;
+  height: 100%;
 
   ul {
     margin: 174px 0;
