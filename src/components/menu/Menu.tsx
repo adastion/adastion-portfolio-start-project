@@ -1,8 +1,7 @@
-import React from 'react'
-import { Icon } from '../Icons/Icon'
 import styled from 'styled-components'
 import { theme } from '../../styles/Theme'
 import { Button } from '../Button'
+import { Icon } from '../Icons/Icon'
 import { FlexWrapper } from './../FlexWrapper'
 
 type NavItemPropsType = {
@@ -96,7 +95,7 @@ const MenuStyled = styled.nav`
 
   @media ${theme.media.desktop} {
     position: absolute;
-    right: -110vw;
+    left: -110vw;
   }
 `
 

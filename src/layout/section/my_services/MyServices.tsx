@@ -61,7 +61,7 @@ export const MyServices = () => {
 const GridWrap = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: ${theme.gapCard};
   align-items: center;
   justify-items: center;

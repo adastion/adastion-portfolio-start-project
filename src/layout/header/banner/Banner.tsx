@@ -16,7 +16,7 @@ export const Banner = () => {
       <button>
         <span></span>
       </button>
-      <FlexWrapper gap={'10px'} justify={'space-between'} align={'center'}>
+      <FlexWrapper gap={'30px 10px'} justify={'space-between'} align={'center'}>
         <FlexWrapper direction={'column'} align={'start'} padding={'25px'}>
           <SectionTitle margin={'2px'} size={'48px'} transform>
             I’m Rayan Adlrdard

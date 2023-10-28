@@ -14,8 +14,8 @@ function App() {
       <Profile />
       <Container main>
         <Header />
-        {/* <Main />
-        <Container>
+        <Main />
+        {/* <Container>
           <FooterStyled>
             <Icon size={'24px'} iconId={'copyright'} />
             <small>2021 All Rights Reserved.Ojjomedia</small>
@@ -34,4 +34,8 @@ const AppStyled = styled.div`
   background: ${theme.colors.pageBg};
   display: flex;
   gap: 15px;
+
+  @media ${theme.media.mobile} {
+    padding: 0 15px;
+  }
 `

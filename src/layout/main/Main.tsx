@@ -17,7 +17,7 @@ export const Main = () => {
   return (
     <MainStyled>
       <MyServices />
-      <PricePlans />
+      {/* <PricePlans />
       <Recommendations />
       <Education />
       <WorkHistory />
@@ -47,7 +47,7 @@ export const Main = () => {
             />
           </li>
         </FlexWrapper>
-      </Container>
+      </Container> */}
     </MainStyled>
   )
 }
