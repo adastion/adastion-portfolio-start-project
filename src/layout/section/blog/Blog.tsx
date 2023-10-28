@@ -1,18 +1,17 @@
-import React from 'react'
-import { FlexWrapper } from '../../../components/FlexWrapper'
-import { SectionTitle } from '../../../components/SectionTitle'
-import { Text } from '../../../components/Text'
-import { Container } from '../../../components/Container'
 import styled from 'styled-components'
-import { theme } from '../../../styles/Theme'
-import { Button } from '../../../components/Button'
-import { Picture } from './../../../components/Picture'
 import PicPreview_1 from '../../../assets/images/portfolio_1.jpg'
 import PicPreview_1Webp from '../../../assets/images/portfolio_1.webp'
 import PicPreview_2 from '../../../assets/images/portfolio_2.jpg'
 import PicPreview_2Webp from '../../../assets/images/portfolio_2.webp'
 import PicPreview_3 from '../../../assets/images/portfolio_3.jpg'
 import PicPreview_3Webp from '../../../assets/images/portfolio_3.webp'
+import { Button } from '../../../components/Button'
+import { Container } from '../../../components/Container'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import { SectionTitle } from '../../../components/SectionTitle'
+import { Text } from '../../../components/Text'
+import { theme } from '../../../styles/Theme'
+import { Picture } from './../../../components/Picture'
 
 export const Blog = () => {
   return (
@@ -89,16 +88,22 @@ export const Blog = () => {
 const BlogStyled = styled.section`
   & ul {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, auto));
     gap: 20px;
+    overflow-x: auto;
+
+    @media ${theme.media.mobile} {
+      max-width: 340px;
+    }
   }
 `
 
 const CardBlog = styled.li`
+  max-width: 310px;
   display: flex;
   flex-direction: column;
   background-color: ${theme.colors.primaryBg};
+  flex-grow: 1;
+  flex-shrink: 0;
 
   & img {
     aspect-ratio: 1/0.971;

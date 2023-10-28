@@ -21,9 +21,9 @@ export const Main = () => {
       <Recommendations />
       <Education />
       <WorkHistory />
-      {/* <Portfolio />
+      <Portfolio />
       <Blog />
-      <Contacts />
+      {/* <Contacts />
       <Container>
         <FlexWrapper
           as={'ul'}
