@@ -19,8 +19,8 @@ export const Main = () => {
       <MyServices />
       <PricePlans />
       <Recommendations />
-      {/* <Education />
-      <WorkHistory />
+      <Education />
+      {/* <WorkHistory />
       <Portfolio />
       <Blog />
       <Contacts />

@@ -53,5 +53,9 @@ const EducationStyled = styled.section`
     padding: 42px 32px;
     width: 100%;
     background: ${theme.colors.primaryBg};
+
+    @media ${theme.media.mobile} {
+      max-width: 340px;
+    }
   }
 `

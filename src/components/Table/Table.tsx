@@ -36,7 +36,6 @@ export const Table = (props: TablePropsType) => {
 
 const TableStyled = styled.li`
   display: grid;
-  grid-template-columns: 2fr 3fr;
   grid-template-columns: repeat(auto-fit, minmax(310px, auto));
   gap: 20px;
   justify-content: center;
@@ -60,5 +59,9 @@ const TableStyled = styled.li`
     background: ${theme.colors.secondaryBg};
     padding: 4px 7px;
     margin-left: 20px;
+  }
+
+  @media ${theme.media.mobile} {
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
   }
 `
