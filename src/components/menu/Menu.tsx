@@ -90,8 +90,13 @@ const MenuStyled = styled.nav`
   padding: 50px 34px 0;
   height: 100%;
 
-  ul {
+  & ul {
     margin: 174px 0;
+  }
+
+  @media ${theme.media.desktop} {
+    position: absolute;
+    right: -110vw;
   }
 `
 

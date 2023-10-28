@@ -13,7 +13,7 @@ import { Picture } from '../../../components/Picture'
 export const Banner = () => {
   return (
     <BannerStyled>
-      <FlexWrapper gap={'10px'} justify={'center'} align={'center'}>
+      <FlexWrapper gap={'10px'} justify={'space-between'} align={'center'}>
         <FlexWrapper direction={'column'} align={'start'} padding={'25px'}>
           <SectionTitle margin={'2px'} size={'48px'} transform>
             I’m Rayan Adlrdard
@@ -48,6 +48,16 @@ const BannerStyled = styled.section`
   background: ${theme.colors.primaryBg || '#F0F0F6'};
   color: ${theme.colors.primary};
 
+  & > ${FlexWrapper} {
+    & > ${FlexWrapper} {
+      flex-shrink: 30;
+    }
+
+    & ${Picture} {
+      align-self: end;
+    }
+  }
+
   & h1 {
     & span {
       color: ${theme.colors.secondaryBg};
@@ -61,6 +71,28 @@ const BannerStyled = styled.section`
   & ${Button}:hover {
     & svg {
       transform: rotate(-45deg);
+    }
+  }
+
+  @media ${theme.media.mobile} {
+    & > ${FlexWrapper} {
+      flex-direction: column;
+
+      & > ${FlexWrapper} {
+        padding: 32px;
+      }
+
+      & ${Picture} {
+        align-self: auto;
+      }
+    }
+
+    & ${Text} {
+      margin-top: 90px;
+    }
+
+    & ${Button} {
+      margin-top: 34px;
     }
   }
 `

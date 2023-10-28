@@ -1,15 +1,16 @@
-import styled from 'styled-components'
-import { Button } from '../../../components/Button'
-import { Icon } from '../../../components/Icons/Icon'
-import { InfoCell } from '../../../components/InfoCell'
-import { Picture } from '../../../components/Picture'
-import { ProgressBar } from '../../../components/ProgressBar'
-import { theme } from '../../../styles/Theme'
+import React from 'react'
 import avatarProfile from './../../../assets/images/avatar_profile.jpg'
 import avatarProfileWebp from './../../../assets/images/avatar_profile.webp'
+import { Icon } from '../../../components/Icons/Icon'
+import { Button } from '../../../components/Button'
+import styled from 'styled-components'
+import { theme } from '../../../styles/Theme'
 import { FlexWrapper } from './../../../components/FlexWrapper'
 import { SectionTitle } from './../../../components/SectionTitle'
 import { Text } from './../../../components/Text'
+import { InfoCell } from '../../../components/InfoCell'
+import { Picture } from '../../../components/Picture'
+import { ProgressBar } from '../../../components/ProgressBar'
 
 export const Profile = () => {
   return (
@@ -261,5 +262,10 @@ const ProfileStyled = styled.aside`
     & + h4 {
       margin-top: 30px;
     }
+  }
+
+  @media ${theme.media.bigDesktop} {
+    position: absolute;
+    left: -110vw;
   }
 `

@@ -1,11 +1,11 @@
-import { Header } from './layout/header/Header'
-import { Main } from './layout/main/Main'
+import styled from 'styled-components'
+import { Container } from './components/Container'
 import { FooterStyled } from './components/FooterStyled'
 import { Icon } from './components/Icons/Icon'
-import styled from 'styled-components'
 import { Menu } from './components/menu/Menu'
+import { Header } from './layout/header/Header'
 import { Profile } from './layout/header/menu_about_me/Profile'
-import { Container } from './components/Container'
+import { Main } from './layout/main/Main'
 import { theme } from './styles/Theme'
 
 function App() {
@@ -14,13 +14,13 @@ function App() {
       <Profile />
       <Container main>
         <Header />
-        <Main />
+        {/* <Main />
         <Container>
           <FooterStyled>
             <Icon size={'24px'} iconId={'copyright'} />
             <small>2021 All Rights Reserved.Ojjomedia</small>
           </FooterStyled>
-        </Container>
+        </Container> */}
       </Container>
       <Menu />
     </AppStyled>
@@ -30,6 +30,7 @@ function App() {
 export default App
 
 const AppStyled = styled.div`
+  min-width: 375px;
   background: ${theme.colors.pageBg};
   display: flex;
   gap: 15px;
