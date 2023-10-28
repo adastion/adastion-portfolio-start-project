@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { SectionTitle } from '../../../components/SectionTitle'
-import { Table } from '../../../components/table/Table'
 import { Text } from '../../../components/Text'
+import { Table } from '../../../components/table/Table'
 import { theme } from '../../../styles/Theme'
 
 export const WorkHistory = () => {
@@ -53,5 +53,9 @@ const WorkHistoryStyled = styled.section`
     padding: 42px 32px;
     width: 100%;
     background: ${theme.colors.primaryBg};
+
+    @media ${theme.media.mobile} {
+      max-width: 340px;
+    }
   }
 `

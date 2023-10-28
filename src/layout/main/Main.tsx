@@ -20,8 +20,8 @@ export const Main = () => {
       <PricePlans />
       <Recommendations />
       <Education />
-      {/* <WorkHistory />
-      <Portfolio />
+      <WorkHistory />
+      {/* <Portfolio />
       <Blog />
       <Contacts />
       <Container>
