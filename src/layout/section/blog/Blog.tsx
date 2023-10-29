@@ -27,7 +27,7 @@ export const Blog = () => {
             <CardBlog>
               <Picture>
                 <source srcSet={PicPreview_1Webp} />
-                <img src={PicPreview_1} alt='preview' />
+                <img loading='lazy' src={PicPreview_1} alt='preview' />
               </Picture>
               <div>
                 <SectionTitle as={'h4'} size={'18px'} margin={'8px'}>
@@ -45,7 +45,7 @@ export const Blog = () => {
             <CardBlog>
               <Picture>
                 <source srcSet={PicPreview_2Webp} />
-                <img src={PicPreview_2} alt='preview' />
+                <img loading='lazy' src={PicPreview_2} alt='preview' />
               </Picture>
               <div>
                 <SectionTitle as={'h4'} size={'18px'} margin={'8px'}>
@@ -63,7 +63,7 @@ export const Blog = () => {
             <CardBlog>
               <Picture>
                 <source srcSet={PicPreview_3Webp} />
-                <img src={PicPreview_3} alt='preview' />
+                <img loading='lazy' src={PicPreview_3} alt='preview' />
               </Picture>
               <div>
                 <SectionTitle as={'h4'} size={'18px'} margin={'8px'}>

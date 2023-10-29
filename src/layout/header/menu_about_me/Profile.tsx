@@ -21,7 +21,7 @@ export const Profile = () => {
             <Picture status={'active'} avatar width={'150px'} height={'150px'}>
               <source srcSet={avatarProfileWebp} type='image/webp' />
               <source srcSet={avatarProfile} type='image/png' />
-              <img src={avatarProfile} alt='avatar' />
+              <img loading='lazy' src={avatarProfile} alt='avatar' />
             </Picture>
             <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
               Rayan Adlardard

@@ -40,7 +40,7 @@ export const Banner = () => {
         <Picture>
           <source srcSet={myPhotoWebp} type='image/webp' />
           <source srcSet={myPhoto} type='image/png' />
-          <img src={myPhoto} alt='photo' />
+          <img loading='lazy' src={myPhoto} alt='photo' />
         </Picture>
       </FlexWrapper>
     </BannerStyled>
