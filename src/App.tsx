@@ -4,24 +4,26 @@ import { FooterStyled } from './components/FooterStyled'
 import { Icon } from './components/Icons/Icon'
 import { Menu } from './components/menu/Menu'
 import { Header } from './layout/header/Header'
-import { Profile } from './layout/header/menu_about_me/Profile'
+import { Profile } from './layout/header/menuAboutMe/Profile'
 import { Main } from './layout/main/Main'
 import { theme } from './styles/Theme'
+import { FlexWrapper } from './components/FlexWrapper'
 
 function App() {
   return (
     <AppStyled className='App'>
       <Profile />
-      <Container main>
+      <FlexWrapper direction={'column'}>
         <Header />
         <Main />
         {/* <Container>
           <FooterStyled>
-            <Icon size={'24px'} iconId={'copyright'} />
-            <small>2021 All Rights Reserved.Ojjomedia</small>
+          <Icon size={'24px'} iconId={'copyright'} />
+          <small>2021 All Rights Reserved.Ojjomedia</small>
           </FooterStyled>
         </Container> */}
-      </Container>
+      </FlexWrapper>
+
       <Menu />
     </AppStyled>
   )
@@ -33,9 +35,6 @@ const AppStyled = styled.div`
   min-width: 375px;
   background: ${theme.colors.pageBg};
   display: flex;
+  justify-content: center;
   gap: 15px;
-
-  @media ${theme.media.mobile} {
-    padding: 0 15px;
-  }
 `
