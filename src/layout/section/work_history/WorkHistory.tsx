@@ -1,14 +1,38 @@
-import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Text } from '../../../components/Text'
 import { Table } from '../../../components/table/Table'
+import { S } from '../../../components/table/Table_Styles'
 import { theme } from '../../../styles/Theme'
 
-export const WorkHistory = () => {
+const listTableWorkHistory = [
+  {
+    title: 'Lead Web Designer',
+    date: 'Jan 2016 - Dec 2021',
+    infoTitle: 'Certificate of web training',
+    infoText:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie         risus enim neque eget dui.',
+  },
+  {
+    title: 'Junior Web Designer',
+    date: 'Jan 2016 - Dec 2021',
+    infoTitle: 'Certificate of web training',
+    infoText:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie         risus enim neque eget dui.',
+  },
+  {
+    title: 'Senior Web Designer',
+    date: 'Jan 2016 - Dec 2021',
+    infoTitle: 'Certificate of web training',
+    infoText:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie         risus enim neque eget dui.',
+  },
+]
+
+export const WorkHistory: React.FC = () => {
   return (
-    <WorkHistoryStyled>
+    <S.TableWrap>
       <Container>
         <FlexWrapper align={'center'} direction={'column'}>
           <SectionTitle>WorkHistory</SectionTitle>
@@ -17,45 +41,17 @@ export const WorkHistory = () => {
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
           <FlexWrapper direction={'column'} as={'ul'}>
-            <Table
-              title={'Lead Web Designer'}
-              date={'Jan 2016 - Dec 2021'}
-              infoTitle={'Certificate of web training'}
-              infoText={
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie         risus enim neque eget dui.'
-              }
-            />
-            <Table
-              title={'Junior Web Designer'}
-              date={'Jan 2016 - Dec 2021'}
-              infoTitle={'Certificate of web training'}
-              infoText={
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie         risus enim neque eget dui.'
-              }
-            />
-            <Table
-              title={'Senior Web Designer'}
-              date={'Jan 2016 - Dec 2021'}
-              infoTitle={'Certificate of web training'}
-              infoText={
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie         risus enim neque eget dui.'
-              }
-            />
+            {listTableWorkHistory.map(T => (
+              <Table
+                title={T.title}
+                date={T.date}
+                infoTitle={T.infoTitle}
+                infoText={T.infoText}
+              />
+            ))}
           </FlexWrapper>
         </FlexWrapper>
       </Container>
-    </WorkHistoryStyled>
+    </S.TableWrap>
   )
 }
-
-const WorkHistoryStyled = styled.section`
-  & ul {
-    padding: 42px 32px;
-    width: 100%;
-    background: ${theme.colors.primaryBg};
-
-    @media ${theme.media.mobile} {
-      max-width: 340px;
-    }
-  }
-`

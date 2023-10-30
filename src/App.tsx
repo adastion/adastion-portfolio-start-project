@@ -16,12 +16,12 @@ function App() {
       <FlexWrapper direction={'column'}>
         <Header />
         <Main />
-        {/* <Container>
+        <Container>
           <FooterStyled>
-          <Icon size={'24px'} iconId={'copyright'} />
-          <small>2021 All Rights Reserved.Ojjomedia</small>
+            <Icon size={'24px'} iconId={'copyright'} />
+            <small>2021 All Rights Reserved.Ojjomedia</small>
           </FooterStyled>
-        </Container> */}
+        </Container>
       </FlexWrapper>
 
       <Menu />

@@ -1,11 +1,10 @@
-import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Table } from '../../../components/table/Table'
+import { S } from '../../../components/table/Table_Styles'
 import { theme } from '../../../styles/Theme'
 import { SectionTitle } from './../../../components/SectionTitle'
 import { Text } from './../../../components/Text'
-import { S } from '../../../components/table/Table_Styles'
 
 const listTableEducation = [
   {

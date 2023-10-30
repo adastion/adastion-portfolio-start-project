@@ -1,18 +1,18 @@
-import React from 'react'
+import styled from 'styled-components'
+import { Button } from '../../../components/Button'
 import { FlexWrapper } from '../../../components/FlexWrapper'
+import { Icon } from '../../../components/Icons/Icon'
+import { Picture } from '../../../components/Picture'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Text } from '../../../components/Text'
+import { theme } from '../../../styles/Theme'
 import myPhoto from './../../../assets/images/your_Image_1.png'
 import myPhotoWebp from './../../../assets/images/your_Image_1.webp'
-import { Icon } from '../../../components/Icons/Icon'
-import styled from 'styled-components'
-import { theme } from '../../../styles/Theme'
-import { Button } from '../../../components/Button'
-import { Picture } from '../../../components/Picture'
+import { S } from './Banner_Styles'
 
 export const Banner = () => {
   return (
-    <BannerStyled>
+    <S.Banner>
       <button>
         <span></span>
       </button>
@@ -43,123 +43,8 @@ export const Banner = () => {
           <img loading='lazy' src={myPhoto} alt='photo' />
         </Picture>
       </FlexWrapper>
-    </BannerStyled>
+    </S.Banner>
   )
 }
 
-const BannerStyled = styled.section`
-  background: ${theme.colors.primaryBg || '#F0F0F6'};
-  color: ${theme.colors.primary};
 
-  & button {
-    position: relative;
-    top: 35px;
-    left: 30px;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none;
-
-    & span {
-      display: inline-block;
-      width: 100%;
-      height: 2px;
-      background: ${theme.colors.secondaryBg};
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      background: ${theme.colors.secondaryBg};
-      transition: all 0.1s ease-in;
-    }
-
-    &::before {
-      transform: translateY(-8px);
-    }
-
-    &::after {
-      transform: translateY(8px);
-    }
-
-    &:hover {
-      & span {
-        z-index: -1;
-      }
-
-      &::before {
-        transform: rotate(45deg) translateY(0);
-        transform-origin: center;
-      }
-
-      &::after {
-        transform: rotate(-45deg) translateY(0);
-        transform-origin: cenetr;
-      }
-    }
-
-    @media ${theme.media.bigDesktop} {
-      display: flex;
-    }
-
-    @media ${theme.media.desktop} {
-      & + * {
-        margin-top: 45px;
-      }
-    }
-  }
-
-  & > ${FlexWrapper} {
-    & > ${FlexWrapper} {
-      flex-shrink: 30;
-    }
-
-    & ${Picture} {
-      align-self: end;
-    }
-  }
-
-  & h1 {
-    & span {
-      color: ${theme.colors.secondaryBg};
-    }
-  }
-
-  & p {
-    max-width: 424px;
-  }
-
-  & ${Button}:hover {
-    & svg {
-      transform: rotate(-45deg);
-    }
-  }
-
-  @media ${theme.media.mobile} {
-    & > ${FlexWrapper} {
-      flex-direction: column;
-
-      & > ${FlexWrapper} {
-        padding: 32px;
-      }
-
-      & ${Picture} {
-        align-self: auto;
-      }
-    }
-
-    & ${Text} {
-      margin-top: 90px;
-    }
-
-    & ${Button} {
-      margin-top: 34px;
-    }
-  }
-`

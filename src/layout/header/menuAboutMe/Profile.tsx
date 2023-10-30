@@ -5,14 +5,14 @@ import { Icon } from '../../../components/Icons/Icon'
 import { Button } from '../../../components/Button'
 import styled from 'styled-components'
 import { theme } from '../../../styles/Theme'
-import { FlexWrapper } from './../../../components/FlexWrapper'
-import { SectionTitle } from './../../../components/SectionTitle'
-import { Text } from './../../../components/Text'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import { SectionTitle } from '../../../components/SectionTitle'
+import { Text } from '../../../components/Text'
 import { InfoCell } from '../../../components/InfoCell'
 import { Picture } from '../../../components/Picture'
-import { ProgressBar } from '../../../components/ProgressBar'
 
-export const Profile = () => {
+
+export const Profile: React.FC = () => {
   return (
     <ProfileStyled>
       <FlexWrapper direction={'column'} align={'stretch'}>
@@ -101,7 +101,7 @@ export const Profile = () => {
             </li>
           </FlexWrapper>
         </InfoCell>
-        <InfoCell>
+        {/* <InfoCell>
           <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
             Languages
           </SectionTitle>
@@ -110,14 +110,14 @@ export const Profile = () => {
             direction={'column'}
             justify={'space-between'}
             gap={'10px'}>
-            <ProgressBar percent='100'>
+            <S.ProgressBar percent='100'>
               <Text margin={'0'} as={'span'}>
                 Bangla
               </Text>
               <Text margin={'0'} as={'span'}>
                 100%
               </Text>
-            </ProgressBar>
+            </S.ProgressBar>
             <ProgressBar percent='80'>
               <Text margin={'0'} as={'span'}>
                 English
@@ -186,7 +186,7 @@ export const Profile = () => {
               </Text>
             </ProgressBar>
           </FlexWrapper>
-        </InfoCell>
+        </InfoCell> */}
         <InfoCell justify={'start'}>
           <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
             Extra Skills
