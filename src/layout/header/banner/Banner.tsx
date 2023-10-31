@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import { Button } from '../../../components/Button'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Icon } from '../../../components/Icons/Icon'
@@ -46,5 +45,3 @@ export const Banner = () => {
     </S.Banner>
   )
 }
-
-

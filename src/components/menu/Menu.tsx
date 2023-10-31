@@ -32,7 +32,7 @@ export const Menu: React.FC = () => {
       <Button circle colorBackground={'transparent'} notHover={'none'}>
         <Icon iconId={'contrast'} boxWidth='30' boxHeight='30' size={'30px'} />
       </Button>
-      <FlexWrapper as={'ul'} direction={'column'} align={'center'} gap={'44px'}>
+      <FlexWrapper as={'ul'} direction={'column'} align={'center'}>
         {listNavItem.map(N => (
           <S.NavItem name={N.name}>
             <Button colorBackground={theme.colors.pageBg} as='a' circle>

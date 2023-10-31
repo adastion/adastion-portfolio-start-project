@@ -15,16 +15,37 @@ const Menu = styled.nav`
 
   & ul {
     margin: 174px 0;
+    gap: 44px;
   }
 
   @media ${theme.media.bigDesktop} {
-    position: absolute;
-    left: -110vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 15px;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+
+    & ul {
+      margin: 0;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+
+  @media ${theme.media.tablet} {
+    & ul {
+      gap: 10px;
+    }
   }
 `
 
 const NavItem = styled.li<NavItemPropsType>`
-  width: 65px;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -50,7 +71,7 @@ const NavItem = styled.li<NavItemPropsType>`
   &::before {
     content: attr(name);
     top: -42px;
-    width: 100%;
+    max-width: 120px;
     font-size: 12px;
     text-align: center;
     color: ${theme.colors.primaryBg};

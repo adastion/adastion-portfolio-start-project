@@ -1,16 +1,15 @@
 import React from 'react'
-import avatarProfile from './../../../assets/images/avatar_profile.jpg'
-import avatarProfileWebp from './../../../assets/images/avatar_profile.webp'
-import { Icon } from '../../../components/Icons/Icon'
-import { Button } from '../../../components/Button'
 import styled from 'styled-components'
-import { theme } from '../../../styles/Theme'
+import { Button } from '../../../components/Button'
 import { FlexWrapper } from '../../../components/FlexWrapper'
-import { SectionTitle } from '../../../components/SectionTitle'
-import { Text } from '../../../components/Text'
+import { Icon } from '../../../components/Icons/Icon'
 import { InfoCell } from '../../../components/InfoCell'
 import { Picture } from '../../../components/Picture'
-
+import { SectionTitle } from '../../../components/SectionTitle'
+import { Text } from '../../../components/Text'
+import { theme } from '../../../styles/Theme'
+import avatarProfile from './../../../assets/images/avatar_profile.jpg'
+import avatarProfileWebp from './../../../assets/images/avatar_profile.webp'
 
 export const Profile: React.FC = () => {
   return (
@@ -101,7 +100,7 @@ export const Profile: React.FC = () => {
             </li>
           </FlexWrapper>
         </InfoCell>
-        {/* <InfoCell>
+        <InfoCell>
           <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
             Languages
           </SectionTitle>
@@ -110,14 +109,14 @@ export const Profile: React.FC = () => {
             direction={'column'}
             justify={'space-between'}
             gap={'10px'}>
-            <S.ProgressBar percent='100'>
+            <ProgressBar percent='100'>
               <Text margin={'0'} as={'span'}>
                 Bangla
               </Text>
               <Text margin={'0'} as={'span'}>
                 100%
               </Text>
-            </S.ProgressBar>
+            </ProgressBar>
             <ProgressBar percent='80'>
               <Text margin={'0'} as={'span'}>
                 English
@@ -186,7 +185,7 @@ export const Profile: React.FC = () => {
               </Text>
             </ProgressBar>
           </FlexWrapper>
-        </InfoCell> */}
+        </InfoCell>
         <InfoCell justify={'start'}>
           <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
             Extra Skills
@@ -267,5 +266,47 @@ const ProfileStyled = styled.aside`
   @media ${theme.media.bigDesktop} {
     position: absolute;
     left: -110vw;
+
+    &.active {
+      left: 0;
+      right: 0;
+      z-index: 3;
+    }
+  }
+`
+
+type ProgressBarPropsType = {
+  percent: string
+}
+
+const ProgressBar = styled.li<ProgressBarPropsType>`
+  position: relative;
+  z-index: 2;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &::before {
+    bottom: -5px;
+    height: 4px;
+    border: 0.5px solid ${theme.colors.secondaryBg};
+    overflow: hidden;
+  }
+
+  &::after {
+    bottom: -4px;
+    left: 1px;
+    width: calc(${props => props.percent || '1'}% - 1%);
+    height: 2px;
+    background: ${theme.colors.secondaryBg};
+    border-radius: 3px;
   }
 `

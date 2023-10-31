@@ -7,11 +7,11 @@ import { Icon } from './../../../components/Icons/Icon'
 import { SectionTitle } from './../../../components/SectionTitle'
 import { MapContainer } from '../../../components/yandex_map/MapContainer'
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
   return (
     <ContactsStyled>
       <Container>
-        <FlexWrapper gap={'30px'} justify={'space-between'}>
+        <FlexWrapper gap={'20px 30px'} justify={'space-between'}>
           <ContactsItem>
             <SectionTitle margin={'50px'}>Leave us your info</SectionTitle>
             <StyledForm>
@@ -148,13 +148,23 @@ export const Contacts = () => {
             </FlexWrapper>
           </ContactsItem>
         </FlexWrapper>
-        {/* <MapContainer /> */}
+        <MapContainer />
       </Container>
     </ContactsStyled>
   )
 }
 
-const ContactsStyled = styled.section``
+const ContactsStyled = styled.section`
+  & ${FlexWrapper} + * {
+    margin-top: 70px;
+  }
+
+  @media ${theme.media.desktop} {
+    & ${FlexWrapper} {
+      flex-direction: column-reverse;
+    }
+  }
+`
 
 const ContactsItem = styled.section`
   &:first-child {

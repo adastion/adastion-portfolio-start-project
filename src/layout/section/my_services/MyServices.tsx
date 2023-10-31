@@ -9,7 +9,7 @@ import styled from 'styled-components'
 
 export const MyServices = () => {
   return (
-    <section>
+    <section id={'myServices'}>
       <Container>
         <FlexWrapper align='center' direction='column'>
           <SectionTitle>My services</SectionTitle>
