@@ -1,142 +1,52 @@
 import React from 'react'
-import { Icon } from '../Icons/Icon'
-import styled from 'styled-components'
 import { theme } from '../../styles/Theme'
 import { Button } from '../Button'
+import { Icon } from '../Icons/Icon'
 import { FlexWrapper } from './../FlexWrapper'
+import { S } from './Menu_Styles'
 
-type NavItemPropsType = {
-  name: string
-}
+const listNavItem = [
+  {
+    name: 'home',
+  },
+  {
+    name: 'services',
+  },
+  {
+    name: 'cv',
+  },
+  {
+    name: 'portfolio',
+  },
+  {
+    name: 'blog',
+  },
+  {
+    name: 'contact',
+  },
+]
 
-export const Menu = () => {
+export const Menu: React.FC = () => {
   return (
-    <MenuStyled>
+    <S.Menu>
       <Button circle colorBackground={'transparent'} notHover={'none'}>
         <Icon iconId={'contrast'} boxWidth='30' boxHeight='30' size={'30px'} />
       </Button>
-      <FlexWrapper as={'ul'} direction={'column'} align={'center'} gap={'44px'}>
-        <NavItem name={'home'}>
-          <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon
-              fill={theme.colors.secondary}
-              iconId={'home'}
-              boxWidth='16'
-              boxHeight='16'
-            />
-          </Button>
-        </NavItem>
-        <NavItem name={'services'}>
-          <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon
-              fill={theme.colors.secondary}
-              iconId={'services'}
-              boxWidth='16'
-              boxHeight='16'
-            />
-          </Button>
-        </NavItem>
-        <NavItem name={'cv'}>
-          <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon
-              fill={theme.colors.secondary}
-              iconId={'cv'}
-              boxWidth='16'
-              boxHeight='16'
-            />
-          </Button>
-        </NavItem>
-        <NavItem name={'portfolio'}>
-          <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon
-              fill={theme.colors.secondary}
-              iconId={'portfolio'}
-              boxWidth='16'
-              boxHeight='16'
-            />
-          </Button>
-        </NavItem>
-        <NavItem name={'blog'}>
-          <Button padding={'10px'} colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon
-              fill={theme.colors.secondary}
-              iconId={'blog'}
-              boxWidth='16'
-              boxHeight='16'
-            />
-          </Button>
-        </NavItem>
-        <NavItem name={'contact'}>
-          <Button colorBackground={theme.colors.pageBg} as='a' circle>
-            <Icon
-              fill={theme.colors.secondary}
-              iconId={'contact'}
-              boxWidth='16'
-              boxHeight='16'
-              size='16'
-            />
-          </Button>
-        </NavItem>
+      <FlexWrapper as={'ul'} direction={'column'} align={'center'}>
+        {listNavItem.map(N => (
+          <S.NavItem name={N.name}>
+            <Button colorBackground={theme.colors.pageBg} as='a' circle>
+              <Icon
+                fill={theme.colors.secondary}
+                iconId={N.name}
+                boxWidth='16'
+                boxHeight='16'
+                size='16'
+              />
+            </Button>
+          </S.NavItem>
+        ))}
       </FlexWrapper>
-    </MenuStyled>
+    </S.Menu>
   )
 }
-
-const MenuStyled = styled.nav`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: ${theme.colors.primaryBg};
-  padding: 50px 34px 0;
-  height: 100vh;
-
-  ul {
-    margin: 174px 0;
-  }
-`
-
-const NavItem = styled.li<NavItemPropsType>`
-  width: 65px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &:hover {
-    &::before,
-    &::after {
-      transform: scale(1);
-    }
-  }
-
-  &::before,
-  &::after {
-    display: inline-block;
-
-    content: '';
-    position: absolute;
-    background: ${theme.colors.primary};
-    transform: scale(0);
-  }
-
-  &::before {
-    content: attr(name);
-    top: -42px;
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-    color: ${theme.colors.primaryBg};
-    border-radius: 2px;
-    padding: 6px;
-    z-index: 1;
-    text-transform: capitalize;
-  }
-
-  &::after {
-    top: -24px;
-    width: 18px;
-    height: 18px;
-    clip-path: polygon(100% 0, 0 0, 50% 100%);
-    z-index: 0;
-  }
-`

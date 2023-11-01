@@ -1,11 +1,10 @@
-import React from 'react'
-import { SectionTitle } from '../../../components/SectionTitle'
-import { Text } from './../../../components/Text'
-import { FlexWrapper } from './../../../components/FlexWrapper'
-import { CardPrice } from './card_price/CardPrice'
-import { theme } from '../../../styles/Theme'
 import styled from 'styled-components'
+import { SectionTitle } from '../../../components/SectionTitle'
+import { theme } from '../../../styles/Theme'
 import { Container } from './../../../components/Container'
+import { FlexWrapper } from './../../../components/FlexWrapper'
+import { Text } from './../../../components/Text'
+import { CardPrice } from './card_price/CardPrice'
 
 const listServices = [
   'UI Design',
@@ -28,7 +27,7 @@ export const PricePlans = () => {
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
-          <FlexWrapper wrap={'wrap'} gap={theme.gapCard}>
+          <FlexWrapper as={'ul'} gap={theme.gapCard}>
             <CardPrice
               title={'silver'}
               price={'0.00'}
@@ -55,4 +54,23 @@ export const PricePlans = () => {
   )
 }
 
-const PricePlansStyled = styled.section``
+const PricePlansStyled = styled.section`
+  & ul {
+    width: 100%;
+    overflow-x: auto;
+    max-width: 970px;
+
+    & li {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+
+    @media ${theme.media.tablet} {
+      max-width: 576px;
+    }
+
+    @media ${theme.media.mobile} {
+      max-width: 340px;
+    }
+  }
+`

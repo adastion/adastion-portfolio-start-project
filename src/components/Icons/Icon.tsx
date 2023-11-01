@@ -1,7 +1,5 @@
-import React from 'react'
-import sprite from './../../assets/images/icons-sprite.svg'
-import styled from 'styled-components'
 import { theme } from '../../styles/Theme'
+import sprite from './../../assets/images/icons-sprite.svg'
 
 type IconPropsType = {
   iconId: string
@@ -11,7 +9,7 @@ type IconPropsType = {
   boxHeight?: string
 }
 
-export const Icon = (props: IconPropsType) => {
+export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {
   return (
     <svg
       fill={`${props.fill || theme.colors.primary || 'black'}`}

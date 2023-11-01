@@ -1,15 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
+import { Brands } from '../section/brands/Brands'
 import { MyServices } from '../section/my_services/MyServices'
+import { Portfolio } from '../section/portfolio/Portfolio'
 import { PricePlans } from '../section/price/PricePlans'
 import { Recommendations } from '../section/recommendations/Recommendations'
-import { Education } from './../section/education/Education'
-import { WorkHistory } from './../section/work_history/WorkHistory'
-import { Portfolio } from '../section/portfolio/Portfolio'
+import { WorkHistory } from '../section/work_history/WorkHistory'
 import { Blog } from './../section/blog/Blog'
 import { Contacts } from './../section/contacts/Contacts'
-import styled from 'styled-components'
+import { Education } from '../section/my_services/education/Education'
 
-export const Main = () => {
+export const Main: React.FC = () => {
   return (
     <MainStyled>
       <MyServices />
@@ -20,6 +21,7 @@ export const Main = () => {
       <Portfolio />
       <Blog />
       <Contacts />
+      <Brands />
     </MainStyled>
   )
 }
@@ -27,4 +29,6 @@ export const Main = () => {
 const MainStyled = styled.main`
   display: grid;
   gap: 70px;
+
+  
 `

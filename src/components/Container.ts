@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 type ContainerPropsType = {
-  main?: boolean
+  wrap?: boolean
 }
 
 export const Container = styled.div<ContainerPropsType>`
@@ -10,7 +10,7 @@ export const Container = styled.div<ContainerPropsType>`
   margin: 0 auto;
 
   ${props =>
-    props.main &&
+    props.wrap &&
     css<ContainerPropsType>`
       max-width: 1440px;
     `}

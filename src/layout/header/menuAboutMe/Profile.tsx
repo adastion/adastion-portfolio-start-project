@@ -1,18 +1,17 @@
 import React from 'react'
-import avatarProfile from './../../../assets/images/avatar_profile.jpg'
-import avatarProfileWebp from './../../../assets/images/avatar_profile.webp'
-import { Icon } from '../../../components/Icons/Icon'
-import { Button } from '../../../components/Button'
 import styled from 'styled-components'
-import { theme } from '../../../styles/Theme'
-import { FlexWrapper } from './../../../components/FlexWrapper'
-import { SectionTitle } from './../../../components/SectionTitle'
-import { Text } from './../../../components/Text'
+import { Button } from '../../../components/Button'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import { Icon } from '../../../components/Icons/Icon'
 import { InfoCell } from '../../../components/InfoCell'
 import { Picture } from '../../../components/Picture'
-import { ProgressBar } from '../../../components/ProgressBar'
+import { SectionTitle } from '../../../components/SectionTitle'
+import { Text } from '../../../components/Text'
+import { theme } from '../../../styles/Theme'
+import avatarProfile from './../../../assets/images/avatar_profile.jpg'
+import avatarProfileWebp from './../../../assets/images/avatar_profile.webp'
 
-export const Profile = () => {
+export const Profile: React.FC = () => {
   return (
     <ProfileStyled>
       <FlexWrapper direction={'column'} align={'stretch'}>
@@ -21,7 +20,7 @@ export const Profile = () => {
             <Picture status={'active'} avatar width={'150px'} height={'150px'}>
               <source srcSet={avatarProfileWebp} type='image/webp' />
               <source srcSet={avatarProfile} type='image/png' />
-              <img src={avatarProfile} alt='avatar' />
+              <img loading='lazy' src={avatarProfile} alt='avatar' />
             </Picture>
             <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
               Rayan Adlardard
@@ -262,5 +261,52 @@ const ProfileStyled = styled.aside`
     & + h4 {
       margin-top: 30px;
     }
+  }
+
+  @media ${theme.media.bigDesktop} {
+    position: absolute;
+    left: -110vw;
+
+    &.active {
+      left: 0;
+      right: 0;
+      z-index: 3;
+    }
+  }
+`
+
+type ProgressBarPropsType = {
+  percent: string
+}
+
+const ProgressBar = styled.li<ProgressBarPropsType>`
+  position: relative;
+  z-index: 2;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &::before {
+    bottom: -5px;
+    height: 4px;
+    border: 0.5px solid ${theme.colors.secondaryBg};
+    overflow: hidden;
+  }
+
+  &::after {
+    bottom: -4px;
+    left: 1px;
+    width: calc(${props => props.percent || '1'}% - 1%);
+    height: 2px;
+    background: ${theme.colors.secondaryBg};
+    border-radius: 3px;
   }
 `

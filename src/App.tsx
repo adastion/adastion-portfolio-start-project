@@ -1,36 +1,40 @@
-import { Header } from './layout/header/Header'
-import { Main } from './layout/main/Main'
-import { FooterStyled } from './components/FooterStyled'
-import { Icon } from './components/Icons/Icon'
 import styled from 'styled-components'
+import { FlexWrapper } from './components/FlexWrapper'
 import { Menu } from './components/menu/Menu'
-import { Profile } from './layout/header/menu_about_me/Profile'
-import { Container } from './components/Container'
+import { Header } from './layout/header/Header'
+import { Profile } from './layout/header/menuAboutMe/Profile'
 import { theme } from './styles/Theme'
+import { Footer } from './layout/footer/Footer'
+import { Main } from './layout/main/Main'
 
-function App() {
+export const App: React.FC = () => {
   return (
     <AppStyled className='App'>
       <Profile />
-      <Container main>
+      <FlexWrapper direction={'column'}>
         <Header />
         <Main />
-        <Container>
-          <FooterStyled>
-            <Icon iconId={'copyright'} />
-            <small>2021 All Rights Reserved.Ojjomedia</small>
-          </FooterStyled>
-        </Container>
-      </Container>
+        <Footer />
+      </FlexWrapper>
       <Menu />
     </AppStyled>
   )
 }
 
-export default App
-
 const AppStyled = styled.div`
+  min-height: 100%;
+  min-width: 375px;
   background: ${theme.colors.pageBg};
   display: flex;
+  justify-content: center;
   gap: 15px;
+  position: relative;
+
+  @media ${theme.media.bigDesktop} {
+    margin-bottom: 180px;
+  }
+
+  @media ${theme.media.desktop} {
+    padding: 0 15px;
+  }
 `

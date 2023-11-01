@@ -1,10 +1,4 @@
 import styled from 'styled-components'
-import { Container } from '../../../components/Container'
-import { FlexWrapper } from '../../../components/FlexWrapper'
-import { SectionTitle } from '../../../components/SectionTitle'
-import { Text } from '../../../components/Text'
-import { theme } from '../../../styles/Theme'
-import { Button } from '../../../components/Button'
 import portfolioPicPreview_1 from '../../../assets/images/portfolio_1.jpg'
 import portfolioPicPreviewWebp_1 from '../../../assets/images/portfolio_1.webp'
 import portfolioPicPreview_2 from '../../../assets/images/portfolio_2.jpg'
@@ -23,7 +17,13 @@ import portfolioPicPreview_8 from '../../../assets/images/portfolio_8.jpg'
 import portfolioPicPreviewWebp_8 from '../../../assets/images/portfolio_8.webp'
 import portfolioPicPreview_9 from '../../../assets/images/portfolio_9.jpg'
 import portfolioPicPreviewWebp_9 from '../../../assets/images/portfolio_9.webp'
+import { Button } from '../../../components/Button'
+import { Container } from '../../../components/Container'
+import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Picture } from '../../../components/Picture'
+import { SectionTitle } from '../../../components/SectionTitle'
+import { Text } from '../../../components/Text'
+import { theme } from '../../../styles/Theme'
 
 export const Portfolio = () => {
   return (
@@ -37,7 +37,7 @@ export const Portfolio = () => {
               Velit officia consequat duis enim velit mollit. lorem ipsum
             </Text>
             <nav>
-              <FlexWrapper as={'ul'} justify={'center'} wrap={'wrap'} gap={' 10px 38px'}>
+              <FlexWrapper as={'ul'} justify={'center'} gap={' 10px 38px'}>
                 <li>
                   <Button className={'active'}>All categories</Button>
                 </li>
@@ -60,7 +60,7 @@ export const Portfolio = () => {
                 <a href='#l'>
                   <Picture>
                     <source srcSet={portfolioPicPreviewWebp_1} />
-                    <img src={portfolioPicPreview_1} alt='portfolio' />
+                    <img loading='lazy' src={portfolioPicPreview_1} alt='portfolio' />
                   </Picture>
                 </a>
               </li>
@@ -68,7 +68,7 @@ export const Portfolio = () => {
                 <a href='#l'>
                   <Picture>
                     <source srcSet={portfolioPicPreviewWebp_2} />
-                    <img src={portfolioPicPreview_2} alt='portfolio' />
+                    <img loading='lazy' src={portfolioPicPreview_2} alt='portfolio' />
                   </Picture>
                 </a>
               </li>
@@ -76,7 +76,7 @@ export const Portfolio = () => {
                 <a href='#l'>
                   <Picture>
                     <source srcSet={portfolioPicPreviewWebp_3} />
-                    <img src={portfolioPicPreview_3} alt='portfolio' />
+                    <img loading='lazy' src={portfolioPicPreview_3} alt='portfolio' />
                   </Picture>
                 </a>
               </li>
@@ -84,7 +84,7 @@ export const Portfolio = () => {
                 <a href='#l'>
                   <Picture>
                     <source srcSet={portfolioPicPreviewWebp_4} />
-                    <img src={portfolioPicPreview_4} alt='portfolio' />
+                    <img loading='lazy' src={portfolioPicPreview_4} alt='portfolio' />
                   </Picture>
                 </a>
               </li>
@@ -92,7 +92,7 @@ export const Portfolio = () => {
                 <a href='#l'>
                   <Picture>
                     <source srcSet={portfolioPicPreviewWebp_5} />
-                    <img src={portfolioPicPreview_5} alt='portfolio' />
+                    <img loading='lazy' src={portfolioPicPreview_5} alt='portfolio' />
                   </Picture>
                 </a>
               </li>
@@ -100,7 +100,7 @@ export const Portfolio = () => {
                 <a href='#l'>
                   <Picture>
                     <source srcSet={portfolioPicPreviewWebp_6} />
-                    <img src={portfolioPicPreview_6} alt='portfolio' />
+                    <img loading='lazy' src={portfolioPicPreview_6} alt='portfolio' />
                   </Picture>
                 </a>
               </li>
@@ -108,7 +108,7 @@ export const Portfolio = () => {
                 <a href='#l'>
                   <Picture>
                     <source srcSet={portfolioPicPreviewWebp_7} />
-                    <img src={portfolioPicPreview_7} alt='portfolio' />
+                    <img loading='lazy' src={portfolioPicPreview_7} alt='portfolio' />
                   </Picture>
                 </a>
               </li>
@@ -116,7 +116,7 @@ export const Portfolio = () => {
                 <a href='#l'>
                   <Picture>
                     <source srcSet={portfolioPicPreviewWebp_8} />
-                    <img src={portfolioPicPreview_8} alt='portfolio' />
+                    <img loading='lazy' src={portfolioPicPreview_8} alt='portfolio' />
                   </Picture>
                 </a>
               </li>
@@ -124,7 +124,7 @@ export const Portfolio = () => {
                 <a href='#l'>
                   <Picture>
                     <source srcSet={portfolioPicPreviewWebp_9} />
-                    <img src={portfolioPicPreview_9} alt='portfolio' />
+                    <img loading='lazy' src={portfolioPicPreview_9} alt='portfolio' />
                   </Picture>
                 </a>
               </li>
@@ -143,14 +143,19 @@ const PortfolioStyled = styled.section`
     }
 
     & ul {
+      width: 100%;
+      overflow-x: auto;
+
       & li {
         font-size: 18px;
         font-weight: 500;
-        text-transform: capitalize;
+        flex-grow: 1;
+        flex-shrink: 0;
 
         & ${Button} {
           background: unset;
           padding: 0;
+          text-transform: capitalize;
 
           &:hover,
           &:focus-visible {
@@ -169,6 +174,11 @@ const PortfolioStyled = styled.section`
             }
           }
         }
+      }
+
+      @media ${theme.media.mobile} {
+        max-width: 340px;
+        justify-content: start;
       }
     }
   }

@@ -1,19 +1,21 @@
-import React from 'react'
+import { Button } from '../../../components/Button'
 import { FlexWrapper } from '../../../components/FlexWrapper'
+import { Icon } from '../../../components/Icons/Icon'
+import { Picture } from '../../../components/Picture'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Text } from '../../../components/Text'
+import { theme } from '../../../styles/Theme'
 import myPhoto from './../../../assets/images/your_Image_1.png'
 import myPhotoWebp from './../../../assets/images/your_Image_1.webp'
-import { Icon } from '../../../components/Icons/Icon'
-import styled from 'styled-components'
-import { theme } from '../../../styles/Theme'
-import { Button } from '../../../components/Button'
-import { Picture } from '../../../components/Picture'
+import { S } from './Banner_Styles'
 
 export const Banner = () => {
   return (
-    <BannerStyled>
-      <FlexWrapper gap={'10px'} justify={'center'} align={'center'}>
+    <S.Banner>
+      <button>
+        <span></span>
+      </button>
+      <FlexWrapper gap={'30px 10px'} justify={'space-between'} align={'center'}>
         <FlexWrapper direction={'column'} align={'start'} padding={'25px'}>
           <SectionTitle margin={'2px'} size={'48px'} transform>
             I’m Rayan Adlrdard
@@ -37,30 +39,9 @@ export const Banner = () => {
         <Picture>
           <source srcSet={myPhotoWebp} type='image/webp' />
           <source srcSet={myPhoto} type='image/png' />
-          <img src={myPhoto} alt='photo' />
+          <img loading='lazy' src={myPhoto} alt='photo' />
         </Picture>
       </FlexWrapper>
-    </BannerStyled>
+    </S.Banner>
   )
 }
-
-const BannerStyled = styled.section`
-  background: ${theme.colors.primaryBg || '#F0F0F6'};
-  color: ${theme.colors.primary};
-
-  & h1 {
-    & span {
-      color: ${theme.colors.secondaryBg};
-    }
-  }
-
-  & p {
-    max-width: 424px;
-  }
-
-  & ${Button}:hover {
-    & svg {
-      transform: rotate(-45deg);
-    }
-  }
-`

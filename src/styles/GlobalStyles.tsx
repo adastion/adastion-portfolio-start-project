@@ -12,6 +12,12 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+    height: 100%;
+}
+
 body {
     margin: 0;
   font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',

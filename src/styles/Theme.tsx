@@ -8,6 +8,14 @@ export const theme = {
     pageBg: '#F0F0F6',
     onlineUser: '#7EB942',
   },
+
   gapCard: '20px',
   widthText: '438px',
+
+  media: {
+    tablet: 'screen and (max-width: 768px)',
+    mobile: 'screen and (max-width: 576px)',
+    desktop: 'screen and (max-width: 992px)',
+    bigDesktop: 'screen and (max-width: 1200px)',
+  },
 }

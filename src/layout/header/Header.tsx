@@ -1,7 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
-import { Banner } from './banner/Banner'
 import { Container } from './../../components/Container'
+import { Banner } from './banner/Banner'
 
 export function Header() {
   return (

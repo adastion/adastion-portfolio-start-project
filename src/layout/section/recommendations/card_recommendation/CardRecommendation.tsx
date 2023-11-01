@@ -57,7 +57,7 @@ export const CardRecommendation = (props: CardRecommendationPropdType) => {
       <FlexWrapper gap={'20px'}>
         <Picture avatar width={'80px'} height={'80px'}>
           <source srcSet={listUsers[props.indexCard].picture[1]} type='image/webp' />
-          <img src={listUsers[props.indexCard].picture[0]} alt='avatar' />
+          <img loading='lazy' src={listUsers[props.indexCard].picture[0]} alt='avatar' />
         </Picture>
         <FlexWrapper direction={'column'} justify={'center'}>
           <SectionTitle as={'h4'} margin={'5px'} size={'18px'} weight={'500'}>
@@ -72,7 +72,7 @@ export const CardRecommendation = (props: CardRecommendationPropdType) => {
   )
 }
 
-const CardRecommendationStyled = styled.div`
+const CardRecommendationStyled = styled.li`
   display: grid;
   max-width: 310px;
   background: ${theme.colors.primaryBg};

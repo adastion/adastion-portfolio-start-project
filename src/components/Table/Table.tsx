@@ -1,7 +1,6 @@
-import styled from 'styled-components'
-import { theme } from '../../styles/Theme'
 import { SectionTitle } from '../SectionTitle'
-import { Text } from './../../components/Text'
+import { Text } from '../Text'
+import { S } from './Table_Styles'
 
 type TablePropsType = {
   title: string
@@ -10,9 +9,9 @@ type TablePropsType = {
   infoText: string
 }
 
-export const Table = (props: TablePropsType) => {
+export const Table: React.FC<TablePropsType> = (props: TablePropsType) => {
   return (
-    <TableStyled>
+    <S.Table>
       <div>
         <SectionTitle size={'18px'} weight={'500'}>
           {props.title}
@@ -30,35 +29,6 @@ export const Table = (props: TablePropsType) => {
           {props.infoText}
         </Text>
       </div>
-    </TableStyled>
+    </S.Table>
   )
 }
-
-const TableStyled = styled.li`
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-columns: repeat(auto-fit, minmax(310px, auto));
-  gap: 20px;
-  justify-content: center;
-  padding-bottom: 30px;
-  border-bottom: 2px solid ${theme.colors.lineTable};
-
-  & + li {
-    margin-top: 30px;
-  }
-
-  &:last-child {
-    border: unset;
-    padding: 0;
-  }
-
-  & span + span {
-    color: ${theme.colors.primaryBg};
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 100.9%;
-    background: ${theme.colors.secondaryBg};
-    padding: 4px 7px;
-    margin-left: 20px;
-  }
-`
