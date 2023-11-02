@@ -13,9 +13,6 @@ import { BurgerButton } from './../../../components/menu/BurgerButton'
 export const Banner = () => {
   return (
     <S.Banner>
-      <BurgerButton>
-        <span></span>
-      </BurgerButton>
       <FlexWrapper gap={'30px 10px'} justify={'space-between'} align={'center'}>
         <FlexWrapper direction={'column'} align={'start'} padding={'25px'}>
           <SectionTitle margin={'2px'} size={'48px'} transform>

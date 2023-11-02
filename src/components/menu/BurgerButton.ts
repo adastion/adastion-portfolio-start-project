@@ -6,7 +6,7 @@ type BurgerButtonPropsType = {
 }
 
 export const BurgerButton = styled.button<BurgerButtonPropsType>`
-  position: relative;
+  position: absolute;
   top: 35px;
   left: 30px;
   width: 30px;
@@ -14,8 +14,8 @@ export const BurgerButton = styled.button<BurgerButtonPropsType>`
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  display: none;
-  z-index: 2;
+  display: flex;
+  z-index: 22;
 
   & span {
     display: inline-block;
@@ -64,11 +64,5 @@ export const BurgerButton = styled.button<BurgerButtonPropsType>`
 
   @media ${theme.media.bigDesktop} {
     display: flex;
-  }
-
-  @media ${theme.media.desktop} {
-    & + * {
-      margin-top: 45px;
-    }
   }
 `

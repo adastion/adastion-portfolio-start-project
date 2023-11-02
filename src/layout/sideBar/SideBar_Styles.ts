@@ -53,21 +53,17 @@ const Content = styled.div`
     }
   }
 
-  & button {
-    z-index: 15;
-    top: -14px;
-    right: 0;
-    left: 90%;
-    display: none;
-  }
-
   @media ${theme.media.bigDesktop} {
     max-width: 375px;
 
-    
-  & ${BurgerButton} {
-    display: flex;
-  }
+    & ${BurgerButton} {
+      display: flex;
+
+      z-index: 15;
+      top: -14px;
+      right: 0;
+      left: 90%;
+    }
   }
 `
 

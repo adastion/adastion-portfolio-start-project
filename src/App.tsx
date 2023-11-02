@@ -7,13 +7,20 @@ import { theme } from './styles/Theme'
 import { Footer } from './layout/footer/Footer'
 import { Main } from './layout/main/Main'
 import { useState } from 'react'
+import { BurgerButton } from './components/menu/BurgerButton'
 
 export const App: React.FC = () => {
-  const [visibleProfile, setVisibleProfile] = useState(false)
 
+  const [isOpenCurrent, setIsOpen] = useState(true)
+  let openClose = () => {
+    setIsOpen(!isOpenCurrent)
+  }
   return (
     <AppStyled className='App'>
-      <Profile />
+       <BurgerButton close onClick={openClose}>
+          <span></span>
+        </BurgerButton>
+      <Profile isOpen={isOpenCurrent}/>
       <FlexWrapper direction={'column'}>
         <Header />
         <Main />
