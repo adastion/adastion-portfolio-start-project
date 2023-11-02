@@ -1,21 +1,61 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Button } from '../../../components/Button'
-import { FlexWrapper } from '../../../components/FlexWrapper'
-import { Icon } from '../../../components/Icons/Icon'
-import { InfoCell } from '../../../components/InfoCell'
-import { Picture } from '../../../components/Picture'
-import { SectionTitle } from '../../../components/SectionTitle'
-import { Text } from '../../../components/Text'
-import { theme } from '../../../styles/Theme'
-import avatarProfile from './../../../assets/images/avatar_profile.jpg'
-import avatarProfileWebp from './../../../assets/images/avatar_profile.webp'
+import { Button } from '../../components/Button'
+import { FlexWrapper } from '../../components/FlexWrapper'
+import { Icon } from '../../components/Icons/Icon'
+import { Picture } from '../../components/Picture'
+import { SectionTitle } from '../../components/SectionTitle'
+import { Text } from '../../components/Text'
+import { theme } from '../../styles/Theme'
+import avatarProfile from './../../assets/images/avatar_profile.jpg'
+import avatarProfileWebp from './../../assets/images/avatar_profile.webp'
+import { S } from './SideBar_Styles'
+import { ProgressBar } from './progressBar/ProgressBar'
+
+const listData = {
+  languages: [
+    {
+      name: 'Bangla',
+      percent: 100,
+    },
+    {
+      name: 'English',
+      percent: 80,
+    },
+    {
+      name: 'Spanish',
+      percent: 60,
+    },
+  ],
+
+  skills: [
+    {
+      name: 'Html',
+      percent: 90,
+    },
+    {
+      name: 'CSS',
+      percent: 85,
+    },
+    {
+      name: 'Js',
+      percent: 80,
+    },
+    {
+      name: 'PHP',
+      percent: 75,
+    },
+    {
+      name: 'WordPress',
+      percent: 85,
+    },
+  ],
+}
 
 export const Profile: React.FC = () => {
   return (
-    <ProfileStyled>
+    <S.ProfileStyled>
       <FlexWrapper direction={'column'} align={'stretch'}>
-        <InfoCell>
+        <S.InfoCell>
           <FlexWrapper direction='column' align='center'>
             <Picture status={'active'} avatar width={'150px'} height={'150px'}>
               <source srcSet={avatarProfileWebp} type='image/webp' />
@@ -59,8 +99,8 @@ export const Profile: React.FC = () => {
               </li>
             </FlexWrapper>
           </FlexWrapper>
-        </InfoCell>
-        <InfoCell profile>
+        </S.InfoCell>
+        <S.InfoCell profile>
           <FlexWrapper
             as={'ul'}
             direction={'column'}
@@ -99,43 +139,22 @@ export const Profile: React.FC = () => {
               </Text>
             </li>
           </FlexWrapper>
-        </InfoCell>
-        <InfoCell>
+        </S.InfoCell>
+        <S.InfoCell>
           <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
-            Languages
+            languages
           </SectionTitle>
           <FlexWrapper
             as={'ul'}
             direction={'column'}
             justify={'space-between'}
-            gap={'10px'}>
-            <ProgressBar percent='100'>
-              <Text margin={'0'} as={'span'}>
-                Bangla
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                100%
-              </Text>
-            </ProgressBar>
-            <ProgressBar percent='80'>
-              <Text margin={'0'} as={'span'}>
-                English
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                80%
-              </Text>
-            </ProgressBar>
-            <ProgressBar percent='60'>
-              <Text margin={'0'} as={'span'}>
-                Spanish
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                60%
-              </Text>
-            </ProgressBar>
+            gap={'12px'}>
+            {listData.languages.map(PB => (
+              <ProgressBar name={PB.name} percent={PB.percent} />
+            ))}
           </FlexWrapper>
-        </InfoCell>
-        <InfoCell>
+        </S.InfoCell>
+        <S.InfoCell>
           <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
             Skills
           </SectionTitle>
@@ -143,50 +162,13 @@ export const Profile: React.FC = () => {
             as={'ul'}
             direction={'column'}
             justify={'space-between'}
-            gap={'10px'}>
-            <ProgressBar percent={'90'}>
-              <Text margin={'0'} as={'span'}>
-                Html
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                90%
-              </Text>
-            </ProgressBar>
-            <ProgressBar percent={'85'}>
-              <Text margin={'0'} as={'span'}>
-                CSS
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                85%
-              </Text>
-            </ProgressBar>
-            <ProgressBar percent={'80'}>
-              <Text margin={'0'} as={'span'}>
-                Js
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                80%
-              </Text>
-            </ProgressBar>
-            <ProgressBar percent={'75'}>
-              <Text margin={'0'} as={'span'}>
-                PHP
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                75%
-              </Text>
-            </ProgressBar>
-            <ProgressBar percent={'85'}>
-              <Text margin={'0'} as={'span'}>
-                WordPress
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                85%
-              </Text>
-            </ProgressBar>
+            gap={'12px'}>
+            {listData.skills.map(PB => (
+              <ProgressBar name={PB.name} percent={PB.percent} />
+            ))}
           </FlexWrapper>
-        </InfoCell>
-        <InfoCell justify={'start'}>
+        </S.InfoCell>
+        <S.InfoCell justify={'start'}>
           <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
             Extra Skills
           </SectionTitle>
@@ -236,77 +218,12 @@ export const Profile: React.FC = () => {
               <Text as={'span'}>GIT Knowledge</Text>
             </li>
           </FlexWrapper>
-        </InfoCell>
+        </S.InfoCell>
         <Button font={'14px'} sideBar padding={'10px'}>
           <span>Download cv</span>
           <Icon size={'14'} iconId={'download'} />
         </Button>
       </FlexWrapper>
-    </ProfileStyled>
+    </S.ProfileStyled>
   )
 }
-
-const ProfileStyled = styled.aside`
-  background: ${theme.colors.primaryBg};
-  max-width: 305px;
-  width: 100%;
-  height: 100%;
-  padding: 50px 42px 25px;
-
-  & ul {
-    width: 100%;
-  }
-
-  & ${Picture} {
-    & + h4 {
-      margin-top: 30px;
-    }
-  }
-
-  @media ${theme.media.bigDesktop} {
-    position: absolute;
-    left: -110vw;
-
-    &.active {
-      left: 0;
-      right: 0;
-      z-index: 3;
-    }
-  }
-`
-
-type ProgressBarPropsType = {
-  percent: string
-}
-
-const ProgressBar = styled.li<ProgressBarPropsType>`
-  position: relative;
-  z-index: 2;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    border-radius: 3px;
-    width: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1;
-  }
-
-  &::before {
-    bottom: -5px;
-    height: 4px;
-    border: 0.5px solid ${theme.colors.secondaryBg};
-    overflow: hidden;
-  }
-
-  &::after {
-    bottom: -4px;
-    left: 1px;
-    width: calc(${props => props.percent || '1'}% - 1%);
-    height: 2px;
-    background: ${theme.colors.secondaryBg};
-    border-radius: 3px;
-  }
-`
