@@ -2,6 +2,11 @@ import styled, { css } from 'styled-components'
 import { Button } from '../../components/Button'
 import { Picture } from '../../components/Picture'
 import { theme } from '../../styles/Theme'
+import { BurgerButton } from './../../components/menu/BurgerButton'
+
+type ProfilePropsType = {
+  isOpen?: boolean
+}
 
 type InfoCellPropsType = {
   profile?: boolean
@@ -12,11 +17,30 @@ type ProgressBarPropsType = {
   percent: number
 }
 
-const ProfileStyled = styled.aside`
+const Profile = styled.aside<ProfilePropsType>`
+  @media ${theme.media.bigDesktop} {
+    position: absolute;
+    left: -110vw;
+  }
+
+  ${props =>
+    props.isOpen &&
+    css<ProfilePropsType>`
+      @media ${theme.media.bigDesktop} {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        backdrop-filter: brightness(0.5);
+      }
+    `}
+`
+
+const Content = styled.div`
   background: ${theme.colors.primaryBg};
   max-width: 305px;
   width: 100%;
-  height: 100%;
   padding: 50px 42px 25px;
 
   & ul {
@@ -29,15 +53,21 @@ const ProfileStyled = styled.aside`
     }
   }
 
-  @media ${theme.media.bigDesktop} {
-    position: absolute;
-    left: -110vw;
+  & button {
+    z-index: 15;
+    top: -14px;
+    right: 0;
+    left: 90%;
+    display: none;
+  }
 
-    &.active {
-      left: 0;
-      right: 0;
-      z-index: 3;
-    }
+  @media ${theme.media.bigDesktop} {
+    max-width: 375px;
+
+    
+  & ${BurgerButton} {
+    display: flex;
+  }
   }
 `
 
@@ -109,7 +139,8 @@ const InfoCell = styled.section<InfoCellPropsType>`
 `
 
 export const S = {
-  ProfileStyled,
+  Profile,
   ProgressBar,
   InfoCell,
+  Content,
 }

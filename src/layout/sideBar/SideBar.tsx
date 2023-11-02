@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '../../components/Button'
 import { FlexWrapper } from '../../components/FlexWrapper'
 import { Icon } from '../../components/Icons/Icon'
@@ -11,6 +11,7 @@ import avatarProfileWebp from './../../assets/images/avatar_profile.webp'
 import { S } from './SideBar_Styles'
 import { ProgressBar } from './progressBar/ProgressBar'
 import { SocialNetwork } from './socialNetwork/SocialNetwork'
+import { BurgerButton } from '../../components/menu/BurgerButton'
 
 const listData = {
   languages: [
@@ -73,151 +74,161 @@ const listData = {
 }
 
 export const Profile: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  let openClose = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <S.ProfileStyled>
-      <FlexWrapper direction={'column'} align={'stretch'}>
-        <S.InfoCell>
-          <FlexWrapper direction='column' align='center'>
-            <Picture status={'active'} avatar width={'150px'} height={'150px'}>
-              <source srcSet={avatarProfileWebp} type='image/webp' />
-              <source srcSet={avatarProfile} type='image/png' />
-              <img loading='lazy' src={avatarProfile} alt='avatar' />
-            </Picture>
+    <S.Profile isOpen>
+      <S.Content>
+        <BurgerButton close>
+          <span></span>
+        </BurgerButton>
+        <FlexWrapper direction={'column'} align={'stretch'}>
+          <S.InfoCell>
+            <FlexWrapper direction='column' align='center'>
+              <Picture status={'active'} avatar width={'150px'} height={'150px'}>
+                <source srcSet={avatarProfileWebp} type='image/webp' />
+                <source srcSet={avatarProfile} type='image/png' />
+                <img loading='lazy' src={avatarProfile} alt='avatar' />
+              </Picture>
+              <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
+                Rayan Adlardard
+              </SectionTitle>
+              <Text margin={'15px'}>Font-end Developer</Text>
+              <FlexWrapper as={'ul'} justify={'space-between'}>
+                {listData.socialNetwork.map((SN, index) => (
+                  <SocialNetwork name={SN.name} key={index} />
+                ))}
+              </FlexWrapper>
+            </FlexWrapper>
+          </S.InfoCell>
+          <S.InfoCell profile>
+            <FlexWrapper
+              as={'ul'}
+              direction={'column'}
+              justify={'space-between'}
+              gap={'10px'}>
+              <li>
+                <Text margin={'0'} as={'span'}>
+                  Age:
+                </Text>
+                <Text margin={'0'} as={'span'}>
+                  24
+                </Text>
+              </li>
+              <li>
+                <Text margin={'0'} as={'span'}>
+                  Residence:
+                </Text>
+                <Text margin={'0'} as={'span'}>
+                  BD
+                </Text>
+              </li>
+              <li>
+                <Text margin={'0'} as={'span'}>
+                  Freelance:
+                </Text>
+                <Text margin={'0'} as={'span'}>
+                  Available
+                </Text>
+              </li>
+              <li>
+                <Text margin={'0'} as={'span'}>
+                  Address:
+                </Text>
+                <Text margin={'0'} as={'span'}>
+                  Dhaka,Bangladesh
+                </Text>
+              </li>
+            </FlexWrapper>
+          </S.InfoCell>
+          <S.InfoCell>
             <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
-              Rayan Adlardard
+              languages
             </SectionTitle>
-            <Text margin={'15px'}>Font-end Developer</Text>
-            <FlexWrapper as={'ul'} justify={'space-between'}>
-              {listData.socialNetwork.map((SN, index) => (
-                <SocialNetwork name={SN.name} key={index} />
+            <FlexWrapper
+              as={'ul'}
+              direction={'column'}
+              justify={'space-between'}
+              gap={'12px'}>
+              {listData.languages.map((PB, index) => (
+                <ProgressBar name={PB.name} percent={PB.percent} key={index} />
               ))}
             </FlexWrapper>
-          </FlexWrapper>
-        </S.InfoCell>
-        <S.InfoCell profile>
-          <FlexWrapper
-            as={'ul'}
-            direction={'column'}
-            justify={'space-between'}
-            gap={'10px'}>
-            <li>
-              <Text margin={'0'} as={'span'}>
-                Age:
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                24
-              </Text>
-            </li>
-            <li>
-              <Text margin={'0'} as={'span'}>
-                Residence:
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                BD
-              </Text>
-            </li>
-            <li>
-              <Text margin={'0'} as={'span'}>
-                Freelance:
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                Available
-              </Text>
-            </li>
-            <li>
-              <Text margin={'0'} as={'span'}>
-                Address:
-              </Text>
-              <Text margin={'0'} as={'span'}>
-                Dhaka,Bangladesh
-              </Text>
-            </li>
-          </FlexWrapper>
-        </S.InfoCell>
-        <S.InfoCell>
-          <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
-            languages
-          </SectionTitle>
-          <FlexWrapper
-            as={'ul'}
-            direction={'column'}
-            justify={'space-between'}
-            gap={'12px'}>
-            {listData.languages.map((PB, index) => (
-              <ProgressBar name={PB.name} percent={PB.percent} key={index} />
-            ))}
-          </FlexWrapper>
-        </S.InfoCell>
-        <S.InfoCell>
-          <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
-            Skills
-          </SectionTitle>
-          <FlexWrapper
-            as={'ul'}
-            direction={'column'}
-            justify={'space-between'}
-            gap={'12px'}>
-            {listData.skills.map((PB, index) => (
-              <ProgressBar name={PB.name} percent={PB.percent} key={index} />
-            ))}
-          </FlexWrapper>
-        </S.InfoCell>
-        <S.InfoCell justify={'start'}>
-          <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
-            Extra Skills
-          </SectionTitle>
-          <FlexWrapper
-            as={'ul'}
-            direction={'column'}
-            justify={'space-between'}
-            gap={'10px'}>
-            <li>
-              <Icon
-                fill={theme.colors.secondaryBg}
-                boxWidth={'15'}
-                boxHeight={'15'}
-                size={'15px'}
-                iconId={'square'}
-              />
-              <Text as={'span'}>Bootstrap, Materialize</Text>
-            </li>
-            <li>
-              <Icon
-                fill={theme.colors.secondaryBg}
-                boxWidth={'15'}
-                boxHeight={'15'}
-                size={'15px'}
-                iconId={'square'}
-              />
-              <Text as={'span'}>Stylus, Sass, Less</Text>
-            </li>
-            <li>
-              <Icon
-                fill={theme.colors.secondaryBg}
-                boxWidth={'15'}
-                boxHeight={'15'}
-                size={'15px'}
-                iconId={'square'}
-              />
-              <Text as={'span'}>Gulp, Webpack, Grunt</Text>
-            </li>
-            <li>
-              <Icon
-                fill={theme.colors.secondaryBg}
-                boxWidth={'15'}
-                boxHeight={'15'}
-                size={'15px'}
-                iconId={'square'}
-              />
-              <Text as={'span'}>GIT Knowledge</Text>
-            </li>
-          </FlexWrapper>
-        </S.InfoCell>
-        <Button font={'14px'} sideBar padding={'10px'}>
-          <span>Download cv</span>
-          <Icon size={'14'} iconId={'download'} />
-        </Button>
-      </FlexWrapper>
-    </S.ProfileStyled>
+          </S.InfoCell>
+          <S.InfoCell>
+            <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
+              Skills
+            </SectionTitle>
+            <FlexWrapper
+              as={'ul'}
+              direction={'column'}
+              justify={'space-between'}
+              gap={'12px'}>
+              {listData.skills.map((PB, index) => (
+                <ProgressBar name={PB.name} percent={PB.percent} key={index} />
+              ))}
+            </FlexWrapper>
+          </S.InfoCell>
+          <S.InfoCell justify={'start'}>
+            <SectionTitle as={'h4'} size={'18px'} weight={'500'} margin={'15px'}>
+              Extra Skills
+            </SectionTitle>
+            <FlexWrapper
+              as={'ul'}
+              direction={'column'}
+              justify={'space-between'}
+              gap={'10px'}>
+              <li>
+                <Icon
+                  fill={theme.colors.secondaryBg}
+                  boxWidth={'15'}
+                  boxHeight={'15'}
+                  size={'15px'}
+                  iconId={'square'}
+                />
+                <Text as={'span'}>Bootstrap, Materialize</Text>
+              </li>
+              <li>
+                <Icon
+                  fill={theme.colors.secondaryBg}
+                  boxWidth={'15'}
+                  boxHeight={'15'}
+                  size={'15px'}
+                  iconId={'square'}
+                />
+                <Text as={'span'}>Stylus, Sass, Less</Text>
+              </li>
+              <li>
+                <Icon
+                  fill={theme.colors.secondaryBg}
+                  boxWidth={'15'}
+                  boxHeight={'15'}
+                  size={'15px'}
+                  iconId={'square'}
+                />
+                <Text as={'span'}>Gulp, Webpack, Grunt</Text>
+              </li>
+              <li>
+                <Icon
+                  fill={theme.colors.secondaryBg}
+                  boxWidth={'15'}
+                  boxHeight={'15'}
+                  size={'15px'}
+                  iconId={'square'}
+                />
+                <Text as={'span'}>GIT Knowledge</Text>
+              </li>
+            </FlexWrapper>
+          </S.InfoCell>
+          <Button font={'14px'} sideBar padding={'10px'}>
+            <span>Download cv</span>
+            <Icon size={'14'} iconId={'download'} />
+          </Button>
+        </FlexWrapper>
+      </S.Content>
+    </S.Profile>
   )
 }

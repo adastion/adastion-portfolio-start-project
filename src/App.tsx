@@ -6,8 +6,11 @@ import { Profile } from './layout/sideBar/SideBar'
 import { theme } from './styles/Theme'
 import { Footer } from './layout/footer/Footer'
 import { Main } from './layout/main/Main'
+import { useState } from 'react'
 
 export const App: React.FC = () => {
+  const [visibleProfile, setVisibleProfile] = useState(false)
+
   return (
     <AppStyled className='App'>
       <Profile />

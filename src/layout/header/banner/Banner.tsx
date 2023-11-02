@@ -8,13 +8,14 @@ import { theme } from '../../../styles/Theme'
 import myPhoto from './../../../assets/images/your_Image_1.png'
 import myPhotoWebp from './../../../assets/images/your_Image_1.webp'
 import { S } from './Banner_Styles'
+import { BurgerButton } from './../../../components/menu/BurgerButton'
 
 export const Banner = () => {
   return (
     <S.Banner>
-      <button>
+      <BurgerButton>
         <span></span>
-      </button>
+      </BurgerButton>
       <FlexWrapper gap={'30px 10px'} justify={'space-between'} align={'center'}>
         <FlexWrapper direction={'column'} align={'start'} padding={'25px'}>
           <SectionTitle margin={'2px'} size={'48px'} transform>
