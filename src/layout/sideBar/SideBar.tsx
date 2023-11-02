@@ -10,6 +10,7 @@ import avatarProfile from './../../assets/images/avatar_profile.jpg'
 import avatarProfileWebp from './../../assets/images/avatar_profile.webp'
 import { S } from './SideBar_Styles'
 import { ProgressBar } from './progressBar/ProgressBar'
+import { SocialNetwork } from './socialNetwork/SocialNetwork'
 
 const listData = {
   languages: [
@@ -49,6 +50,26 @@ const listData = {
       percent: 85,
     },
   ],
+  socialNetwork: [
+    {
+      name: 'faceboock',
+    },
+    {
+      name: 'instagram',
+    },
+    {
+      name: 'twitter',
+    },
+    {
+      name: 'linkedin',
+    },
+    {
+      name: 'youtube',
+    },
+    {
+      name: 'dribbble',
+    },
+  ],
 }
 
 export const Profile: React.FC = () => {
@@ -67,36 +88,9 @@ export const Profile: React.FC = () => {
             </SectionTitle>
             <Text margin={'15px'}>Font-end Developer</Text>
             <FlexWrapper as={'ul'} justify={'space-between'}>
-              <li>
-                <Button width={'24px'} circle>
-                  <Icon size={'14px'} iconId={'faceboock'} />
-                </Button>
-              </li>
-              <li>
-                <Button width={'24px'} circle>
-                  <Icon size={'14px'} iconId={'instagram'} />
-                </Button>
-              </li>
-              <li>
-                <Button width={'24px'} circle>
-                  <Icon size={'14px'} iconId={'twitter'} />
-                </Button>
-              </li>
-              <li>
-                <Button width={'24px'} circle>
-                  <Icon size={'14px'} iconId={'linkedin'} />
-                </Button>
-              </li>
-              <li>
-                <Button width={'24px'} circle>
-                  <Icon size={'14px'} iconId={'youtube'} />
-                </Button>
-              </li>
-              <li>
-                <Button width={'24px'} circle>
-                  <Icon size={'14px'} iconId={'dribbble'} />
-                </Button>
-              </li>
+              {listData.socialNetwork.map((SN, index) => (
+                <SocialNetwork name={SN.name} key={index} />
+              ))}
             </FlexWrapper>
           </FlexWrapper>
         </S.InfoCell>
@@ -149,8 +143,8 @@ export const Profile: React.FC = () => {
             direction={'column'}
             justify={'space-between'}
             gap={'12px'}>
-            {listData.languages.map(PB => (
-              <ProgressBar name={PB.name} percent={PB.percent} />
+            {listData.languages.map((PB, index) => (
+              <ProgressBar name={PB.name} percent={PB.percent} key={index} />
             ))}
           </FlexWrapper>
         </S.InfoCell>
@@ -163,8 +157,8 @@ export const Profile: React.FC = () => {
             direction={'column'}
             justify={'space-between'}
             gap={'12px'}>
-            {listData.skills.map(PB => (
-              <ProgressBar name={PB.name} percent={PB.percent} />
+            {listData.skills.map((PB, index) => (
+              <ProgressBar name={PB.name} percent={PB.percent} key={index} />
             ))}
           </FlexWrapper>
         </S.InfoCell>

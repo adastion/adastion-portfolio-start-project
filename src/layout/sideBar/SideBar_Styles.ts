@@ -111,5 +111,5 @@ const InfoCell = styled.section<InfoCellPropsType>`
 export const S = {
   ProfileStyled,
   ProgressBar,
-  InfoCell
+  InfoCell,
 }
