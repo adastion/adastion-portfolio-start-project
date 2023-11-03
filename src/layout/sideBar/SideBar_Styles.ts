@@ -42,6 +42,7 @@ const Content = styled.div`
   max-width: 305px;
   width: 100%;
   padding: 50px 42px 25px;
+  position: relative;
 
   & ul {
     width: 100%;
@@ -53,16 +54,27 @@ const Content = styled.div`
     }
   }
 
+  & ${BurgerButton} {
+    display: none;
+  }
+
   @media ${theme.media.bigDesktop} {
     max-width: 375px;
 
     & ${BurgerButton} {
       display: flex;
-
+      top: 35px;
+      right: 30px;
       z-index: 15;
-      top: -14px;
-      right: 0;
-      left: 90%;
+      transition: transform 0.3s ease-out;
+
+      &:hover {
+        transform: rotate(180deg);
+      }
+
+      &:focus-visible {
+        transform: scale(1.3);
+      }
     }
   }
 `

@@ -1,3 +1,4 @@
+import React from 'react'
 import { Button } from '../../../components/Button'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Icon } from '../../../components/Icons/Icon'
@@ -8,9 +9,8 @@ import { theme } from '../../../styles/Theme'
 import myPhoto from './../../../assets/images/your_Image_1.png'
 import myPhotoWebp from './../../../assets/images/your_Image_1.webp'
 import { S } from './Banner_Styles'
-import { BurgerButton } from './../../../components/menu/BurgerButton'
 
-export const Banner = () => {
+export const Banner: React.FC = () => {
   return (
     <S.Banner>
       <FlexWrapper gap={'30px 10px'} justify={'space-between'} align={'center'}>

@@ -11,6 +11,7 @@ import avatarProfileWebp from './../../assets/images/avatar_profile.webp'
 import { S } from './SideBar_Styles'
 import { ProgressBar } from './progressBar/ProgressBar'
 import { SocialNetwork } from './socialNetwork/SocialNetwork'
+import { BurgerButton } from '../../components/menu/BurgerButton'
 
 const listData = {
   languages: [
@@ -72,17 +73,18 @@ const listData = {
   ],
 }
 
-type ProfilePropsType = {
-  isOpen:boolean
-}
-
-export const Profile: React.FC<ProfilePropsType> = (props: ProfilePropsType) => {
-
+export const Profile: React.FC = () => {
+  const [isOpenCurrent, setIsOpen] = useState(true)
+  let openClose = () => {
+    setIsOpen(!isOpenCurrent)
+  }
 
   return (
-    <S.Profile isOpen={props.isOpen} >
+    <S.Profile isOpen={isOpenCurrent}>
       <S.Content>
-       
+        <BurgerButton close onClick={openClose}>
+          <span></span>
+        </BurgerButton>
         <FlexWrapper direction={'column'} align={'stretch'}>
           <S.InfoCell>
             <FlexWrapper direction='column' align='center'>

@@ -7,8 +7,6 @@ type BurgerButtonPropsType = {
 
 export const BurgerButton = styled.button<BurgerButtonPropsType>`
   position: absolute;
-  top: 35px;
-  left: 30px;
   width: 30px;
   height: 20px;
   cursor: pointer;
