@@ -1,3 +1,4 @@
+import React from 'react'
 import { S } from './App_Styles'
 import { FlexWrapper } from './components/FlexWrapper'
 import { Menu } from './components/menu/Menu'

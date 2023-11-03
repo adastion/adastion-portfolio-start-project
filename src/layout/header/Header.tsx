@@ -1,22 +1,14 @@
-import styled from 'styled-components'
+import React from 'react'
 import { Container } from './../../components/Container'
+import { S } from './Header_Styles'
 import { Banner } from './banner/Banner'
 
-export function Header() {
+export const Header: React.FC = () => {
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <Banner />
       </Container>
-    </StyledHeader>
+    </S.Header>
   )
 }
-
-const StyledHeader = styled.header`
-  display: flex;
-  gap: 30px;
-
-  & + * {
-    margin-top: 138px;
-  }
-`

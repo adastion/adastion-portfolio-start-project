@@ -1,25 +1,139 @@
-import styled from 'styled-components'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { theme } from '../../../styles/Theme'
 import { Container } from './../../../components/Container'
 import { FlexWrapper } from './../../../components/FlexWrapper'
 import { Text } from './../../../components/Text'
-import { CardPrice } from './card_price/CardPrice'
+import { S } from './PricePlans_Styles'
+import { CardPrice } from './cardPrice/CardPrice'
 
-const listServices = [
-  'UI Design',
-  'web development',
-  'logo design',
-  'seo optimization',
-  'wordPress integration',
-  '5 Websites',
-  'unlimited user',
-  '20 gB bandwith',
-]
+const cardPriceList = {
+  cardData: [
+    {
+      title: 'silver',
+      price: 0.0,
+      info: 'For most businesses that want tooptimize web queries',
+      popularActive: false,
+      services: [
+        {
+          checked: true,
+          service: 'UI Design',
+        },
+        {
+          checked: true,
+          service: 'web development',
+        },
+        {
+          checked: false,
+          service: 'logo design',
+        },
+        {
+          checked: false,
+          service: 'seo optimization',
+        },
+        {
+          checked: false,
+          service: 'wordPress integration',
+        },
+        {
+          checked: false,
+          service: '5 Websites',
+        },
+        {
+          checked: false,
+          service: 'unlimited user',
+        },
+        {
+          checked: false,
+          service: '20 gB bandwith',
+        },
+      ],
+    },
+    {
+      title: 'gold',
+      price: 50.0,
+      info: 'For most businesses that want tooptimize web queries',
+      popularActive: true,
+      services: [
+        {
+          checked: true,
+          service: 'UI Design',
+        },
+        {
+          checked: true,
+          service: 'web development',
+        },
+        {
+          checked: true,
+          service: 'logo design',
+        },
+        {
+          checked: true,
+          service: 'seo optimization',
+        },
+        {
+          checked: false,
+          service: 'wordPress integration',
+        },
+        {
+          checked: false,
+          service: '5 Websites',
+        },
+        {
+          checked: false,
+          service: 'unlimited user',
+        },
+        {
+          checked: false,
+          service: '20 gB bandwith',
+        },
+      ],
+    },
+    {
+      title: 'dimond',
+      price: 80.0,
+      info: 'For most businesses that want tooptimize web queries',
+      popularActive: false,
+      services: [
+        {
+          checked: true,
+          service: 'UI Design',
+        },
+        {
+          checked: true,
+          service: 'web development',
+        },
+        {
+          checked: true,
+          service: 'logo design',
+        },
+        {
+          checked: true,
+          service: 'seo optimization',
+        },
+        {
+          checked: true,
+          service: 'wordPress integration',
+        },
+        {
+          checked: true,
+          service: '5 Websites',
+        },
+        {
+          checked: true,
+          service: 'unlimited user',
+        },
+        {
+          checked: true,
+          service: '20 gB bandwith',
+        },
+      ],
+    },
+  ],
+}
 
 export const PricePlans = () => {
   return (
-    <PricePlansStyled>
+    <S.PricePlans>
       <Container>
         <FlexWrapper align={'center'} direction={'column'}>
           <SectionTitle>Price plans</SectionTitle>
@@ -28,49 +142,19 @@ export const PricePlans = () => {
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
           <FlexWrapper as={'ul'} gap={theme.gapCard}>
-            <CardPrice
-              title={'silver'}
-              price={'0.00'}
-              info={'For most businesses that want tooptimize web queries'}
-              service={listServices}
-            />
-            <CardPrice
-              title={'gold'}
-              price={'50.00'}
-              info={'For most businesses that want tooptimize web queries'}
-              service={listServices}
-              popularActive
-            />
-            <CardPrice
-              title={'dimond'}
-              price={'80.00'}
-              info={'For most businesses that want tooptimize web queries'}
-              service={listServices}
-            />
+            {cardPriceList.cardData.map((C, index) => (
+              <CardPrice
+                title={C.title}
+                price={C.price}
+                info={C.info}
+                popularActive={C.popularActive}
+                services={C.services}
+                key={index}
+              />
+            ))}
           </FlexWrapper>
         </FlexWrapper>
       </Container>
-    </PricePlansStyled>
+    </S.PricePlans>
   )
 }
-
-const PricePlansStyled = styled.section`
-  & ul {
-    width: 100%;
-    overflow-x: auto;
-    max-width: 970px;
-
-    & li {
-      flex-grow: 1;
-      flex-shrink: 0;
-    }
-
-    @media ${theme.media.tablet} {
-      max-width: 576px;
-    }
-
-    @media ${theme.media.mobile} {
-      max-width: 340px;
-    }
-  }
-`

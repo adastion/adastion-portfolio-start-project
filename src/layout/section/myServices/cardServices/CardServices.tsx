@@ -1,11 +1,11 @@
 import React from 'react'
+import { Button } from '../../../../components/Button'
 import { FlexWrapper } from '../../../../components/FlexWrapper'
 import { Icon } from '../../../../components/Icons/Icon'
 import { Text } from '../../../../components/Text'
-import styled from 'styled-components'
 import { theme } from '../../../../styles/Theme'
 import { SectionTitle } from './../../../../components/SectionTitle'
-import { Button } from '../../../../components/Button'
+import { S } from '../MyServices_Styles'
 
 type CardServicesPropsType = {
   iconCard: string
@@ -14,9 +14,11 @@ type CardServicesPropsType = {
   addBtn?: string
 }
 
-export const CardServices = (props: CardServicesPropsType) => {
+export const CardServices: React.FC<CardServicesPropsType> = (
+  props: CardServicesPropsType
+) => {
   return (
-    <CardServicesStyled>
+    <S.CardServices>
       <FlexWrapper direction={'column'} align={'center'} padding={'30px 25px 25px'}>
         {props.iconCard !== '' ? (
           <Icon size='74px' iconId={props.iconCard} fill={theme.colors.secondaryBg} />
@@ -31,20 +33,6 @@ export const CardServices = (props: CardServicesPropsType) => {
           {props.addBtn}
         </Button>
       </FlexWrapper>
-    </CardServicesStyled>
+    </S.CardServices>
   )
 }
-
-const CardServicesStyled = styled.div`
-  background: ${theme.colors.primaryBg};
-  width: 100%;
-  height: 100%;
-
-  & svg + * {
-    margin-top: 25px;
-  }
-
-  & ${Button}:empty {
-    display: none;
-  }
-`

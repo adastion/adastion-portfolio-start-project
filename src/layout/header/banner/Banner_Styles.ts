@@ -4,6 +4,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Picture } from '../../../components/Picture'
 import { Button } from '../../../components/Button'
 import { Text } from '../../../components/Text'
+import { BurgerButton } from '../../../components/menu/BurgerButton'
 
 const Banner = styled.section`
   background: ${theme.colors.primaryBg || '#F0F0F6'};
@@ -36,8 +37,28 @@ const Banner = styled.section`
     }
   }
 
+  & ${BurgerButton} {
+    display: none;
+  }
+
+  @media ${theme.media.bigDesktop} {
+    position: relative;
+
+    & ${BurgerButton} {
+      display: flex;
+      top: 35px;
+      left: 30px;
+    }
+  }
+
   @media ${theme.media.desktop} {
     padding: 0;
+
+    & ${BurgerButton} {
+      & + * {
+        margin-top: 45px;
+      }
+    }
   }
 
   @media ${theme.media.mobile} {

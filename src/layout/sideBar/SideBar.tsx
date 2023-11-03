@@ -5,13 +5,13 @@ import { Icon } from '../../components/Icons/Icon'
 import { Picture } from '../../components/Picture'
 import { SectionTitle } from '../../components/SectionTitle'
 import { Text } from '../../components/Text'
+import { BurgerButton } from '../../components/menu/BurgerButton'
 import { theme } from '../../styles/Theme'
 import avatarProfile from './../../assets/images/avatar_profile.jpg'
 import avatarProfileWebp from './../../assets/images/avatar_profile.webp'
 import { S } from './SideBar_Styles'
 import { ProgressBar } from './progressBar/ProgressBar'
 import { SocialNetwork } from './socialNetwork/SocialNetwork'
-import { BurgerButton } from '../../components/menu/BurgerButton'
 
 const listData = {
   languages: [
@@ -28,7 +28,6 @@ const listData = {
       percent: 60,
     },
   ],
-
   skills: [
     {
       name: 'Html',
