@@ -38,7 +38,7 @@ export const CardPrice = (props: CardPricePropsType) => {
                 fill={S.checked ? theme.colors.secondaryBg : theme.colors.secondary}
                 key={index}
               />
-              <span>{S.service}</span>
+              <span className={S.checked ? 'activeColor' : ''}>{S.service}</span>
             </li>
           ))}
         </FlexWrapper>

@@ -47,6 +47,10 @@ const CardPrice = styled.li<CardPricePropsType>`
     gap: 15px;
     width: 100%;
     color: ${theme.colors.secondary};
+
+    & span.activeColor {
+      color: ${theme.colors.primary};
+    }
   }
 
   & ${Button} {
