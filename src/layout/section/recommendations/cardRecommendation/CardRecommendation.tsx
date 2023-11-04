@@ -1,53 +1,36 @@
 import React from 'react'
 import { FlexWrapper } from '../../../../components/FlexWrapper'
 import { Icon } from '../../../../components/Icons/Icon'
-import { Text } from './../../../../components/Text'
-import avatrPreview1 from './../../../../assets/images/ava_1.jpg'
-import avatrPreview1Webp from './../../../../assets/images/ava_1.webp'
-import avatrPreview2 from './../../../../assets/images/ava_2.jpg'
-import avatrPreview2Webp from './../../../../assets/images/ava_2.webp'
-import avatrPreview3 from './../../../../assets/images/ava_3.jpg'
-import avatrPreview3Webp from './../../../../assets/images/ava_3.webp'
-import styled from 'styled-components'
-import { theme } from '../../../../styles/Theme'
-import { SectionTitle } from '../../../../components/SectionTitle'
 import { Picture } from '../../../../components/Picture'
+import { SectionTitle } from '../../../../components/SectionTitle'
+import { theme } from '../../../../styles/Theme'
+import { S } from '../Recommendations_Styles'
+import { Text } from './../../../../components/Text'
 
-type CardRecommendationPropdType = {
+type CardRecommendationPropsType = {
   nameIcon: string
   title: string
   description: string
   indexCard: number
+  dataUser: {
+    picture: string[]
+    name: string
+    profession: string
+  }
 }
 
-const listUsers = [
-  {
-    picture: [avatrPreview1, avatrPreview1Webp],
-    name: 'James Gouse',
-    profession: 'Graphic Designer',
-  },
-  {
-    picture: [avatrPreview2, avatrPreview2Webp],
-    name: 'Tiana Philips',
-    profession: 'Photographer',
-  },
-  {
-    picture: [avatrPreview3, avatrPreview3Webp],
-    name: 'Talan Westervelt',
-    profession: 'Business man',
-  },
-]
-
-export const CardRecommendation = (props: CardRecommendationPropdType) => {
+export const CardRecommendation: React.FC<CardRecommendationPropsType> = (
+  props: CardRecommendationPropsType
+) => {
   return (
-    <CardRecommendationStyled>
-      <Rtating>
+    <S.CardRecommendation>
+      <S.Rtating>
         <Icon iconId={props.nameIcon} fill={theme.colors.secondaryBg} size={'18px'} />
         <Icon iconId={props.nameIcon} fill={theme.colors.secondaryBg} size={'18px'} />
         <Icon iconId={props.nameIcon} fill={theme.colors.secondaryBg} size={'18px'} />
         <Icon iconId={props.nameIcon} fill={theme.colors.secondaryBg} size={'18px'} />
         <Icon iconId={props.nameIcon} fill={theme.colors.secondaryBg} size={'18px'} />
-      </Rtating>
+      </S.Rtating>
       <SectionTitle as={'h4'} margin={'18px'} size={'18px'} weight={'500'}>
         {props.title}
       </SectionTitle>
@@ -56,31 +39,18 @@ export const CardRecommendation = (props: CardRecommendationPropdType) => {
       </Text>
       <FlexWrapper gap={'20px'}>
         <Picture avatar width={'80px'} height={'80px'}>
-          <source srcSet={listUsers[props.indexCard].picture[1]} type='image/webp' />
-          <img loading='lazy' src={listUsers[props.indexCard].picture[0]} alt='avatar' />
+          <source srcSet={props.dataUser.picture[1]} type='image/webp' />
+          <img loading='lazy' src={props.dataUser.picture[0]} alt='avatar' />
         </Picture>
         <FlexWrapper direction={'column'} justify={'center'}>
           <SectionTitle as={'h4'} margin={'5px'} size={'18px'} weight={'500'}>
-            {listUsers[props.indexCard].name}
+            {props.dataUser.name}
           </SectionTitle>
           <Text margin={'30px'} position={'start'}>
-            {listUsers[props.indexCard].profession}
+            {props.dataUser.profession}
           </Text>
         </FlexWrapper>
       </FlexWrapper>
-    </CardRecommendationStyled>
+    </S.CardRecommendation>
   )
 }
-
-const CardRecommendationStyled = styled.li`
-  display: grid;
-  max-width: 310px;
-  background: ${theme.colors.primaryBg};
-  padding: 25px;
-`
-
-const Rtating = styled.div`
-  display: flex;
-  gap: 10px;
-  margin-bottom: 16px;
-`
