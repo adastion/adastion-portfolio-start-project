@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { Button } from '../../components/Button'
 import { Picture } from '../../components/Picture'
 import { theme } from '../../styles/Theme'
-import { BurgerButton } from './../../components/menu/BurgerButton'
+import { BurgerButton } from '../../components/burgerButton/BurgerButton'
 
 type ProfilePropsType = {
   isOpen?: boolean

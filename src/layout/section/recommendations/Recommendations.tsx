@@ -1,4 +1,10 @@
 import React from 'react'
+import avatrPreview1 from '../../../assets/images/ava_1.jpg'
+import avatrPreview1Webp from '../../../assets/images/ava_1.webp'
+import avatrPreview2 from '../../../assets/images/ava_2.jpg'
+import avatrPreview2Webp from '../../../assets/images/ava_2.webp'
+import avatrPreview3 from '../../../assets/images/ava_3.jpg'
+import avatrPreview3Webp from '../../../assets/images/ava_3.webp'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { theme } from '../../../styles/Theme'
@@ -6,12 +12,6 @@ import { SectionTitle } from './../../../components/SectionTitle'
 import { Text } from './../../../components/Text'
 import { S } from './Recommendations_Styles'
 import { CardRecommendation } from './cardRecommendation/CardRecommendation'
-import avatrPreview1 from '../../../assets/images/ava_1.jpg'
-import avatrPreview1Webp from '../../../assets/images/ava_1.webp'
-import avatrPreview2 from '../../../assets/images/ava_2.jpg'
-import avatrPreview2Webp from '../../../assets/images/ava_2.webp'
-import avatrPreview3 from '../../../assets/images/ava_3.jpg'
-import avatrPreview3Webp from '../../../assets/images/ava_3.webp'
 
 const cardListRecommendation = [
   {

@@ -5,7 +5,7 @@ import { Icon } from '../../components/Icons/Icon'
 import { Picture } from '../../components/Picture'
 import { SectionTitle } from '../../components/SectionTitle'
 import { Text } from '../../components/Text'
-import { BurgerButton } from '../../components/menu/BurgerButton'
+import { BurgerButton } from '../../components/burgerButton/BurgerButton'
 import { theme } from '../../styles/Theme'
 import avatarProfile from './../../assets/images/avatar_profile.jpg'
 import avatarProfileWebp from './../../assets/images/avatar_profile.webp'
@@ -73,7 +73,7 @@ const listData = {
 }
 
 export const Profile: React.FC = () => {
-  const [isOpenCurrent, setIsOpen] = useState(true)
+  const [isOpenCurrent, setIsOpen] = useState(false)
   let openClose = () => {
     setIsOpen(!isOpenCurrent)
   }

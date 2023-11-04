@@ -8,7 +8,7 @@ import { Text } from '../../../components/Text'
 import { theme } from '../../../styles/Theme'
 import myPhoto from './../../../assets/images/your_Image_1.png'
 import myPhotoWebp from './../../../assets/images/your_Image_1.webp'
-import { BurgerButton } from './../../../components/menu/BurgerButton'
+import { BurgerButton } from '../../../components/burgerButton/BurgerButton'
 import { S } from './Banner_Styles'
 
 export const Banner: React.FC = () => {

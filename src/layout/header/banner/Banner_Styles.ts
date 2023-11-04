@@ -4,7 +4,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Picture } from '../../../components/Picture'
 import { Button } from '../../../components/Button'
 import { Text } from '../../../components/Text'
-import { BurgerButton } from '../../../components/menu/BurgerButton'
+import { BurgerButton } from '../../../components/burgerButton/BurgerButton'
 
 const Banner = styled.section`
   background: ${theme.colors.primaryBg || '#F0F0F6'};

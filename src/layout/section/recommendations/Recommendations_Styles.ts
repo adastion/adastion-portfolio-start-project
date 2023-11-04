@@ -13,7 +13,10 @@ const Recommendations = styled.section`
     }
 
     @media ${theme.media.tablet} {
-      overflow-x: hidden;
+      max-width: 576px;
+    }
+
+    @media ${theme.media.mobile} {
       max-width: 310px;
     }
   }
