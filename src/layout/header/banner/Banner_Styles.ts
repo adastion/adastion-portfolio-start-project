@@ -48,6 +48,11 @@ const Banner = styled.section`
       display: flex;
       top: 35px;
       left: 30px;
+      transition: all 0.3s cubic-bezier(0.52, -0.6, 0.485, 1.65);
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 

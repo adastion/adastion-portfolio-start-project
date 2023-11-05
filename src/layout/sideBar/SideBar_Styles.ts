@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import { Button } from '../../components/Button'
 import { Picture } from '../../components/Picture'
-import { theme } from '../../styles/Theme'
 import { BurgerButton } from '../../components/burgerButton/BurgerButton'
+import { theme } from '../../styles/Theme'
 
 type ProfilePropsType = {
   isOpen?: boolean
@@ -18,6 +18,8 @@ type ProgressBarPropsType = {
 }
 
 const Profile = styled.aside<ProfilePropsType>`
+  transition: all 0.4s ease-out;
+
   @media ${theme.media.bigDesktop} {
     position: absolute;
     left: -110vw;

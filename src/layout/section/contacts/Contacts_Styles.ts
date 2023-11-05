@@ -17,11 +17,25 @@ const Contacts = styled.section`
 
 const ContactsItem = styled.section`
   &:first-child {
-    flex-grow: 1;
+    flex-grow: 30;
+    flex-shrink: 0;
+  }
+
+  &:last-child {
+    max-width: 370px;
+    width: 100%;
+
+    @media ${theme.media.desktop} {
+      max-width: 100%;
+    }
+
+    @media ${theme.media.tablet} {
+      max-width: none;
+    }
   }
 `
 
-const StyledForm = styled.form`
+const Form = styled.form`
   max-width: 100%;
   padding: 25px;
   background-color: ${theme.colors.primaryBg};
@@ -41,6 +55,7 @@ const StyledForm = styled.form`
       & label {
         display: inline-block;
         color: ${theme.colors.secondary};
+        cursor: default;
       }
 
       & input,
@@ -48,6 +63,10 @@ const StyledForm = styled.form`
         height: 50px;
         background: ${theme.colors.pageBg};
         padding: 8px;
+
+        &:focus-visible {
+          box-shadow: 0px 1px 20px 7px ${theme.colors.secondaryBg};
+        }
       }
 
       & textarea {
@@ -68,14 +87,18 @@ const CardContacts = styled.li`
   & ${Button} {
     margin: 0 auto;
     margin-bottom: 30px;
+    cursor: default;
   }
 
   & li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 15px;
     font-size: 15px;
     color: ${theme.colors.secondary};
+    height: 100%;
+    width: 100%;
   }
 `
 
@@ -83,5 +106,5 @@ export const S = {
   Contacts,
   ContactsItem,
   CardContacts,
-  StyledForm,
+  Form,
 }
