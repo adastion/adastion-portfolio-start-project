@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { theme } from '../../../styles/Theme'
 import { Button } from '../../../components/Button'
+import { theme } from '../../../styles/Theme'
 
 const Portfolio = styled.section`
   & nav {
@@ -10,7 +10,6 @@ const Portfolio = styled.section`
 
     & ul {
       width: 100%;
-      overflow-x: auto;
 
       & li {
         font-size: 18px;
@@ -42,9 +41,10 @@ const Portfolio = styled.section`
         }
       }
 
-      @media ${theme.media.mobile} {
-        max-width: 340px;
-        justify-content: start;
+      @media ${theme.media.tablet} {
+        width: 49, 9425%;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }

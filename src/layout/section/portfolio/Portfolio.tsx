@@ -157,7 +157,7 @@ export const Portfolio: React.FC = () => {
               Velit officia consequat duis enim velit mollit. lorem ipsum
             </Text>
             <nav>
-              <FlexWrapper as={'ul'} justify={'center'} gap={' 10px 38px'}>
+              <FlexWrapper as={'ul'} justify={'center'} gap={' 20px 38px'} wrap={'wrap'}>
                 {tabsItemsList.map((T, index) => (
                   <li key={index}>
                     <Button
