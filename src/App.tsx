@@ -18,7 +18,7 @@ export const App: React.FC = () => {
         <Main />
         <Footer />
       </FlexWrapper>
-      <Menu />
+      <Menu active={currentActive} setActive={setCurrentActive} />
     </S.App>
   )
 }

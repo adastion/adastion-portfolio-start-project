@@ -1,4 +1,5 @@
 import React from 'react'
+import { ProfilePropsType } from '../../layout/sideBar/SideBar'
 import { theme } from '../../styles/Theme'
 import { Button } from '../Button'
 import { Icon } from '../Icons/Icon'
@@ -32,7 +33,7 @@ const navItemsList = [
   },
 ]
 
-export const Menu: React.FC = () => {
+export const Menu: React.FC<ProfilePropsType> = (props: ProfilePropsType) => {
   return (
     <S.Menu>
       <Button circle colorBackground={'transparent'} notHover={'none'}>
@@ -42,6 +43,7 @@ export const Menu: React.FC = () => {
         {navItemsList.map(N => (
           <S.NavItem name={N.name}>
             <Button
+              onClick={N.name === 'cv' ? ()=> {props.setActive(true)}: undefined}
               href={`#${N.href}`}
               colorBackground={theme.colors.pageBg}
               as='a'
