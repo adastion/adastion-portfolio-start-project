@@ -6,7 +6,7 @@ import { Table } from '../../../components/table/Table'
 import { S } from '../../../components/table/Table_Styles'
 import { theme } from '../../../styles/Theme'
 
-const listTableWorkHistory = [
+const tableEducationList = [
   {
     title: 'Lead Web Designer',
     date: 'Jan 2016 - Dec 2021',
@@ -41,7 +41,7 @@ export const WorkHistory: React.FC = () => {
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
           <FlexWrapper direction={'column'} as={'ul'}>
-            {listTableWorkHistory.map(T => (
+            {tableEducationList.map(T => (
               <Table
                 title={T.title}
                 date={T.date}

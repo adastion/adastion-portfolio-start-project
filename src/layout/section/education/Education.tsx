@@ -1,12 +1,12 @@
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
+import { SectionTitle } from '../../../components/SectionTitle'
+import { Text } from '../../../components/Text'
 import { Table } from '../../../components/table/Table'
 import { S } from '../../../components/table/Table_Styles'
 import { theme } from '../../../styles/Theme'
-import { SectionTitle } from '../../../components/SectionTitle'
-import { Text } from '../../../components/Text'
 
-const listTableEducation = [
+const tableEducationList = [
   {
     title: 'University of Toronto',
     date: 'Jan 2016 - Dec 2021',
@@ -41,7 +41,7 @@ export const Education: React.FC = () => {
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
           <FlexWrapper direction={'column'} as={'ul'}>
-            {listTableEducation.map(T => (
+            {tableEducationList.map(T => (
               <Table
                 title={T.title}
                 date={T.date}
