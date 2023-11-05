@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import portfolioPicPreview_1 from '../../../assets/images/portfolio_1.jpg'
 import portfolioPicPreviewWebp_1 from '../../../assets/images/portfolio_1.webp'
@@ -25,7 +26,7 @@ import { SectionTitle } from '../../../components/SectionTitle'
 import { Text } from '../../../components/Text'
 import { theme } from '../../../styles/Theme'
 
-export const Portfolio = () => {
+export const Portfolio: React.FC = () => {
   return (
     <PortfolioStyled>
       <FlexWrapper align={'center'} direction='column'>

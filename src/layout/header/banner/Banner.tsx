@@ -1,3 +1,4 @@
+import React from 'react'
 import { Button } from '../../../components/Button'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Icon } from '../../../components/Icons/Icon'
@@ -7,15 +8,16 @@ import { Text } from '../../../components/Text'
 import { theme } from '../../../styles/Theme'
 import myPhoto from './../../../assets/images/your_Image_1.png'
 import myPhotoWebp from './../../../assets/images/your_Image_1.webp'
+import { BurgerButton } from '../../../components/burgerButton/BurgerButton'
 import { S } from './Banner_Styles'
 
-export const Banner = () => {
+export const Banner: React.FC = () => {
   return (
     <S.Banner>
-      <button>
-        <span></span>
-      </button>
       <FlexWrapper gap={'30px 10px'} justify={'space-between'} align={'center'}>
+        <BurgerButton>
+          <span></span>
+        </BurgerButton>
         <FlexWrapper direction={'column'} align={'start'} padding={'25px'}>
           <SectionTitle margin={'2px'} size={'48px'} transform>
             I’m Rayan Adlrdard

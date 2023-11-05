@@ -12,7 +12,7 @@ type IconPropsType = {
 export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {
   return (
     <svg
-      fill={`${props.fill || theme.colors.primary || 'black'}`}
+      fill={`${props.fill || theme.colors.primary}`}
       xmlns='http://www.w3.org/2000/svg'
       width={props.size || '40px'}
       height={props.size || '40px'}
