@@ -45,7 +45,7 @@ const blogCardData = [
 
 export const Blog: React.FC = () => {
   return (
-    <S.Blog>
+    <S.Blog id={'blog'}>
       <Container>
         <FlexWrapper align={'center'} direction={'column'}>
           <SectionTitle>Blog</SectionTitle>

@@ -79,7 +79,7 @@ export const Profile: React.FC = () => {
   }
 
   return (
-    <S.Profile isOpen={isOpenCurrent}>
+    <S.Profile id={'cv'} isOpen={isOpenCurrent}>
       <S.Content>
         <BurgerButton close onClick={openClose}>
           <span></span>

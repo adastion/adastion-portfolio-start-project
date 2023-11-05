@@ -1,5 +1,4 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
 import portfolioPicPreview_1 from '../../../assets/images/portfolio_1.jpg'
 import portfolioPicPreviewWebp_1 from '../../../assets/images/portfolio_1.webp'
 import portfolioPicPreview_2 from '../../../assets/images/portfolio_2.jpg'
@@ -25,10 +24,130 @@ import { Picture } from '../../../components/Picture'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Text } from '../../../components/Text'
 import { theme } from '../../../styles/Theme'
+import { S } from './Portfolio_Styles'
+
+type TabsType = {
+  title: string
+  status: 'all' | 'ui design' | 'web templates' | 'logo' | 'branding'
+}
+
+const tabsItemsList: Array<TabsType> = [
+  {
+    title: 'All categories',
+    status: 'all',
+  },
+  {
+    title: 'UI Design',
+    status: 'ui design',
+  },
+  {
+    title: 'Web Templates',
+    status: 'web templates',
+  },
+  {
+    title: 'Logo',
+    status: 'logo',
+  },
+  {
+    title: 'Branding',
+    status: 'branding',
+  },
+]
+
+const cardsPortfolioList = [
+  {
+    preview: {
+      jpg: portfolioPicPreview_1,
+      webp: portfolioPicPreviewWebp_1,
+    },
+    type: 'ui design',
+  },
+  {
+    preview: {
+      jpg: portfolioPicPreview_2,
+      webp: portfolioPicPreviewWebp_2,
+    },
+    type: 'ui design',
+  },
+  {
+    preview: {
+      jpg: portfolioPicPreview_3,
+      webp: portfolioPicPreviewWebp_3,
+    },
+    type: 'logo',
+  },
+  {
+    preview: {
+      jpg: portfolioPicPreview_4,
+      webp: portfolioPicPreviewWebp_4,
+    },
+    type: 'web templates',
+  },
+  {
+    preview: {
+      jpg: portfolioPicPreview_5,
+      webp: portfolioPicPreviewWebp_5,
+    },
+    type: 'web templates',
+  },
+  {
+    preview: {
+      jpg: portfolioPicPreview_6,
+      webp: portfolioPicPreviewWebp_6,
+    },
+    type: 'web templates',
+  },
+  {
+    preview: {
+      jpg: portfolioPicPreview_7,
+      webp: portfolioPicPreviewWebp_7,
+    },
+    type: 'branding',
+  },
+  {
+    preview: {
+      jpg: portfolioPicPreview_8,
+      webp: portfolioPicPreviewWebp_8,
+    },
+    type: 'branding',
+  },
+  {
+    preview: {
+      jpg: portfolioPicPreview_9,
+      webp: portfolioPicPreviewWebp_9,
+    },
+    type: 'branding',
+  },
+]
 
 export const Portfolio: React.FC = () => {
+  const [countTabsStatus, setCountTabsStatus] = useState('all')
+  let filteredPortfolio = cardsPortfolioList
+
+  if (countTabsStatus === 'ui design') {
+    filteredPortfolio = cardsPortfolioList.filter(cards => cards.type === 'ui design')
+  }
+
+  if (countTabsStatus === 'web templates') {
+    filteredPortfolio = cardsPortfolioList.filter(cards => cards.type === 'web templates')
+  }
+
+  if (countTabsStatus === 'logo') {
+    filteredPortfolio = cardsPortfolioList.filter(cards => cards.type === 'logo')
+  }
+
+  if (countTabsStatus === 'branding') {
+    filteredPortfolio = cardsPortfolioList.filter(cards => cards.type === 'branding')
+  }
+
+  function changeFilterStatus(
+    value: 'all' | 'ui design' | 'web templates' | 'logo' | 'branding'
+  ) {
+    setCountTabsStatus(value)
+  }
+
   return (
-    <PortfolioStyled>
+    <S.Portfolio>
       <FlexWrapper align={'center'} direction='column'>
         <Container>
           <FlexWrapper align={'center'} direction={'column'}>
@@ -39,202 +158,34 @@ export const Portfolio: React.FC = () => {
             </Text>
             <nav>
               <FlexWrapper as={'ul'} justify={'center'} gap={' 10px 38px'}>
-                <li>
-                  <Button className={'active'}>All categories</Button>
-                </li>
-                <li>
-                  <Button>UI Design</Button>
-                </li>
-                <li>
-                  <Button>Web Templates</Button>
-                </li>
-                <li>
-                  <Button>Logo</Button>
-                </li>
-                <li>
-                  <Button>Branding</Button>
-                </li>
+                {tabsItemsList.map((T, index) => (
+                  <li key={index}>
+                    <Button
+                      className={countTabsStatus === T.status ? 'active' : ''}
+                      onClick={() => {
+                        changeFilterStatus(T.status)
+                      }}>
+                      {T.title}
+                    </Button>
+                  </li>
+                ))}
               </FlexWrapper>
             </nav>
-            <GridWrapper as={'ul'}>
-              <li>
-                <a href='#l'>
-                  <Picture>
-                    <source srcSet={portfolioPicPreviewWebp_1} />
-                    <img loading='lazy' src={portfolioPicPreview_1} alt='portfolio' />
-                  </Picture>
-                </a>
-              </li>
-              <li>
-                <a href='#l'>
-                  <Picture>
-                    <source srcSet={portfolioPicPreviewWebp_2} />
-                    <img loading='lazy' src={portfolioPicPreview_2} alt='portfolio' />
-                  </Picture>
-                </a>
-              </li>
-              <li>
-                <a href='#l'>
-                  <Picture>
-                    <source srcSet={portfolioPicPreviewWebp_3} />
-                    <img loading='lazy' src={portfolioPicPreview_3} alt='portfolio' />
-                  </Picture>
-                </a>
-              </li>
-              <li>
-                <a href='#l'>
-                  <Picture>
-                    <source srcSet={portfolioPicPreviewWebp_4} />
-                    <img loading='lazy' src={portfolioPicPreview_4} alt='portfolio' />
-                  </Picture>
-                </a>
-              </li>
-              <li>
-                <a href='#l'>
-                  <Picture>
-                    <source srcSet={portfolioPicPreviewWebp_5} />
-                    <img loading='lazy' src={portfolioPicPreview_5} alt='portfolio' />
-                  </Picture>
-                </a>
-              </li>
-              <li>
-                <a href='#l'>
-                  <Picture>
-                    <source srcSet={portfolioPicPreviewWebp_6} />
-                    <img loading='lazy' src={portfolioPicPreview_6} alt='portfolio' />
-                  </Picture>
-                </a>
-              </li>
-              <li>
-                <a href='#l'>
-                  <Picture>
-                    <source srcSet={portfolioPicPreviewWebp_7} />
-                    <img loading='lazy' src={portfolioPicPreview_7} alt='portfolio' />
-                  </Picture>
-                </a>
-              </li>
-              <li>
-                <a href='#l'>
-                  <Picture>
-                    <source srcSet={portfolioPicPreviewWebp_8} />
-                    <img loading='lazy' src={portfolioPicPreview_8} alt='portfolio' />
-                  </Picture>
-                </a>
-              </li>
-              <li>
-                <a href='#l'>
-                  <Picture>
-                    <source srcSet={portfolioPicPreviewWebp_9} />
-                    <img loading='lazy' src={portfolioPicPreview_9} alt='portfolio' />
-                  </Picture>
-                </a>
-              </li>
-            </GridWrapper>
+            <S.GridWrapper as={'ul'}>
+              {filteredPortfolio.map((P, index) => (
+                <li key={index}>
+                  <a href='#l'>
+                    <Picture>
+                      <source srcSet={P.preview.webp} />
+                      <img loading='lazy' src={P.preview.jpg} alt='portfolio' />
+                    </Picture>
+                  </a>
+                </li>
+              ))}
+            </S.GridWrapper>
           </FlexWrapper>
         </Container>
       </FlexWrapper>
-    </PortfolioStyled>
+    </S.Portfolio>
   )
 }
-
-const PortfolioStyled = styled.section`
-  & nav {
-    & + * {
-      margin-top: 50px;
-    }
-
-    & ul {
-      width: 100%;
-      overflow-x: auto;
-
-      & li {
-        font-size: 18px;
-        font-weight: 500;
-        flex-grow: 1;
-        flex-shrink: 0;
-
-        & ${Button} {
-          background: unset;
-          padding: 0;
-          text-transform: capitalize;
-
-          &:hover,
-          &:focus-visible {
-            opacity: 0.7;
-            color: inherit;
-          }
-
-          &.active {
-            color: ${theme.colors.secondaryBg};
-
-            &:hover,
-            &:focus-visible {
-              opacity: unset;
-              color: ${theme.colors.secondaryBg};
-              cursor: auto;
-            }
-          }
-        }
-      }
-
-      @media ${theme.media.mobile} {
-        max-width: 340px;
-        justify-content: start;
-      }
-    }
-  }
-`
-
-const GridWrapper = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, auto));
-  gap: 20px;
-
-  & li a {
-    display: inline-block;
-    position: relative;
-    z-index: 0;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      opacity: 0;
-      z-index: -1;
-    }
-
-    &::before {
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background: ${theme.colors.secondaryBg};
-    }
-
-    &::after {
-      content: '+';
-      font-size: 85px;
-      line-height: 0;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    &:hover,
-    &:focus-visible {
-      &::before,
-      &::after {
-        transition: all 0.3s ease-in-out;
-        z-index: 1;
-        opacity: 0.9;
-      }
-    }
-
-    & img {
-      aspect-ratio: 1/0.971;
-      object-fit: cover;
-    }
-  }
-`

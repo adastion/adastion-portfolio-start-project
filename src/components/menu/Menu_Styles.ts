@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { theme } from '../../styles/Theme'
+import { Button } from './../Button';
 
 type NavItemPropsType = {
   name: string
@@ -87,6 +88,10 @@ const NavItem = styled.li<NavItemPropsType>`
     height: 18px;
     clip-path: polygon(100% 0, 0 0, 50% 100%);
     z-index: 0;
+  }
+
+  & ${Button} {
+
   }
 `
 

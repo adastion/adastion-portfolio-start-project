@@ -5,24 +5,30 @@ import { Icon } from '../Icons/Icon'
 import { FlexWrapper } from './../FlexWrapper'
 import { S } from './Menu_Styles'
 
-const listNavItem = [
+const navItemsList = [
   {
     name: 'home',
+    href: 'home',
   },
   {
     name: 'services',
+    href: 'myServices',
   },
   {
     name: 'cv',
+    href: 'cv',
   },
   {
     name: 'portfolio',
+    href: 'portfolio',
   },
   {
     name: 'blog',
+    href: 'blog',
   },
   {
     name: 'contact',
+    href: 'contacts',
   },
 ]
 
@@ -33,9 +39,13 @@ export const Menu: React.FC = () => {
         <Icon iconId={'contrast'} boxWidth='30' boxHeight='30' size={'30px'} />
       </Button>
       <FlexWrapper as={'ul'} direction={'column'} align={'center'}>
-        {listNavItem.map(N => (
+        {navItemsList.map(N => (
           <S.NavItem name={N.name}>
-            <Button colorBackground={theme.colors.pageBg} as='a' circle>
+            <Button
+              href={`#${N.href}`}
+              colorBackground={theme.colors.pageBg}
+              as='a'
+              circle>
               <Icon
                 fill={theme.colors.secondary}
                 iconId={N.name}
