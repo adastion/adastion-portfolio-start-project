@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll'
 import styled, { css } from 'styled-components'
 import { theme } from '../styles/Theme'
 
@@ -13,6 +14,27 @@ type ButtonPropsType = {
   font?: string
   notHover?: string
 }
+
+export const NavLink = styled(Link)<ButtonPropsType>`
+  padding: ${props => props.padding || '5px'};
+  border-radius: 50%;
+  width: ${props => props.width || '40px'};
+  height: ${props => props.width || '40px'};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${props => props.colorBackground || theme.colors.secondaryBg};
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    background: ${props => (props.notHover ? 'none' : theme.colors.secondaryBg)};
+
+    svg {
+      fill: ${theme.colors.primary};
+    }
+  }
+`
 
 export const Button = styled.button<ButtonPropsType>`
   display: flex;

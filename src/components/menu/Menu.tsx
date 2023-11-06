@@ -3,6 +3,7 @@ import { ProfilePropsType } from '../../layout/sideBar/SideBar'
 import { theme } from '../../styles/Theme'
 import { Button } from '../Button'
 import { Icon } from '../Icons/Icon'
+import { NavLink } from './../Button'
 import { FlexWrapper } from './../FlexWrapper'
 import { S } from './Menu_Styles'
 
@@ -33,7 +34,7 @@ const navItemsList = [
   },
 ]
 
-export const Menu: React.FC<ProfilePropsType> = (props: ProfilePropsType) => {
+export const Menu: React.FC = () => {
   return (
     <S.Menu>
       <Button circle colorBackground={'transparent'} notHover={'none'}>
@@ -42,11 +43,13 @@ export const Menu: React.FC<ProfilePropsType> = (props: ProfilePropsType) => {
       <FlexWrapper as={'ul'} direction={'column'} align={'center'}>
         {navItemsList.map(N => (
           <S.NavItem name={N.name}>
-            <Button
-              onClick={N.name === 'cv' ? ()=> {props.setActive(true)}: undefined}
-              href={`#${N.href}`}
+            <NavLink
+              activeClass='active'
+              smooth={true}
+              spy={true}
+              offset={-20}
+              to={N.href}
               colorBackground={theme.colors.pageBg}
-              as='a'
               circle>
               <Icon
                 fill={theme.colors.secondary}
@@ -55,7 +58,7 @@ export const Menu: React.FC<ProfilePropsType> = (props: ProfilePropsType) => {
                 boxHeight='16'
                 size='16'
               />
-            </Button>
+            </NavLink>
           </S.NavItem>
         ))}
       </FlexWrapper>

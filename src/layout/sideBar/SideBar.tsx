@@ -80,7 +80,6 @@ export type ProfilePropsType = {
 export const Profile: React.FC<ProfilePropsType> = (props: ProfilePropsType) => {
   return (
     <S.Profile
-      id={'cv'}
       isOpen={props.active}
       onClick={() => {
         props.setActive(false)
