@@ -5,17 +5,21 @@ import { Icon } from '../../../components/Icons/Icon'
 import { Picture } from '../../../components/Picture'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Text } from '../../../components/Text'
+import { BurgerButton } from '../../../components/burgerButton/BurgerButton'
 import { theme } from '../../../styles/Theme'
+import { ProfilePropsType } from '../../sideBar/SideBar'
 import myPhoto from './../../../assets/images/your_Image_1.png'
 import myPhotoWebp from './../../../assets/images/your_Image_1.webp'
-import { BurgerButton } from '../../../components/burgerButton/BurgerButton'
 import { S } from './Banner_Styles'
 
-export const Banner: React.FC = () => {
+export const Banner: React.FC<ProfilePropsType> = (props: ProfilePropsType) => {
   return (
     <S.Banner>
       <FlexWrapper gap={'30px 10px'} justify={'space-between'} align={'center'}>
-        <BurgerButton>
+        <BurgerButton
+          onClick={() => {
+            props.setActive(true)
+          }}>
           <span></span>
         </BurgerButton>
         <FlexWrapper direction={'column'} align={'start'} padding={'25px'}>

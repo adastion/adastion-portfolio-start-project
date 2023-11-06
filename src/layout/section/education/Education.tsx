@@ -32,7 +32,7 @@ const tableEducationList = [
 
 export const Education: React.FC = () => {
   return (
-    <S.TableWrap>
+    <S.TableWrap id={'cv'}>
       <Container>
         <FlexWrapper align={'center'} direction={'column'}>
           <SectionTitle>Education</SectionTitle>

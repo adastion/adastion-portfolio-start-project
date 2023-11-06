@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Button } from '../../components/Button'
 import { FlexWrapper } from '../../components/FlexWrapper'
 import { Icon } from '../../components/Icons/Icon'
@@ -72,16 +72,24 @@ const listData = {
   ],
 }
 
-export const Profile: React.FC = () => {
-  const [isOpenCurrent, setIsOpen] = useState(false)
-  let openClose = () => {
-    setIsOpen(!isOpenCurrent)
-  }
+export type ProfilePropsType = {
+  active: boolean
+  setActive: (setCurrentActive: boolean) => void
+}
 
+export const Profile: React.FC<ProfilePropsType> = (props: ProfilePropsType) => {
   return (
-    <S.Profile isOpen={isOpenCurrent}>
-      <S.Content>
-        <BurgerButton close onClick={openClose}>
+    <S.Profile
+      isOpen={props.active}
+      onClick={() => {
+        props.setActive(false)
+      }}>
+      <S.Content onClick={e => e.stopPropagation()}>
+        <BurgerButton
+          close
+          onClick={() => {
+            props.setActive(false)
+          }}>
           <span></span>
         </BurgerButton>
         <FlexWrapper direction={'column'} align={'stretch'}>
