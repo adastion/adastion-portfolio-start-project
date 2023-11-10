@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/adastion-portfolio-start-project/static/js/main.41228779.js",
+    "main.js": "/adastion-portfolio-start-project/static/js/main.41809ab8.js",
     "static/js/787.25eaef86.chunk.js": "/adastion-portfolio-start-project/static/js/787.25eaef86.chunk.js",
     "static/media/icons-sprite.svg": "/adastion-portfolio-start-project/static/media/icons-sprite.9ac9cfe4e01cb671a6fc9638b978f910.svg",
     "static/media/portfolio_7.jpg": "/adastion-portfolio-start-project/static/media/portfolio_7.ee9d2d341645235f6b4b.jpg",
@@ -29,10 +29,10 @@
     "static/media/ava_2.webp": "/adastion-portfolio-start-project/static/media/ava_2.efbecf49e17c85436e0e.webp",
     "static/media/ava_1.webp": "/adastion-portfolio-start-project/static/media/ava_1.3a5b41ecf55ccf9391e3.webp",
     "index.html": "/adastion-portfolio-start-project/index.html",
-    "main.41228779.js.map": "/adastion-portfolio-start-project/static/js/main.41228779.js.map",
+    "main.41809ab8.js.map": "/adastion-portfolio-start-project/static/js/main.41809ab8.js.map",
     "787.25eaef86.chunk.js.map": "/adastion-portfolio-start-project/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.41228779.js"
+    "static/js/main.41809ab8.js"
   ]
 }
