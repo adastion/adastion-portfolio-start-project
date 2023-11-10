@@ -65,7 +65,7 @@ const Form = styled.form`
         padding: 8px;
 
         &:focus-visible {
-          box-shadow: 0px 1px 20px 7px ${theme.colors.secondaryBg};
+          border: 1px solid ${theme.colors.secondaryBg};
         }
       }
 
