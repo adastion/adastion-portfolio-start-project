@@ -1,5 +1,4 @@
 import React from 'react'
-import { ProfilePropsType } from '../../layout/sideBar/SideBar'
 import { theme } from '../../styles/Theme'
 import { Button } from '../Button'
 import { Icon } from '../Icons/Icon'

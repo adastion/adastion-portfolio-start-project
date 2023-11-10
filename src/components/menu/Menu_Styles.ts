@@ -6,6 +6,8 @@ type NavItemPropsType = {
 }
 
 const Menu = styled.nav`
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +22,7 @@ const Menu = styled.nav`
 
   @media ${theme.media.bigDesktop} {
     position: fixed;
+    top: auto;
     left: 0;
     right: 0;
     bottom: 0;
