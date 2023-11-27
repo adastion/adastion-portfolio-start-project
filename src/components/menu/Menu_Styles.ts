@@ -11,13 +11,19 @@ const Menu = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 30px 0;
   background: ${theme.colors.primaryBg};
-  padding: 50px 34px 0;
+  padding: 50px 0;
   height: 100%;
-
+  
   & ul {
-    margin: 174px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 44px;
+    padding: 0 34px;
+    overflow-y: auto;
+    height: 100vh;
   }
 
   @media ${theme.media.bigDesktop} {
@@ -37,6 +43,7 @@ const Menu = styled.nav`
       flex-direction: row;
       justify-content: center;
       gap: 20px;
+      height: auto;
     }
   }
 
