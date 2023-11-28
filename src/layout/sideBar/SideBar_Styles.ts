@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { Button } from '../../components/Button'
 import { Picture } from '../../components/Picture'
 import { BurgerButton } from '../../components/burgerButton/BurgerButton'
-import { theme } from '../../styles/Theme'
+import { DefaultTheme } from '../../styles/Theme'
 
 type ProfilePropsType = {
   isOpen?: boolean
@@ -20,7 +20,7 @@ type ProgressBarPropsType = {
 const Profile = styled.aside<ProfilePropsType>`
   transition: all 0.4s ease-out;
 
-  @media ${theme.media.bigDesktop} {
+  @media ${DefaultTheme.media.bigDesktop} {
     position: absolute;
     left: -110vw;
   }
@@ -28,7 +28,7 @@ const Profile = styled.aside<ProfilePropsType>`
   ${props =>
     props.isOpen &&
     css<ProfilePropsType>`
-      @media ${theme.media.bigDesktop} {
+      @media ${DefaultTheme.media.bigDesktop} {
         top: 0;
         left: 0;
         right: 0;
@@ -40,7 +40,7 @@ const Profile = styled.aside<ProfilePropsType>`
 `
 
 const Content = styled.div`
-  background: ${theme.colors.primaryBg};
+  background: ${DefaultTheme.colors.primaryBg};
   max-width: 305px;
   width: 100%;
   padding: 50px 42px 25px;
@@ -60,7 +60,7 @@ const Content = styled.div`
     display: none;
   }
 
-  @media ${theme.media.bigDesktop} {
+  @media ${DefaultTheme.media.bigDesktop} {
     max-width: 375px;
 
     & ${BurgerButton} {
@@ -99,7 +99,7 @@ const ProgressBar = styled.li<ProgressBarPropsType>`
   &::before {
     bottom: -5px;
     height: 4px;
-    border: 0.5px solid ${theme.colors.secondaryBg};
+    border: 0.5px solid ${DefaultTheme.colors.secondaryBg};
     overflow: hidden;
   }
 
@@ -108,14 +108,14 @@ const ProgressBar = styled.li<ProgressBarPropsType>`
     left: 1px;
     width: calc(${props => props.percent || 1}% - 1%);
     height: 2px;
-    background: ${theme.colors.secondaryBg};
+    background: ${DefaultTheme.colors.secondaryBg};
     border-radius: 3px;
   }
 `
 
 const InfoCell = styled.section<InfoCellPropsType>`
   padding: 25px 0;
-  border-bottom: 2px solid ${theme.colors.lineTable};
+  border-bottom: 2px solid ${DefaultTheme.colors.lineTable};
 
   & ul li {
     display: flex;
@@ -133,7 +133,7 @@ const InfoCell = styled.section<InfoCellPropsType>`
     css<InfoCellPropsType>`
       & ul li {
         & > * {
-          color: ${theme.colors.primary};
+          color: ${DefaultTheme.colors.primary};
         }
 
         & span {
@@ -141,7 +141,7 @@ const InfoCell = styled.section<InfoCellPropsType>`
         }
 
         & span:first-child {
-          background: ${theme.colors.secondaryBg};
+          background: ${DefaultTheme.colors.secondaryBg};
           padding: 0 7px;
         }
       }

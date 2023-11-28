@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../../styles/Theme'
+import { DefaultTheme } from '../../styles/Theme'
 
 type NavItemPropsType = {
   name: string
@@ -12,7 +12,7 @@ const Menu = styled.nav`
   flex-direction: column;
   align-items: center;
   gap: 30px 0;
-  background: ${theme.colors.primaryBg};
+  background: ${DefaultTheme.colors.primaryBg};
   padding: 50px 0;
   height: 100%;
   
@@ -26,13 +26,13 @@ const Menu = styled.nav`
     height: 100vh;
   }
 
-  @media ${theme.media.bigDesktop} {
+  @media ${DefaultTheme.media.bigDesktop} {
     position: fixed;
     top: auto;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 20px 15px;
+    padding: 20px 5px;
     height: auto;
     flex-direction: row;
     justify-content: center;
@@ -42,12 +42,13 @@ const Menu = styled.nav`
       margin: 0;
       flex-direction: row;
       justify-content: center;
+      padding: 0;
       gap: 20px;
       height: auto;
     }
   }
 
-  @media ${theme.media.tablet} {
+  @media ${DefaultTheme.media.tablet} {
     & ul {
       gap: 10px;
     }
@@ -74,7 +75,7 @@ const NavItem = styled.li<NavItemPropsType>`
 
     content: '';
     position: absolute;
-    background: ${theme.colors.primary};
+    background: ${DefaultTheme.colors.primary};
     transform: scale(0);
   }
 
@@ -84,7 +85,7 @@ const NavItem = styled.li<NavItemPropsType>`
     max-width: 120px;
     font-size: 12px;
     text-align: center;
-    color: ${theme.colors.primaryBg};
+    color: ${DefaultTheme.colors.primaryBg};
     border-radius: 2px;
     padding: 6px;
     z-index: 1;

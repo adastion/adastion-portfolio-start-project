@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Button } from '../../../components/Button'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 
 const Portfolio = styled.section`
   & nav {
@@ -25,23 +25,23 @@ const Portfolio = styled.section`
           &:hover,
           &:focus-visible {
             opacity: 0.7;
-            color: ${theme.colors.secondaryBg};
+            color: ${DefaultTheme.colors.secondaryBg};
           }
 
           &.active {
-            color: ${theme.colors.secondaryBg};
+            color: ${DefaultTheme.colors.secondaryBg};
 
             &:hover,
             &:focus-visible {
               opacity: unset;
-              color: ${theme.colors.secondaryBg};
+              color: ${DefaultTheme.colors.secondaryBg};
               cursor: auto;
             }
           }
         }
       }
 
-      @media ${theme.media.tablet} {
+      @media ${DefaultTheme.media.tablet} {
         width: 49, 9425%;
         flex-direction: column;
         align-items: center;
@@ -76,7 +76,7 @@ const GridWrapper = styled.div`
       left: 0;
       bottom: 0;
       width: 100%;
-      background: ${theme.colors.secondaryBg};
+      background: ${DefaultTheme.colors.secondaryBg};
     }
 
     &::after {

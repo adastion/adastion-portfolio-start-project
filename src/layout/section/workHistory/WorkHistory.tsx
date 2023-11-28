@@ -4,7 +4,7 @@ import { SectionTitle } from '../../../components/SectionTitle'
 import { Text } from '../../../components/Text'
 import { Table } from '../../../components/table/Table'
 import { S } from '../../../components/table/Table_Styles'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 
 const tableEducationList = [
   {
@@ -36,7 +36,7 @@ export const WorkHistory: React.FC = () => {
       <Container>
         <FlexWrapper align={'center'} direction={'column'}>
           <SectionTitle>WorkHistory</SectionTitle>
-          <Text width={theme.widthText}>
+          <Text width={DefaultTheme.widthText}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>

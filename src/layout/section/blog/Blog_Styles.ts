@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme} from '../../../styles/Theme'
 
 const Blog = styled.section`
   & ul {
@@ -7,7 +7,7 @@ const Blog = styled.section`
     gap: 20px;
     overflow-x: auto;
 
-    @media ${theme.media.mobile} {
+    @media ${DefaultTheme.media.mobile} {
       max-width: 340px;
     }
   }
@@ -17,7 +17,7 @@ const CardBlog = styled.li`
   max-width: 310px;
   display: flex;
   flex-direction: column;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${DefaultTheme.colors.primaryBg};
   flex-grow: 1;
   flex-shrink: 0;
 

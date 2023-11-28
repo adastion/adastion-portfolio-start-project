@@ -1,5 +1,5 @@
 import React from 'react'
-import { theme } from '../../styles/Theme'
+import { DefaultTheme } from '../../styles/Theme'
 import { Button } from '../Button'
 import { Icon } from '../Icons/Icon'
 import { NavLink } from './../Button'
@@ -48,10 +48,10 @@ export const Menu: React.FC = () => {
               spy={true}
               offset={-20}
               to={N.href}
-              colorBackground={theme.colors.pageBg}
+              colorBackground={DefaultTheme.colors.pageBg}
               circle>
               <Icon
-                fill={theme.colors.secondary}
+                fill={DefaultTheme.colors.secondary}
                 iconId={N.name}
                 boxWidth='16'
                 boxHeight='16'

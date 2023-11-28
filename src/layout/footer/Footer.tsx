@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../../styles/Theme'
+import { DefaultTheme } from '../../styles/Theme'
 import { Container } from '../../components/Container'
 import { Icon } from '../../components/Icons/Icon'
 
@@ -15,7 +15,7 @@ export const Footer = () => {
 }
 
 export const FooterStyled = styled.footer`
-  background: ${theme.colors.primaryBg};
+  background: ${DefaultTheme.colors.primaryBg};
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -26,7 +26,7 @@ export const FooterStyled = styled.footer`
   min-height: 60px;
   margin-top: 70px;
 
-  @media ${theme.media.bigDesktop} {
+  @media ${DefaultTheme.media.bigDesktop} {
     margin-bottom: 80px;
   }
 `

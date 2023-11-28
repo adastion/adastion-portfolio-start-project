@@ -6,7 +6,7 @@ import { Picture } from '../../components/Picture'
 import { SectionTitle } from '../../components/SectionTitle'
 import { Text } from '../../components/Text'
 import { BurgerButton } from '../../components/burgerButton/BurgerButton'
-import { theme } from '../../styles/Theme'
+import { DefaultTheme } from '../../styles/Theme'
 import avatarProfile from './../../assets/images/avatar_profile.jpg'
 import avatarProfileWebp from './../../assets/images/avatar_profile.webp'
 import { S } from './SideBar_Styles'
@@ -190,7 +190,7 @@ export const Profile: React.FC<ProfilePropsType> = (props: ProfilePropsType) => 
               gap={'10px'}>
               <li>
                 <Icon
-                  fill={theme.colors.secondaryBg}
+                  fill={DefaultTheme.colors.secondaryBg}
                   boxWidth={'15'}
                   boxHeight={'15'}
                   size={'15px'}
@@ -200,7 +200,7 @@ export const Profile: React.FC<ProfilePropsType> = (props: ProfilePropsType) => 
               </li>
               <li>
                 <Icon
-                  fill={theme.colors.secondaryBg}
+                  fill={DefaultTheme.colors.secondaryBg}
                   boxWidth={'15'}
                   boxHeight={'15'}
                   size={'15px'}
@@ -210,7 +210,7 @@ export const Profile: React.FC<ProfilePropsType> = (props: ProfilePropsType) => 
               </li>
               <li>
                 <Icon
-                  fill={theme.colors.secondaryBg}
+                  fill={DefaultTheme.colors.secondaryBg}
                   boxWidth={'15'}
                   boxHeight={'15'}
                   size={'15px'}
@@ -220,7 +220,7 @@ export const Profile: React.FC<ProfilePropsType> = (props: ProfilePropsType) => 
               </li>
               <li>
                 <Icon
-                  fill={theme.colors.secondaryBg}
+                  fill={DefaultTheme.colors.secondaryBg}
                   boxWidth={'15'}
                   boxHeight={'15'}
                   size={'15px'}

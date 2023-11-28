@@ -3,7 +3,7 @@ import { Button } from '../../../../components/Button'
 import { FlexWrapper } from '../../../../components/FlexWrapper'
 import { Icon } from '../../../../components/Icons/Icon'
 import { Text } from '../../../../components/Text'
-import { theme } from '../../../../styles/Theme'
+import { DefaultTheme } from '../../../../styles/Theme'
 import { SectionTitle } from './../../../../components/SectionTitle'
 import { S } from '../MyServices_Styles'
 
@@ -21,7 +21,7 @@ export const CardServices: React.FC<CardServicesPropsType> = (
     <S.CardServices>
       <FlexWrapper direction={'column'} align={'center'} padding={'30px 25px 25px'}>
         {props.iconCard !== '' ? (
-          <Icon size='74px' iconId={props.iconCard} fill={theme.colors.secondaryBg} />
+          <Icon size='74px' iconId={props.iconCard} fill={DefaultTheme.colors.secondaryBg} />
         ) : (
           ''
         )}

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Picture } from '../../../components/Picture'
 import { Button } from '../../../components/Button'
@@ -7,8 +7,8 @@ import { Text } from '../../../components/Text'
 import { BurgerButton } from '../../../components/burgerButton/BurgerButton'
 
 const Banner = styled.section`
-  background: ${theme.colors.primaryBg || '#F0F0F6'};
-  color: ${theme.colors.primary};
+  background: ${DefaultTheme.colors.primaryBg || '#F0F0F6'};
+  color: ${DefaultTheme.colors.primary};
   padding: 0 30px;
 
   & > ${FlexWrapper} {
@@ -23,7 +23,7 @@ const Banner = styled.section`
 
   & h1 {
     & span {
-      color: ${theme.colors.secondaryBg};
+      color: ${DefaultTheme.colors.secondaryBg};
     }
   }
 
@@ -41,7 +41,7 @@ const Banner = styled.section`
     display: none;
   }
 
-  @media ${theme.media.bigDesktop} {
+  @media ${DefaultTheme.media.bigDesktop} {
     position: relative;
 
     & ${BurgerButton} {
@@ -56,7 +56,7 @@ const Banner = styled.section`
     }
   }
 
-  @media ${theme.media.desktop} {
+  @media ${DefaultTheme.media.desktop} {
     padding: 0;
 
     & ${BurgerButton} {
@@ -66,7 +66,7 @@ const Banner = styled.section`
     }
   }
 
-  @media ${theme.media.mobile} {
+  @media ${DefaultTheme.media.mobile} {
     & > ${FlexWrapper} {
       flex-direction: column;
 

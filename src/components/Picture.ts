@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { theme } from '../styles/Theme'
+import { DefaultTheme } from '../styles/Theme'
 
 type PicturePropsType = {
   width?: string
@@ -47,8 +47,8 @@ export const Picture = styled.picture<PicturePropsType>`
         border-radius: 50%;
         background: ${props =>
           props.status === 'active'
-            ? theme.colors.onlineUser
-            : theme.colors.secondary || 'gray'};
+            ? DefaultTheme.colors.onlineUser
+            : DefaultTheme.colors.secondary || 'gray'};
         z-index: 3;
       }
     `}

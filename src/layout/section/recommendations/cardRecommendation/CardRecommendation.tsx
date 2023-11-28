@@ -3,7 +3,7 @@ import { FlexWrapper } from '../../../../components/FlexWrapper'
 import { Icon } from '../../../../components/Icons/Icon'
 import { Picture } from '../../../../components/Picture'
 import { SectionTitle } from '../../../../components/SectionTitle'
-import { theme } from '../../../../styles/Theme'
+import { DefaultTheme } from '../../../../styles/Theme'
 import { S } from '../Recommendations_Styles'
 import { Text } from './../../../../components/Text'
 
@@ -25,11 +25,11 @@ export const CardRecommendation: React.FC<CardRecommendationPropsType> = (
   return (
     <S.CardRecommendation>
       <S.Rtating>
-        <Icon iconId={props.nameIcon} fill={theme.colors.secondaryBg} size={'18px'} />
-        <Icon iconId={props.nameIcon} fill={theme.colors.secondaryBg} size={'18px'} />
-        <Icon iconId={props.nameIcon} fill={theme.colors.secondaryBg} size={'18px'} />
-        <Icon iconId={props.nameIcon} fill={theme.colors.secondaryBg} size={'18px'} />
-        <Icon iconId={props.nameIcon} fill={theme.colors.secondaryBg} size={'18px'} />
+        <Icon iconId={props.nameIcon} fill={DefaultTheme.colors.secondaryBg} size={'18px'} />
+        <Icon iconId={props.nameIcon} fill={DefaultTheme.colors.secondaryBg} size={'18px'} />
+        <Icon iconId={props.nameIcon} fill={DefaultTheme.colors.secondaryBg} size={'18px'} />
+        <Icon iconId={props.nameIcon} fill={DefaultTheme.colors.secondaryBg} size={'18px'} />
+        <Icon iconId={props.nameIcon} fill={DefaultTheme.colors.secondaryBg} size={'18px'} />
       </S.Rtating>
       <SectionTitle as={'h4'} margin={'18px'} size={'18px'} weight={'500'}>
         {props.title}

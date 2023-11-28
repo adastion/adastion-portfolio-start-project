@@ -9,7 +9,7 @@ import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Text } from '../../../components/Text'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 import { S } from './Blog_Styles'
 import { CardBlog } from './cardBlog/CardBlog'
 
@@ -49,7 +49,7 @@ export const Blog: React.FC = () => {
       <Container>
         <FlexWrapper align={'center'} direction={'column'}>
           <SectionTitle>Blog</SectionTitle>
-          <Text width={theme.widthText}>
+          <Text width={DefaultTheme.widthText}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
