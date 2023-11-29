@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Button } from '../../../components/Button'
 import { Icon } from '../../../components/Icons/Icon'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 
 type SocialNetworkPropsType = {
   name: string
@@ -25,7 +25,7 @@ const SocialNetworkItem = styled.li`
     & svg {
       &:hover,
       &:focus-visible {
-        fill: ${theme.colors.primaryBg};
+        fill: ${DefaultTheme.colors.primaryBg};
       }
     }
   }

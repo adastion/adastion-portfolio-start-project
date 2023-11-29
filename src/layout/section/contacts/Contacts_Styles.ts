@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import { Button } from '../../../components/Button'
 import { FlexWrapper } from '../../../components/FlexWrapper'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 
 const Contacts = styled.section`
   & ${FlexWrapper} + * {
     margin-top: 70px;
   }
 
-  @media ${theme.media.desktop} {
+  @media ${DefaultTheme.media.desktop} {
     & ${FlexWrapper} {
       flex-direction: column-reverse;
     }
@@ -25,11 +25,11 @@ const ContactsItem = styled.section`
     max-width: 370px;
     width: 100%;
 
-    @media ${theme.media.desktop} {
+    @media ${DefaultTheme.media.desktop} {
       max-width: 100%;
     }
 
-    @media ${theme.media.tablet} {
+    @media ${DefaultTheme.media.tablet} {
       max-width: none;
     }
   }
@@ -38,7 +38,7 @@ const ContactsItem = styled.section`
 const Form = styled.form`
   max-width: 100%;
   padding: 25px;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${DefaultTheme.colors.primaryBg};
 
   & button {
     font-weight: 600;
@@ -54,18 +54,18 @@ const Form = styled.form`
 
       & label {
         display: inline-block;
-        color: ${theme.colors.secondary};
+        color: ${DefaultTheme.colors.secondary};
         cursor: default;
       }
 
       & input,
       & textarea {
         height: 50px;
-        background: ${theme.colors.pageBg};
+        background: ${DefaultTheme.colors.pageBg};
         padding: 8px;
 
         &:focus-visible {
-          box-shadow: 0px 1px 20px 7px ${theme.colors.secondaryBg};
+          border: 1px solid ${DefaultTheme.colors.secondaryBg};
         }
       }
 
@@ -81,7 +81,7 @@ const Form = styled.form`
 `
 
 const CardContacts = styled.li`
-  background: ${theme.colors.primaryBg};
+  background: ${DefaultTheme.colors.primaryBg};
   padding: 25px 25px 16px;
 
   & ${Button} {
@@ -96,7 +96,7 @@ const CardContacts = styled.li`
     align-items: center;
     gap: 15px;
     font-size: 15px;
-    color: ${theme.colors.secondary};
+    color: ${DefaultTheme.colors.secondary};
     height: 100%;
     width: 100%;
   }

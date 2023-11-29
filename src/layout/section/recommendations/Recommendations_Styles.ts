@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 
 const Recommendations = styled.section`
   & ul {
@@ -12,11 +12,11 @@ const Recommendations = styled.section`
       flex-shrink: 0;
     }
 
-    @media ${theme.media.tablet} {
+    @media ${DefaultTheme.media.tablet} {
       max-width: 576px;
     }
 
-    @media ${theme.media.mobile} {
+    @media ${DefaultTheme.media.mobile} {
       max-width: 310px;
     }
   }
@@ -25,7 +25,7 @@ const Recommendations = styled.section`
 const CardRecommendation = styled.li`
   display: grid;
   max-width: 310px;
-  background: ${theme.colors.primaryBg};
+  background: ${DefaultTheme.colors.primaryBg};
   padding: 25px;
 `
 

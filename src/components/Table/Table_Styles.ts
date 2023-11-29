@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { theme } from '../../styles/Theme'
+import { DefaultTheme } from '../../styles/Theme'
 
 const TableWrap = styled.section`
   & ul {
     padding: 42px 32px;
     width: 100%;
-    background: ${theme.colors.primaryBg};
+    background: ${DefaultTheme.colors.primaryBg};
 
-    @media ${theme.media.mobile} {
+    @media ${DefaultTheme.media.mobile} {
       max-width: 340px;
     }
   }
@@ -19,7 +19,7 @@ const Table = styled.li`
   gap: 20px;
   justify-content: center;
   padding-bottom: 30px;
-  border-bottom: 2px solid ${theme.colors.lineTable};
+  border-bottom: 2px solid ${DefaultTheme.colors.lineTable};
 
   & + li {
     margin-top: 30px;
@@ -31,16 +31,16 @@ const Table = styled.li`
   }
 
   & span + span {
-    color: ${theme.colors.primaryBg};
+    color: ${DefaultTheme.colors.primary};
     font-size: 10px;
     font-weight: 400;
     line-height: 100.9%;
-    background: ${theme.colors.secondaryBg};
+    background: ${DefaultTheme.colors.secondaryBg};
     padding: 4px 7px;
     margin-left: 20px;
   }
 
-  @media ${theme.media.mobile} {
+  @media ${DefaultTheme.media.mobile} {
     grid-template-columns: repeat(auto-fit, minmax(280px, auto));
   }
 `

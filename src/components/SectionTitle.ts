@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { DefaultTheme } from '../styles/Theme'
 
 type SectionTitlePropsType = {
   size?: string
@@ -12,6 +13,7 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
   font-weight: ${props => props.weight || '700'};
   line-height: 1.2;
   text-transform: ${props => (props.transform ? 'none' : 'capitalize')};
+  color: ${DefaultTheme.colors.primary};
 
   &::first-letter {
     text-transform: uppercase;

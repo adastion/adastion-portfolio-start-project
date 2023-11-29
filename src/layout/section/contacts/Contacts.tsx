@@ -1,6 +1,6 @@
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
-import { MapContainer } from '../../../components/yandex_map/MapContainer'
+import { MapContainer } from '../../../components/yandexMap/MapContainer'
 import { Button } from './../../../components/Button'
 import { SectionTitle } from './../../../components/SectionTitle'
 import { S } from './Contacts_Styles'

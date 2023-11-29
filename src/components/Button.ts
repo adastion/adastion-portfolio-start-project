@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll'
 import styled, { css } from 'styled-components'
-import { theme } from '../styles/Theme'
+import { DefaultTheme } from '../styles/Theme'
 
 type ButtonPropsType = {
   circle?: boolean
@@ -23,15 +23,15 @@ export const NavLink = styled(Link)<ButtonPropsType>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${props => props.colorBackground || theme.colors.secondaryBg};
+  background: ${props => props.colorBackground || DefaultTheme.colors.secondaryBg};
   cursor: pointer;
 
   &:hover,
   &.active {
-    background: ${props => (props.notHover ? 'none' : theme.colors.secondaryBg)};
+    background: ${props => (props.notHover ? 'none' : DefaultTheme.colors.secondaryBg)};
 
     svg {
-      fill: ${theme.colors.primary};
+      fill: ${DefaultTheme.colors.primary};
     }
   }
 `
@@ -40,7 +40,7 @@ export const Button = styled.button<ButtonPropsType>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${props => props.colorBackground || theme.colors.secondaryBg};
+  background: ${props => props.colorBackground || DefaultTheme.colors.secondaryBg};
   border-radius: 5px;
   padding: ${props => props.padding || '16px 32px'};
   font-weight: 500;
@@ -54,10 +54,10 @@ export const Button = styled.button<ButtonPropsType>`
 
   &:hover,
   &:focus-visible {
-    color: ${theme.colors.primaryBg};
+    color: ${DefaultTheme.colors.primaryBg};
 
     & svg {
-      fill: ${theme.colors.primaryBg};
+      fill: ${DefaultTheme.colors.primaryBg};
     }
   }
 
@@ -70,11 +70,12 @@ export const Button = styled.button<ButtonPropsType>`
       height: ${props => props.width || '40px'};
 
       &:hover {
-        background: ${theme.colors.secondaryBg};
-        background: ${props => (props.notHover ? 'none' : theme.colors.secondaryBg)};
+        background: ${DefaultTheme.colors.secondaryBg};
+        background: ${props =>
+          props.notHover ? 'none' : DefaultTheme.colors.secondaryBg};
 
         svg {
-          fill: ${theme.colors.primary};
+          fill: ${DefaultTheme.colors.primary};
         }
       }
     `}
@@ -92,10 +93,10 @@ export const Button = styled.button<ButtonPropsType>`
       font-weight: 700;
       font-size: 12px;
       background: unset;
-      color: ${theme.colors.secondaryBg};
+      color: ${DefaultTheme.colors.secondaryBg};
 
       &:hover {
-        color: ${theme.colors.secondaryBg};
+        color: ${DefaultTheme.colors.secondaryBg};
         opacity: 0.7;
       }
     `}
@@ -106,13 +107,15 @@ export const Button = styled.button<ButtonPropsType>`
       padding: 10px 41px;
       height: 38px;
       border-radius: 19px;
-      background: ${theme.colors.primaryBg || 'white'};
-      box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+      background: ${DefaultTheme.colors.primaryBg || 'white'};
+      color: ${DefaultTheme.colors.primary};
+      /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15); */
+      box-shadow: 0px 1px 10px 0px rgba(${DefaultTheme.colors.primaryBg}, 0.15);
       font-size: 14px;
       font-weight: 700;
 
       &:hover {
-        color: ${theme.colors.secondary};
+        color: ${DefaultTheme.colors.secondary};
       }
     `}
 `

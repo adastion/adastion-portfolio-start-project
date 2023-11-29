@@ -2,7 +2,7 @@ import { Button } from '../../../../components/Button'
 import { FlexWrapper } from '../../../../components/FlexWrapper'
 import { SectionTitle } from '../../../../components/SectionTitle'
 import { Text } from '../../../../components/Text'
-import { theme } from '../../../../styles/Theme'
+import { DefaultTheme } from '../../../../styles/Theme'
 import { S } from '../PricePlans_Styles'
 import { Icon } from './../../../../components/Icons/Icon'
 
@@ -35,7 +35,7 @@ export const CardPrice = (props: CardPricePropsType) => {
             <li>
               <Icon
                 iconId={S.checked ? 'check' : 'close'}
-                fill={S.checked ? theme.colors.secondaryBg : theme.colors.secondary}
+                fill={S.checked ? DefaultTheme.colors.secondaryBg : DefaultTheme.colors.secondary}
                 key={index}
               />
               <span className={S.checked ? 'activeColor' : ''}>{S.service}</span>

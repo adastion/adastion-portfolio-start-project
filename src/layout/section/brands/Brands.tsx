@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { Icon } from '../../../components/Icons/Icon'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 
 export const Brands: React.FC = () => {
   return (
@@ -10,19 +10,19 @@ export const Brands: React.FC = () => {
       <Container>
         <ul>
           <li>
-            <Icon iconId={'logoPetroleum'} size={'140px'} fill={theme.colors.secondary} />
+            <Icon iconId={'logoPetroleum'} size={'140px'} fill={DefaultTheme.colors.secondary} />
           </li>
           <li>
-            <Icon iconId={'logoStation'} size={'140px'} fill={theme.colors.secondary} />
+            <Icon iconId={'logoStation'} size={'140px'} fill={DefaultTheme.colors.secondary} />
           </li>
           <li>
-            <Icon iconId={'logoQuality'} size={'140px'} fill={theme.colors.secondary} />
+            <Icon iconId={'logoQuality'} size={'140px'} fill={DefaultTheme.colors.secondary} />
           </li>
           <li>
             <Icon
               iconId={'logoStationTwo'}
               size={'140px'}
-              fill={theme.colors.secondary}
+              fill={DefaultTheme.colors.secondary}
             />
           </li>
         </ul>

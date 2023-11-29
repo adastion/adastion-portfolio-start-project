@@ -1,12 +1,12 @@
-export const theme = {
+export const DefaultTheme = {
   colors: {
-    primary: '#2B2B2B',
-    secondary: '#767676',
-    lineTable: '#F0F0F6',
-    primaryBg: '#fff',
-    secondaryBg: '#ffb400',
-    pageBg: '#F0F0F6',
-    onlineUser: '#7EB942',
+    primary: 'var(--primary)',
+    secondary: 'var(--secondary)',
+    lineTable: 'var(--lineTable)',
+    primaryBg: 'var(--primaryBg)',
+    secondaryBg: 'var(--secondaryBg)',
+    pageBg: 'var(--pageBg)',
+    onlineUser: 'var(--onlineUser)',
   },
 
   gapCard: '20px',

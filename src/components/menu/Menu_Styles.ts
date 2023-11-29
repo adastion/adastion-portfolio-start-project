@@ -1,29 +1,38 @@
 import styled from 'styled-components'
-import { theme } from '../../styles/Theme'
+import { DefaultTheme } from '../../styles/Theme'
 
 type NavItemPropsType = {
   name: string
 }
 
 const Menu = styled.nav`
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: ${theme.colors.primaryBg};
-  padding: 50px 34px 0;
+  gap: 30px 0;
+  background: ${DefaultTheme.colors.primaryBg};
+  padding: 50px 0;
   height: 100%;
 
   & ul {
-    margin: 174px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 44px;
+    padding: 0 34px;
+    overflow-y: auto;
+    height: 100vh;
   }
 
-  @media ${theme.media.bigDesktop} {
+  @media ${DefaultTheme.media.bigDesktop} {
     position: fixed;
+    top: auto;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 20px 15px;
+    padding: 20px 5px;
     height: auto;
     flex-direction: row;
     justify-content: center;
@@ -33,11 +42,13 @@ const Menu = styled.nav`
       margin: 0;
       flex-direction: row;
       justify-content: center;
+      padding: 0;
       gap: 20px;
+      height: auto;
     }
   }
 
-  @media ${theme.media.tablet} {
+  @media ${DefaultTheme.media.tablet} {
     & ul {
       gap: 10px;
     }
@@ -64,7 +75,8 @@ const NavItem = styled.li<NavItemPropsType>`
 
     content: '';
     position: absolute;
-    background: ${theme.colors.primary};
+    background: ${DefaultTheme.colors.primary};
+    color: ${DefaultTheme.colors.primaryBg};
     transform: scale(0);
   }
 
@@ -74,7 +86,6 @@ const NavItem = styled.li<NavItemPropsType>`
     max-width: 120px;
     font-size: 12px;
     text-align: center;
-    color: ${theme.colors.primaryBg};
     border-radius: 2px;
     padding: 6px;
     z-index: 1;

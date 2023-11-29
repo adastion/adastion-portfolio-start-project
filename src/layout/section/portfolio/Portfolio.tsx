@@ -23,7 +23,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Picture } from '../../../components/Picture'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Text } from '../../../components/Text'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 import { S } from './Portfolio_Styles'
 
 type TabsType = {
@@ -152,7 +152,7 @@ export const Portfolio: React.FC = () => {
         <Container>
           <FlexWrapper align={'center'} direction={'column'}>
             <SectionTitle>Portfolio</SectionTitle>
-            <Text width={theme.widthText}>
+            <Text width={DefaultTheme.widthText}>
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
               Velit officia consequat duis enim velit mollit. lorem ipsum
             </Text>

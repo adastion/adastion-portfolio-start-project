@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { theme } from '../../styles/Theme'
+import { DefaultTheme } from '../../styles/Theme'
 
 type BurgerButtonPropsType = {
   close?: boolean
@@ -19,7 +19,7 @@ export const BurgerButton = styled.button<BurgerButtonPropsType>`
     display: inline-block;
     width: 100%;
     height: 2px;
-    background: ${theme.colors.secondaryBg};
+    background: ${DefaultTheme.colors.secondaryBg};
     opacity: 1;
   }
 
@@ -29,7 +29,7 @@ export const BurgerButton = styled.button<BurgerButtonPropsType>`
     position: absolute;
     height: 2px;
     width: 100%;
-    background: ${theme.colors.secondaryBg};
+    background: ${DefaultTheme.colors.secondaryBg};
     transition: all 0.1s ease-in;
     z-index: 5;
   }
@@ -60,7 +60,7 @@ export const BurgerButton = styled.button<BurgerButtonPropsType>`
       }
     `}
 
-  @media ${theme.media.bigDesktop} {
+  @media ${DefaultTheme.media.bigDesktop} {
     display: flex;
   }
 `

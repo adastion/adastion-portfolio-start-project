@@ -1,5 +1,5 @@
 import { SectionTitle } from '../../../components/SectionTitle'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 import { Container } from './../../../components/Container'
 import { FlexWrapper } from './../../../components/FlexWrapper'
 import { Text } from './../../../components/Text'
@@ -137,11 +137,11 @@ export const PricePlans = () => {
       <Container>
         <FlexWrapper align={'center'} direction={'column'}>
           <SectionTitle>Price plans</SectionTitle>
-          <Text width={theme.widthText}>
+          <Text width={DefaultTheme.widthText}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>
-          <FlexWrapper as={'ul'} gap={theme.gapCard}>
+          <FlexWrapper as={'ul'} gap={DefaultTheme.gapCard}>
             {cardPriceList.cardData.map((C, index) => (
               <CardPrice
                 title={C.title}

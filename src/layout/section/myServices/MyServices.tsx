@@ -1,7 +1,7 @@
 import React from 'react'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Text } from '../../../components/Text'
-import { theme } from '../../../styles/Theme'
+import { DefaultTheme } from '../../../styles/Theme'
 import { Container } from './../../../components/Container'
 import { SectionTitle } from './../../../components/SectionTitle'
 import { CardServices } from './cardServices/CardServices'
@@ -48,7 +48,7 @@ export const MyServices: React.FC = () => {
       <Container>
         <FlexWrapper align='center' direction='column'>
           <SectionTitle>My services</SectionTitle>
-          <Text width={theme.widthText}>
+          <Text width={DefaultTheme.widthText}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             Velit officia consequat duis enim velit mollit. lorem ipsum
           </Text>

@@ -1,6 +1,5 @@
-import React from 'react'
-import { ProfilePropsType } from '../../layout/sideBar/SideBar'
-import { theme } from '../../styles/Theme'
+import React, { useState, useEffect } from 'react'
+import { DefaultTheme } from '../../styles/Theme'
 import { Button } from '../Button'
 import { Icon } from '../Icons/Icon'
 import { NavLink } from './../Button'
@@ -35,9 +34,23 @@ const navItemsList = [
 ]
 
 export const Menu: React.FC = () => {
+  const [currentTheme, setCurrentTheme] = useState('light')
+
+  function toggleTheme() {
+    setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
+  }
+
+  useEffect(() => {
+    document.body.setAttribute('data-theme', currentTheme)
+  }, [currentTheme])
+
   return (
     <S.Menu>
-      <Button circle colorBackground={'transparent'} notHover={'none'}>
+      <Button
+        onClick={toggleTheme}
+        circle
+        colorBackground={'transparent'}
+        notHover={'none'}>
         <Icon iconId={'contrast'} boxWidth='30' boxHeight='30' size={'30px'} />
       </Button>
       <FlexWrapper as={'ul'} direction={'column'} align={'center'}>
@@ -49,10 +62,10 @@ export const Menu: React.FC = () => {
               spy={true}
               offset={-20}
               to={N.href}
-              colorBackground={theme.colors.pageBg}
+              colorBackground={DefaultTheme.colors.pageBg}
               circle>
               <Icon
-                fill={theme.colors.secondary}
+                fill={DefaultTheme.colors.secondary}
                 iconId={N.name}
                 boxWidth='16'
                 boxHeight='16'
