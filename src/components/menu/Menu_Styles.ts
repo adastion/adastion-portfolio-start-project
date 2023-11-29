@@ -15,7 +15,7 @@ const Menu = styled.nav`
   background: ${DefaultTheme.colors.primaryBg};
   padding: 50px 0;
   height: 100%;
-  
+
   & ul {
     display: flex;
     flex-direction: column;
@@ -76,6 +76,7 @@ const NavItem = styled.li<NavItemPropsType>`
     content: '';
     position: absolute;
     background: ${DefaultTheme.colors.primary};
+    color: ${DefaultTheme.colors.primaryBg};
     transform: scale(0);
   }
 
@@ -85,7 +86,6 @@ const NavItem = styled.li<NavItemPropsType>`
     max-width: 120px;
     font-size: 12px;
     text-align: center;
-    color: ${DefaultTheme.colors.primaryBg};
     border-radius: 2px;
     padding: 6px;
     z-index: 1;

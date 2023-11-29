@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll'
 import styled, { css } from 'styled-components'
-import { DefaultTheme  } from '../styles/Theme'
+import { DefaultTheme } from '../styles/Theme'
 
 type ButtonPropsType = {
   circle?: boolean
@@ -23,7 +23,7 @@ export const NavLink = styled(Link)<ButtonPropsType>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${props => props.colorBackground || DefaultTheme .colors.secondaryBg};
+  background: ${props => props.colorBackground || DefaultTheme.colors.secondaryBg};
   cursor: pointer;
 
   &:hover,
@@ -70,8 +70,9 @@ export const Button = styled.button<ButtonPropsType>`
       height: ${props => props.width || '40px'};
 
       &:hover {
-        background: ${DefaultTheme .colors.secondaryBg};
-        background: ${props => (props.notHover ? 'none' : DefaultTheme.colors.secondaryBg)};
+        background: ${DefaultTheme.colors.secondaryBg};
+        background: ${props =>
+          props.notHover ? 'none' : DefaultTheme.colors.secondaryBg};
 
         svg {
           fill: ${DefaultTheme.colors.primary};
@@ -107,7 +108,9 @@ export const Button = styled.button<ButtonPropsType>`
       height: 38px;
       border-radius: 19px;
       background: ${DefaultTheme.colors.primaryBg || 'white'};
-      box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+      color: ${DefaultTheme.colors.primary};
+      /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15); */
+      box-shadow: 0px 1px 10px 0px rgba(${DefaultTheme.colors.primaryBg}, 0.15);
       font-size: 14px;
       font-weight: 700;
 

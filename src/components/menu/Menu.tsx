@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { DefaultTheme } from '../../styles/Theme'
 import { Button } from '../Button'
 import { Icon } from '../Icons/Icon'
@@ -34,9 +34,23 @@ const navItemsList = [
 ]
 
 export const Menu: React.FC = () => {
+  const [currentTheme, setCurrentTheme] = useState('light')
+
+  function toggleTheme() {
+    setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
+  }
+
+  useEffect(() => {
+    document.body.setAttribute('data-theme', currentTheme)
+  }, [currentTheme])
+
   return (
     <S.Menu>
-      <Button circle colorBackground={'transparent'} notHover={'none'}>
+      <Button
+        onClick={toggleTheme}
+        circle
+        colorBackground={'transparent'}
+        notHover={'none'}>
         <Icon iconId={'contrast'} boxWidth='30' boxHeight='30' size={'30px'} />
       </Button>
       <FlexWrapper as={'ul'} direction={'column'} align={'center'}>

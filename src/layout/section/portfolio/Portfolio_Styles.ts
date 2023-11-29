@@ -21,6 +21,8 @@ const Portfolio = styled.section`
           background: unset;
           padding: 0;
           text-transform: capitalize;
+          color: ${DefaultTheme.colors.primary};
+
 
           &:hover,
           &:focus-visible {

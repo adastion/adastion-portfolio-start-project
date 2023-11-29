@@ -27,6 +27,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body[data-theme='light'] {
+  --primary: #2B2B2B;
+  --secondary: #767676;
+  --lineTable: #F0F0F6;
+  --primaryBg: #fff;
+  --secondaryBg: #ffb400;
+  --pageBg: #F0F0F6;
+  --onlineUser: #7EB942;
+}
+
+body[data-theme='dark'] {
+    --primary: #d2d2d2;
+    --secondary: #9c9a9a;
+    --lineTable: #60839d;
+    --primaryBg: #161617;
+    --secondaryBg: #6374a0;
+    --pageBg: #0f0f0f;
+    --onlineUser: #7EB942;
+}
+
 a, button {
     cursor: revert;
 }

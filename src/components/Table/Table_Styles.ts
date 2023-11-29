@@ -31,7 +31,7 @@ const Table = styled.li`
   }
 
   & span + span {
-    color: ${DefaultTheme.colors.primaryBg};
+    color: ${DefaultTheme.colors.primary};
     font-size: 10px;
     font-weight: 400;
     line-height: 100.9%;
