@@ -19,6 +19,7 @@ export const App: React.FC = () => {
         <Footer />
       </FlexWrapper>
       <Menu />
+      
     </S.App>
   )
 }
