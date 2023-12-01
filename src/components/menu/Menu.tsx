@@ -34,10 +34,15 @@ const navItemsList = [
 ]
 
 export const Menu: React.FC = () => {
-  const [currentTheme, setCurrentTheme] = useState('light')
+  const storedTheme = localStorage.getItem('theme');
+  const initialTheme: string = storedTheme || 'light';
+
+  const [currentTheme, setCurrentTheme] = useState<string>(initialTheme)
 
   function toggleTheme() {
-    setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
+    const newTheme: string = currentTheme === 'light' ? 'dark' : 'light'
+     setCurrentTheme(newTheme)
+     localStorage.setItem('theme', newTheme)
   }
 
   useEffect(() => {

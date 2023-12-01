@@ -39,6 +39,7 @@ const Form = styled.form`
   max-width: 100%;
   padding: 25px;
   background-color: ${DefaultTheme.colors.primaryBg};
+  color: ${DefaultTheme.colors.primary};
 
   & button {
     font-weight: 600;
