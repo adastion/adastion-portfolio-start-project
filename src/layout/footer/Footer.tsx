@@ -16,6 +16,7 @@ export const Footer = () => {
 
 export const FooterStyled = styled.footer`
   background: ${DefaultTheme.colors.primaryBg};
+  color: ${DefaultTheme.colors.primary};
   display: flex;
   justify-content: center;
   gap: 15px;
