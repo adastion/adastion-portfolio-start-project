@@ -29,7 +29,7 @@ body {
 }
 
 body.toggle-theme {
-    animation: ${animateToggleTheme} 0.2s ease-in-out;
+    animation: ${animateToggleTheme} 0.2s ease;
 }
 
 body[data-theme='light'] {

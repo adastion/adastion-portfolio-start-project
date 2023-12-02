@@ -47,6 +47,10 @@ export const Menu: React.FC = () => {
 
   useEffect(() => {
     document.body.setAttribute('data-theme', currentTheme)
+    document.body.classList.add('toggle-theme')
+    setTimeout(() => {
+      document.body.classList.remove('toggle-theme')
+    }, 200)
   }, [currentTheme])
 
   return (
