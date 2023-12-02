@@ -41,6 +41,7 @@ export const Button = styled.button<ButtonPropsType>`
   align-items: center;
   justify-content: center;
   background: ${props => props.colorBackground || DefaultTheme.colors.secondaryBg};
+  color: ${DefaultTheme.colors.primary};
   border-radius: 5px;
   padding: ${props => props.padding || '16px 32px'};
   font-weight: 500;
@@ -109,8 +110,7 @@ export const Button = styled.button<ButtonPropsType>`
       border-radius: 19px;
       background: ${DefaultTheme.colors.primaryBg || 'white'};
       color: ${DefaultTheme.colors.primary};
-      /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15); */
-      box-shadow: 0px 1px 10px 0px rgba(${DefaultTheme.colors.primaryBg}, 0.15);
+      box-shadow: 0px 1px 10px 0px ${DefaultTheme.colors.boxShadow};
       font-size: 14px;
       font-weight: 700;
 

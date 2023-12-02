@@ -14,7 +14,7 @@ const Menu = styled.nav`
   gap: 30px 0;
   background: ${DefaultTheme.colors.primaryBg};
   padding: 50px 0;
-  height: 100%;
+  height: 100vh;
 
   & ul {
     display: flex;
@@ -23,7 +23,7 @@ const Menu = styled.nav`
     gap: 44px;
     padding: 0 34px;
     overflow-y: auto;
-    height: 100vh;
+    flex-grow: 1;
   }
 
   @media ${DefaultTheme.media.bigDesktop} {
@@ -51,6 +51,13 @@ const Menu = styled.nav`
   @media ${DefaultTheme.media.tablet} {
     & ul {
       gap: 10px;
+    }
+  }
+
+  @media ${DefaultTheme.media.mobile} {
+    & button,
+    & ul > li {
+      transform: scale(0.8);
     }
   }
 `

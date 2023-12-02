@@ -69,6 +69,7 @@ const CardPrice = styled.li<CardPricePropsType>`
         max-height: 30px;
         text-transform: capitalize;
         background: ${DefaultTheme.colors.secondaryBg};
+        color: ${DefaultTheme.colors.primary};
         position: absolute;
         top: 0;
         right: 0;

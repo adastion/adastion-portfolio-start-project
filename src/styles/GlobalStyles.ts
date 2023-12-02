@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { animateToggleTheme } from './animations'
 
 export const GlobalStyles = createGlobalStyle`
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
@@ -27,14 +28,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.toggle-theme {
+    animation: ${animateToggleTheme} 0.2s ease-in-out;
+}
+
 body[data-theme='light'] {
-  --primary: #2B2B2B;
-  --secondary: #767676;
-  --lineTable: #F0F0F6;
-  --primaryBg: #fff;
-  --secondaryBg: #ffb400;
-  --pageBg: #F0F0F6;
-  --onlineUser: #7EB942;
+    --primary: #2B2B2B;
+    --secondary: #767676;
+    --lineTable: #F0F0F6;
+    --primaryBg: #fff;
+    --secondaryBg: #ffb400;
+    --pageBg: #F0F0F6;
+    --onlineUser: #7EB942;
+    --boxShadow: rgba(0, 0, 0, 0.15)
 }
 
 body[data-theme='dark'] {
@@ -45,7 +51,9 @@ body[data-theme='dark'] {
     --secondaryBg: #6374a0;
     --pageBg: #0f0f0f;
     --onlineUser: #7EB942;
+    --boxShadow: rgba(255, 255, 255, 0.15)
 }
+
 
 a, button {
     cursor: revert;

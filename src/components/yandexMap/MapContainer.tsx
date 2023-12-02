@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { DefaultTheme } from '../../styles/Theme'
 
 export const MapContainer = () => (
   <MapContainerStyled>
@@ -13,5 +14,9 @@ const MapContainerStyled = styled.div`
     width: 100%;
     height: 300px;
     border: unset;
+
+    @media ${DefaultTheme.media.mobile} {
+      transform: scale(1.05);
+    }
   }
 `

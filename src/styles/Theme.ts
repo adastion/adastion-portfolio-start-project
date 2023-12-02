@@ -7,6 +7,7 @@ export const DefaultTheme = {
     secondaryBg: 'var(--secondaryBg)',
     pageBg: 'var(--pageBg)',
     onlineUser: 'var(--onlineUser)',
+    boxShadow: 'var(--boxShadow)',
   },
 
   gapCard: '20px',
