@@ -32,7 +32,7 @@ body[data-theme='light'] {
   --secondary: #767676;
   --lineTable: #F0F0F6;
   --primaryBg: #fff;
-  --secondaryBg: #ffb400;
+  --secondaryBg: #a1d84d;
   --pageBg: #F0F0F6;
   --onlineUser: #7EB942;
 }
